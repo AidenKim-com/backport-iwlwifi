@@ -1,0 +1,1 @@
+cmd_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/compat/compat.o := ld -m elf_x86_64 -z noexecstack --no-warn-rwx-segments   -r -o /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/compat/compat.o @/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/compat/compat.mod 

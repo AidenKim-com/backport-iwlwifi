@@ -3957,11 +3957,50 @@ static void ieee80211_rx_handlers_result(struct ieee80211_rx_data *rx,
 	}
 }
 
+void pkt_hex_dump(struct sk_buff *skb)
+{
+    size_t len;
+    int rowsize = 16;
+    int i, l, linelen, remaining;
+    int li = 0;
+    uint8_t *data, ch;
+
+    printk("Packet hex dump:\n");
+    //data = (uint8_t *) skb_mac_header(skb);
+    data = (uint8_t *) skb->data;
+
+    if (skb_is_nonlinear(skb)) {
+        len = skb->data_len;
+    } else {
+        len = skb->len;
+    }
+
+    remaining = len;
+    for (i = 0; i < len; i += rowsize) {
+        printk("%06d\t", li);
+
+        linelen = min(remaining, rowsize);
+        remaining -= rowsize;
+
+        for (l = 0; l < linelen; l++) {
+            ch = data[l];
+            printk(KERN_CONT "%02X ", (uint32_t) ch);
+        }
+
+        data += linelen;
+        li += 10;
+
+        printk(KERN_CONT "\n");
+    }
+}
+
+
 static void ieee80211_rx_handlers(struct ieee80211_rx_data *rx,
 				  struct sk_buff_head *frames)
 {
 	ieee80211_rx_result res = RX_DROP_MONITOR;
 	struct sk_buff *skb;
+
 
 #define CALL_RXH(rxh)			\
 	do {				\
@@ -3989,6 +4028,7 @@ static void ieee80211_rx_handlers(struct ieee80211_rx_data *rx,
 		if (WARN_ON_ONCE(!rx->link))
 			goto rxh_next;
 
+		pkt_hex_dump(rx->skb);
 		CALL_RXH(ieee80211_rx_h_check_more_data);
 		CALL_RXH(ieee80211_rx_h_uapsd_and_pspoll);
 		CALL_RXH(ieee80211_rx_h_sta_process);
@@ -4044,6 +4084,7 @@ static void ieee80211_invoke_rx_handlers(struct ieee80211_rx_data *rx)
 
 	ieee80211_rx_reorder_ampdu(rx, &reorder_release);
 
+	printk("HANDELRS TRIGGER\n");
 	ieee80211_rx_handlers(rx, &reorder_release);
 	return;
 

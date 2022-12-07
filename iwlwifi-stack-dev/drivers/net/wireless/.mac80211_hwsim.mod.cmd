@@ -1,0 +1,1 @@
+cmd_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/mac80211_hwsim.mod := printf '%s\n'   mac80211_hwsim.o | awk '!x[$$0]++ { print("/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/"$$0) }' > /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/mac80211_hwsim.mod
