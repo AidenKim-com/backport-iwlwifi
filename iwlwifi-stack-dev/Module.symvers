@@ -1,417 +1,417 @@
-0xb43a926b	backport_dependency_symbol	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/compat/compat	EXPORT_SYMBOL_GPL	
-0x1c842ca3	iwl_write8	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x4e936095	iwl_write32	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x55359f46	iwl_write64	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x7b382ea0	iwl_read32	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x77db5305	iwl_poll_bit	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x27818282	iwl_read_direct32	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x3d265e92	iwl_write_direct32	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x2680a141	iwl_write_direct64	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x1c1aedb1	iwl_poll_direct_bit	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xa10ea8b6	iwl_read_prph_no_grab	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x36546930	iwl_write_prph_no_grab	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x3d1d3f18	iwl_write_prph64_no_grab	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x59505d92	iwl_read_prph	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x72674ee4	iwl_write_prph_delay	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xe8a350ef	iwl_set_bits_prph	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x1913d078	iwl_set_bits_mask_prph	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xda4ab164	iwl_clear_bits_prph	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x146c91f3	iwl_force_nmi	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x7e7eb716	iwl_finish_nic_init	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x738241b0	iwl_drv_get_dev_container	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x6e3bb66e	iwl_drv_switch_op_mode	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x6c49291f	iwlwifi_mod_params	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x039f1e1a	iwl_opmode_register	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x5c52e109	iwl_opmode_deregister	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x72ea0466	__iwl_warn	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x0e4bb438	__iwl_info	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x3f4ab80e	__iwl_crit	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xbb02ed7e	__iwl_err	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x03a7ad90	__iwl_dbg	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x853f8c09	iwl_read_eeprom	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x6f562584	iwl_parse_eeprom_data	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xb7efe732	iwl_phy_db_init	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x35033c81	iwl_phy_db_free	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xce0c6460	iwl_phy_db_set_section	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xa35f2861	iwl_phy_db_get_section_data	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x776221bf	iwl_send_phy_db_data	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xb7e2824e	iwl_parse_mei_nvm_data	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xdd0fb72a	iwl_parse_nvm_data	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x499155bc	iwl_parse_nvm_mcc_info	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xea1b26fc	iwl_nvm_fixups	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xaf11575e	iwl_read_external_nvm	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xff3e8145	iwl_get_nvm	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x55a41534	iwl_dbg_tlv_del_timers	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xd310307e	_iwl_dbg_tlv_time_point	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xd725101d	iwl_trans_send_cmd	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x5fcb2964	iwl_get_cmd_string	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x24665da6	iwl_cmd_groups_verify_sorted	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x1a07215f	iwl_fw_lookup_cmd_ver	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	
-0x9f4784a0	iwl_fw_lookup_notif_ver	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	
-0x5987fe45	iwl_fw_lookup_assert_desc	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	
-0x5988395c	iwl_notification_wait_init	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xe75b7e77	iwl_notification_wait	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x1332e4de	iwl_abort_notification_waits	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xe0eb5838	iwl_init_notification_wait	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xf88964e4	iwl_remove_notification	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xbafc8994	iwl_wait_notification	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x874c77de	iwl_fw_rate_idx_to_plcp	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xb7d5ffb1	iwl_rate_mcs	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x84bb50e1	iwl_rs_pretty_ant	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xb37b318c	iwl_rs_pretty_bw	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x49e0135d	iwl_new_rate_from_v1	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x37956b72	rs_pretty_print_rate	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x78971d7e	iwl_he_is_sgi	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x2710c362	iwl_dump_desc_assert	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x267350d7	iwl_fw_dbg_collect_desc	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xb9606cc5	iwl_fw_dbg_error_collect	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x45e34f1f	iwl_fw_dbg_collect	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x38d2c737	iwl_fw_dbg_collect_trig	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x9f55ba9b	iwl_fw_start_dbg_conf	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xf43b7655	iwl_fw_dbg_read_d3_debug_data	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x57d83192	iwl_fw_dbg_stop_sync	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xcc387431	iwl_fw_dbg_stop_restart_recording	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xe787d582	iwl_pnvm_load	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xb1368d57	iwl_fwrt_dump_error_logs	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x9d3769c9	iwl_free_fw_paging	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xd10ac263	iwl_init_paging	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xbf850b4f	iwl_get_shared_mem_conf	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x4f08bac4	iwl_fw_runtime_init	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x62d3e8a0	iwl_fw_runtime_suspend	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x5e2149ed	iwl_fw_runtime_resume	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x60178b57	iwl_set_soc_latency	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xe3055a19	iwl_configure_rxq	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xfc1e6f41	iwl_guid	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x9038811a	iwl_rfi_guid	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x45f08fa8	iwl_acpi_get_object	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x3fe808dd	iwl_acpi_get_dsm_u8	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xb6d0bef7	iwl_acpi_get_dsm_u32	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x0007b4ab	iwl_acpi_get_wifi_pkg_range	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x680ddb34	iwl_acpi_get_tas	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x3bfba9a5	iwl_acpi_get_mcc	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x6710de6f	iwl_acpi_get_pwr_limit	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x801c903c	iwl_acpi_get_eckv	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xfe0dcf93	iwl_sar_select_profile	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x656f448c	iwl_sar_get_wrds_table	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x44166dfb	iwl_sar_get_ewrd_table	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xb7d5bd63	iwl_sar_get_wgds_table	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xdd190073	iwl_sar_geo_support	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xd8396d84	iwl_sar_geo_init	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xde5da3ae	iwl_acpi_get_lari_config_bitmap	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x10b92315	iwl_acpi_get_ppag_table	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xcc43b5fb	iwl_read_ppag_table	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x52bbc177	iwl_acpi_is_ppag_approved	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x71abe59b	iwl_uefi_get_step_table	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x3b2d4338	iwl_uefi_get_sgom_table	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x8c5fa651	_dmi_match	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x4e3d06ab	_dmi_get_system_info	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x2eeedb47	_dmi_check_system	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x9ff44280	__tracepoint_iwlwifi_dev_ucode_event	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
-0x045eb74a	__traceiter_iwlwifi_dev_ucode_event	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
-0xb53d7acd	__SCK__tp_func_iwlwifi_dev_ucode_event	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
-0xd81e2f28	__SCT__tp_func_iwlwifi_dev_ucode_event	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
-0x84dcd748	__tracepoint_iwlwifi_dev_ucode_cont_event	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
-0x1058eeab	__traceiter_iwlwifi_dev_ucode_cont_event	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
-0xe035fa19	__SCK__tp_func_iwlwifi_dev_ucode_cont_event	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
-0x3a2a40a5	__SCT__tp_func_iwlwifi_dev_ucode_cont_event	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
-0x1350ab72	__tracepoint_iwlwifi_dev_ucode_wrap_event	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
-0xd9eb2db0	__traceiter_iwlwifi_dev_ucode_wrap_event	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
-0x77b98623	__SCK__tp_func_iwlwifi_dev_ucode_wrap_event	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
-0x38688d65	__SCT__tp_func_iwlwifi_dev_ucode_wrap_event	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
-0xde4ff7eb	iwl_tm_gnl_send_msg	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xa49fc366	iwl_tm_gnl_send_rx	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xdcd01077	iwl_dnt_start	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xbe53203a	iwl_dnt_init	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x32bb95a7	iwl_dnt_free	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xc95a16e9	iwl_dnt_dispatch_collect_ucode_message	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x30be8f40	iwl_dnt_dispatch_handle_nic_err	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xfde2ab09	iwl_dnt_dev_if_read_sram	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x7d74dc8d	iwl_dnt_dev_if_read_rx	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xb411eeb8	iwl_tm_init	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0xc157d301	iwl_tm_set_fw_ver	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
-0x4ceac14c	iwl_mei_is_connected	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
-0xc30d8ba6	iwl_mei_get_nvm	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
-0xafb23a58	iwl_mei_pldr_req	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
-0x2a6267b8	iwl_mei_get_ownership	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
-0x805fc091	iwl_mei_alive_notif	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
-0x4e00000b	iwl_mei_host_associated	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
-0x1aca8c55	iwl_mei_host_disassociated	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
-0x27595f53	iwl_mei_set_rfkill_state	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
-0x7d8730a9	iwl_mei_set_nic_info	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
-0xee3e060e	iwl_mei_set_country_code	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
-0xc76e7b8e	iwl_mei_set_power_limit	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
-0x04b06abf	iwl_mei_set_netdev	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
-0x37a19c73	iwl_mei_device_state	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
-0x804b709e	iwl_mei_register	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
-0xa571d81a	iwl_mei_start_unregister	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
-0x793ece1d	iwl_mei_unregister_complete	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
-0xaf58608d	iwl_mei_tx_copy_to_csme	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
-0xf57013ac	cfg80211_shutdown_all_interfaces	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL_GPL	
-0xc4258a57	wiphy_new_nm	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x0f68de1f	wiphy_register	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x1633cf43	wiphy_rfkill_start_polling	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x0d00dab7	wiphy_unregister	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x3bcbcaca	wiphy_free	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x59111418	wiphy_rfkill_set_hw_state_reason	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xd0500ce4	cfg80211_unregister_wdev	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x2f8fe16e	cfg80211_stop_iface	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xa943545d	cfg80211_register_netdevice	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x43afadee	ieee80211_radiotap_iterator_init	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x7acb86ed	ieee80211_radiotap_iterator_next	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x46ff300c	ieee80211_get_response_rate	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x97b516c7	ieee80211_mandatory_rates	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x5584448a	ieee80211_channel_to_freq_khz	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x0cc95bc2	ieee80211_s1g_channel_width	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x6bedf402	ieee80211_freq_khz_to_channel	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x99cc9f9e	ieee80211_get_channel_khz	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x7ef39823	ieee80211_hdrlen	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x04e78acf	ieee80211_get_hdrlen_from_skb	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xd56d55f3	ieee80211_get_mesh_hdrlen	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xd32aed02	ieee80211_data_to_8023_exthdr	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x02f821e5	ieee80211_amsdu_to_8023s	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xb0ef3ae2	cfg80211_classify8021d	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x429c0c31	ieee80211_bss_get_elem	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x4d888bc1	cfg80211_calculate_bitrate	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xf5596d89	cfg80211_get_p2p_attr	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x275269b3	ieee80211_ie_split_ric	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xf40bc2f5	ieee80211_operating_class_to_band	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x3643b80f	ieee80211_chandef_to_operating_class	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x6e49750c	cfg80211_iter_combinations	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x639d1e58	cfg80211_check_combinations	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x0e0d8b10	ieee80211_get_num_supported_channels	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xcd92d337	cfg80211_get_station	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x8fa02936	cfg80211_free_nan_func	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x1b5a3a7e	cfg80211_sinfo_alloc_tid_stats	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x69b18f43	rfc1042_header	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x1879fcbd	bridge_tunnel_header	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x8ee8f397	cfg80211_send_layer2_update	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x7c3ac925	ieee80211_get_vht_max_nss	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x8ab891f1	cfg80211_iftype_allowed	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xd2b21b42	cfg80211_get_iftype_ext_capa	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x439bbd18	get_wiphy_regdom	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x1ce2497f	reg_query_regdb_wmm	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x1fa778f1	freq_reg_info	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xdba126c1	reg_initiator_name	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xe8eebb8a	wiphy_apply_custom_regulatory	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x0f3142a1	regulatory_hint	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x4ba71a05	regulatory_set_wiphy_regd	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xe939fa57	regulatory_set_wiphy_regd_sync	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xc088c94b	regulatory_pre_cac_allowed	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xcc1a7c48	cfg80211_is_element_inherited	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xf38cfad5	cfg80211_scan_done	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x85cba77d	cfg80211_sched_scan_results	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x2502173d	cfg80211_sched_scan_stopped_locked	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x56cb42b1	cfg80211_sched_scan_stopped	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xb4bb9940	cfg80211_bss_flush	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x9d6cba30	cfg80211_find_elem_match	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x79b82a71	cfg80211_find_vendor_elem	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x5c4dcb7a	cfg80211_get_bss	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x3aca71a1	cfg80211_get_ies_channel_number	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x117aca91	cfg80211_merge_profile	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xe6197b28	cfg80211_inform_bss_data	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xd85f8b17	cfg80211_inform_bss_frame_data	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x2c1edb91	cfg80211_ref_bss	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x7607f42e	cfg80211_put_bss	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x587b2cd9	cfg80211_unlink_bss	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x314ffa4c	cfg80211_bss_iter	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x1f72970d	cfg80211_check_station_change	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x99688505	__cfg80211_alloc_event_skb	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x3db950c8	__cfg80211_send_event_skb	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xa8eec2dc	cfg80211_nan_match	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x1032634a	cfg80211_nan_func_terminated	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x85e399a6	__cfg80211_alloc_reply_skb	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xe2f63aaf	cfg80211_vendor_cmd_reply	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL_GPL	
-0xe6376523	cfg80211_vendor_cmd_get_sender	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL_GPL	
-0xbceebd7c	cfg80211_rx_unprot_mlme_mgmt	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x16fd02cd	cfg80211_notify_new_peer_candidate	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xa379ba51	cfg80211_assoc_comeback	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x22306517	cfg80211_ready_on_channel	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x403e8adb	cfg80211_remain_on_channel_expired	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x4942e9b0	cfg80211_tx_mgmt_expired	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x3a4734b9	cfg80211_new_sta	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xd7d3c877	cfg80211_del_sta_sinfo	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x2a4963dd	cfg80211_conn_failed	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xb8f5ce3d	cfg80211_rx_spurious_frame	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x289f229f	cfg80211_rx_unexpected_4addr_frame	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x3cb5d6a0	cfg80211_control_port_tx_status	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xfb4af4a7	cfg80211_mgmt_tx_status_ext	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x1fee83e1	cfg80211_rx_control_port	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x7aeff27d	cfg80211_cqm_rssi_notify	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x8c57e699	cfg80211_cqm_txe_notify	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x0a1d54d5	cfg80211_cqm_pktloss_notify	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xf22d94d3	cfg80211_cqm_beacon_loss_notify	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x3bba2fcb	cfg80211_gtk_rekey_notify	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x8f40c44c	cfg80211_pmksa_candidate_notify	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x758f3a2b	cfg80211_ch_switch_notify	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x1a4bd59a	cfg80211_ch_switch_started_notify	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xa8eb3065	cfg80211_bss_color_notify	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x570bba9a	cfg80211_sta_opmode_change_notify	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x3c5b323e	cfg80211_probe_status	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x8111a9d3	cfg80211_report_obss_beacon_khz	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x41803aa6	cfg80211_report_wowlan_wakeup	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xc65bee80	cfg80211_tdls_oper_request	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x8abae45a	cfg80211_ft_event	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x309e02fe	cfg80211_crit_proto_stopped	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xdb741e9a	cfg80211_external_auth_request	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x00e3fd42	cfg80211_update_owe_info_event	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x0b838151	cfg80211_rx_assoc_resp	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xee9e6bc2	cfg80211_rx_mlme_mgmt	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x6d64a6eb	cfg80211_auth_timeout	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x8672e797	cfg80211_assoc_failure	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x916605fe	cfg80211_tx_mlme_mgmt	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xc7da4037	cfg80211_michael_mic_failure	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x14e77dc9	cfg80211_rx_mgmt_ext	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x1a99069d	__cfg80211_radar_event	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x1592c80a	cfg80211_cac_event	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xd8d5782b	cfg80211_background_cac_abort	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xfce7a073	cfg80211_ibss_joined	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x71b4ff16	cfg80211_connect_done	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xc410daef	cfg80211_roamed	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xa848f95f	cfg80211_port_authorized	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xec2ecd9e	cfg80211_disconnected	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x06ca71fd	cfg80211_chandef_create	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xc4b4fc27	cfg80211_chandef_valid	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xd97eaad4	cfg80211_chandef_compatible	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xcfa2a717	cfg80211_chandef_dfs_required	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xce04e868	cfg80211_chandef_usable	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x2b4b56b2	cfg80211_reg_can_beacon	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x68c60acf	cfg80211_reg_can_beacon_relax	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x93058080	cfg80211_any_usable_channels	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xcc669df1	wdev_chandef	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0xc53e8141	cfg80211_get_drvinfo	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
-0x424ea0fe	cfg80211_pmsr_complete	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL_GPL	
-0x12a2a203	cfg80211_pmsr_report	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL_GPL	
-0x2258cdcb	ieee80211_restart_hw	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x2cfffe2a	ieee80211_alloc_hw_nm	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x4e6e0ad9	ieee80211_register_hw	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x4c9d0d63	ieee80211_unregister_hw	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x64926597	ieee80211_free_hw	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x23b7909a	ieee80211_tx_status_irqsafe	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x078144a2	ieee80211_tx_status	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xd52e0b11	ieee80211_tx_status_ext	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x588509e0	ieee80211_tx_rate_update	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x2aa2989c	ieee80211_tx_status_8023	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x88a482ad	ieee80211_report_low_ack	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x2c13daa0	ieee80211_free_txskb	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x6717ee71	ieee80211_find_sta_by_link_addrs	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0xb963e551	ieee80211_find_sta_by_ifaddr	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0x10d31a87	ieee80211_find_sta	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x2935c843	ieee80211_sta_block_awake	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x3da0c4bb	ieee80211_sta_eosp	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x3107a5c0	ieee80211_send_eosp_nullfunc	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xf3e969bf	ieee80211_sta_set_buffered	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x2bf152f9	ieee80211_sta_register_airtime	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x5d527083	ieee80211_sta_recalc_aggregates	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x9ce6567e	ieee80211_scan_completed	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x02a3521f	ieee80211_sched_scan_results	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xb38e9098	ieee80211_sched_scan_stopped	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x501a733f	ieee80211_ready_on_channel	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0x4e72b0e9	ieee80211_remain_on_channel_expired	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0xb44c19cc	ieee80211_request_smps	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0x1418109f	ieee80211_send_bar	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x521b838a	ieee80211_start_tx_ba_session	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xd220d90c	ieee80211_start_tx_ba_cb_irqsafe	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x1176c171	ieee80211_stop_tx_ba_session	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x0aa03456	ieee80211_stop_tx_ba_cb_irqsafe	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xb64fdabb	ieee80211_stop_rx_ba_session	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x05499780	ieee80211_manage_rx_ba_offl	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xc13ef311	ieee80211_rx_ba_timer_expired	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x3d87845d	ieee80211_update_mu_groups	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0xa45aa63c	ieee80211_rate_control_register	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xdd85d47f	ieee80211_rate_control_unregister	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xf9cfc05a	ieee80211_get_tx_rates	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xcb0a0ac3	rate_control_set_rates	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x16ad7c5f	ieee80211_tkip_add_iv	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0x1cf75d45	ieee80211_get_tkip_p1k_iv	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x391eda45	ieee80211_get_tkip_rx_p1k	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x04a7a7c9	ieee80211_get_tkip_p2k	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x0bc73ca3	ieee80211_csa_finish	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x6b11110b	ieee80211_channel_switch_disconnect	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xa17750eb	ieee80211_nan_func_terminated	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xcc388d15	ieee80211_nan_func_match	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xc7d67cf9	ieee80211_color_change_finish	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0xe6a43a24	ieeee80211_obss_color_collision_notify	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0x05489143	ieee80211_sta_ps_transition	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xb849a4ea	ieee80211_sta_pspoll	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x079e1b74	ieee80211_sta_uapsd_trigger	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x3f9278ca	ieee80211_mark_rx_ba_filtered_frames	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x4bafddc6	ieee80211_rx_list	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x371a2d98	ieee80211_rx_napi	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x448535d4	ieee80211_rx_irqsafe	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x002b8b69	ieee80211_tx_prepare_skb	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xc0b58e7f	ieee80211_tx_dequeue	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x06f5cdff	ieee80211_next_txq	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x4730f011	__ieee80211_schedule_txq	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xf79c0f47	ieee80211_txq_airtime_check	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x38cb0456	ieee80211_txq_may_transmit	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xd1cacdd3	ieee80211_txq_schedule_start	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xd37e5f39	ieee80211_beacon_update_cntdwn	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xb6caa211	ieee80211_beacon_set_cntdwn	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xea3a3370	ieee80211_beacon_cntdwn_is_complete	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x00eb7e3b	ieee80211_beacon_get_template	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x3c03ddc4	ieee80211_beacon_get_tim	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x5044a9eb	ieee80211_proberesp_get	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xfa99df94	ieee80211_get_fils_discovery_tmpl	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x7bc0e76c	ieee80211_get_unsol_bcast_probe_resp_tmpl	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x95eb3af7	ieee80211_pspoll_get	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xf7df654c	ieee80211_nullfunc_get	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xa1a8fb9a	ieee80211_probereq_get	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x20589382	ieee80211_rts_get	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xbd8c3756	ieee80211_ctstoself_get	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xe478ea4e	ieee80211_get_buffered_bc	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x2903974b	ieee80211_reserve_tid	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xe4d714ba	ieee80211_unreserve_tid	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x6e65ee77	ieee80211_iter_keys	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x64d16e2e	ieee80211_iter_keys_rcu	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xea969fe5	ieee80211_gtk_rekey_notify	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0xaeb9a917	ieee80211_get_key_rx_seq	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x1dab0efe	ieee80211_set_key_rx_seq	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0xea792270	ieee80211_remove_key	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0x9b9da9fc	ieee80211_gtk_rekey_add	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0xd004ea88	ieee80211_key_mic_failure	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0x9e1c1431	ieee80211_key_replay	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0xda2cdde2	wiphy_to_ieee80211_hw	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xe5752af3	ieee80211_get_bssid	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x9ed1638b	ieee80211_generic_frame_duration	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x14452ec9	ieee80211_rts_duration	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xc2621e67	ieee80211_ctstoself_duration	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xcaaa63c5	ieee80211_wake_queue	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x97e1c3d3	ieee80211_stop_queue	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xc3933de4	ieee80211_stop_queues	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xd28e59b0	ieee80211_queue_stopped	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x52ae357d	ieee80211_wake_queues	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x4f691794	ieee80211_iterate_interfaces	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0xd73a518c	ieee80211_iterate_active_interfaces_atomic	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0x06b2c3c2	ieee80211_iterate_active_interfaces_mtx	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0x99483c9e	ieee80211_iterate_stations	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0x0ee575c9	ieee80211_iterate_stations_atomic	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0x771f93ac	wdev_to_ieee80211_vif	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0x7e6bab15	ieee80211_vif_to_wdev	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0xc20d0d34	ieee80211_queue_work	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x231e84ba	ieee80211_queue_delayed_work	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xa6fea5cb	ieee80211_hw_restart_disconnect	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0xbd5a710b	ieee80211_resume_disconnect	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0xaf0ba5c0	ieee80211_ave_rssi	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0x5b64f645	ieee80211_radar_detected	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x19f37f0d	ieee80211_update_p2p_noa	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x991a0ca0	ieee80211_parse_p2p_noa	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x2d5e727e	ieee80211_txq_get_depth	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xf4e070cb	ieee80211_iter_chan_contexts_atomic	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0x69fbbce0	ieee80211_chswitch_done	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xe8b94ab0	ieee80211_ap_probereq_get	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x9d39d900	ieee80211_beacon_loss	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xfaccfe8b	ieee80211_connection_loss	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x28069645	ieee80211_disconnect	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xd1523c86	ieee80211_cqm_rssi_notify	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xb9163ee5	ieee80211_cqm_beacon_loss_notify	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xc94a6d69	ieee80211_enable_rssi_reports	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xe7c78a42	ieee80211_disable_rssi_reports	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x6eefe617	ieee80211_tdls_oper_request	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x9f9d7242	ieee80211_calc_rx_airtime	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0x0bd91f15	ieee80211_calc_tx_airtime	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
-0x03d965bd	__ieee80211_get_radio_led_name	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xa8830e0d	__ieee80211_get_assoc_led_name	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x7b7c3142	__ieee80211_get_tx_led_name	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0xb46716c1	__ieee80211_get_rx_led_name	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x14f24c3e	__ieee80211_create_tpt_led_trigger	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
-0x38bf176b	ieee80211_report_wowlan_wakeup	/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xb43a926b	backport_dependency_symbol	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/compat/compat	EXPORT_SYMBOL_GPL	
+0x1c842ca3	iwl_write8	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x4e936095	iwl_write32	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x55359f46	iwl_write64	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x7b382ea0	iwl_read32	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x77db5305	iwl_poll_bit	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x27818282	iwl_read_direct32	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x3d265e92	iwl_write_direct32	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x2680a141	iwl_write_direct64	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x1c1aedb1	iwl_poll_direct_bit	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xa10ea8b6	iwl_read_prph_no_grab	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x36546930	iwl_write_prph_no_grab	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x3d1d3f18	iwl_write_prph64_no_grab	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x59505d92	iwl_read_prph	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x72674ee4	iwl_write_prph_delay	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xe8a350ef	iwl_set_bits_prph	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x1913d078	iwl_set_bits_mask_prph	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xda4ab164	iwl_clear_bits_prph	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x146c91f3	iwl_force_nmi	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x7e7eb716	iwl_finish_nic_init	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x738241b0	iwl_drv_get_dev_container	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x6e3bb66e	iwl_drv_switch_op_mode	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x6c49291f	iwlwifi_mod_params	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x039f1e1a	iwl_opmode_register	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x5c52e109	iwl_opmode_deregister	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x72ea0466	__iwl_warn	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x0e4bb438	__iwl_info	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x3f4ab80e	__iwl_crit	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xbb02ed7e	__iwl_err	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x03a7ad90	__iwl_dbg	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x853f8c09	iwl_read_eeprom	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x6f562584	iwl_parse_eeprom_data	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb7efe732	iwl_phy_db_init	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x35033c81	iwl_phy_db_free	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xce0c6460	iwl_phy_db_set_section	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xa35f2861	iwl_phy_db_get_section_data	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x776221bf	iwl_send_phy_db_data	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb7e2824e	iwl_parse_mei_nvm_data	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xdd0fb72a	iwl_parse_nvm_data	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x499155bc	iwl_parse_nvm_mcc_info	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xea1b26fc	iwl_nvm_fixups	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xaf11575e	iwl_read_external_nvm	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xff3e8145	iwl_get_nvm	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x55a41534	iwl_dbg_tlv_del_timers	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xd310307e	_iwl_dbg_tlv_time_point	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xd725101d	iwl_trans_send_cmd	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x5fcb2964	iwl_get_cmd_string	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x24665da6	iwl_cmd_groups_verify_sorted	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x1a07215f	iwl_fw_lookup_cmd_ver	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	
+0x9f4784a0	iwl_fw_lookup_notif_ver	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	
+0x5987fe45	iwl_fw_lookup_assert_desc	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	
+0x5988395c	iwl_notification_wait_init	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xe75b7e77	iwl_notification_wait	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x1332e4de	iwl_abort_notification_waits	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xe0eb5838	iwl_init_notification_wait	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xf88964e4	iwl_remove_notification	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xbafc8994	iwl_wait_notification	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x874c77de	iwl_fw_rate_idx_to_plcp	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb7d5ffb1	iwl_rate_mcs	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x84bb50e1	iwl_rs_pretty_ant	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb37b318c	iwl_rs_pretty_bw	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x49e0135d	iwl_new_rate_from_v1	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x37956b72	rs_pretty_print_rate	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x78971d7e	iwl_he_is_sgi	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x2710c362	iwl_dump_desc_assert	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x267350d7	iwl_fw_dbg_collect_desc	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb9606cc5	iwl_fw_dbg_error_collect	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x45e34f1f	iwl_fw_dbg_collect	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x38d2c737	iwl_fw_dbg_collect_trig	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x9f55ba9b	iwl_fw_start_dbg_conf	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xf43b7655	iwl_fw_dbg_read_d3_debug_data	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x57d83192	iwl_fw_dbg_stop_sync	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xcc387431	iwl_fw_dbg_stop_restart_recording	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xe787d582	iwl_pnvm_load	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb1368d57	iwl_fwrt_dump_error_logs	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x9d3769c9	iwl_free_fw_paging	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xd10ac263	iwl_init_paging	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xbf850b4f	iwl_get_shared_mem_conf	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x4f08bac4	iwl_fw_runtime_init	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x62d3e8a0	iwl_fw_runtime_suspend	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x5e2149ed	iwl_fw_runtime_resume	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x60178b57	iwl_set_soc_latency	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xe3055a19	iwl_configure_rxq	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xfc1e6f41	iwl_guid	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x9038811a	iwl_rfi_guid	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x45f08fa8	iwl_acpi_get_object	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x3fe808dd	iwl_acpi_get_dsm_u8	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb6d0bef7	iwl_acpi_get_dsm_u32	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x0007b4ab	iwl_acpi_get_wifi_pkg_range	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x680ddb34	iwl_acpi_get_tas	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x3bfba9a5	iwl_acpi_get_mcc	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x6710de6f	iwl_acpi_get_pwr_limit	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x801c903c	iwl_acpi_get_eckv	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xfe0dcf93	iwl_sar_select_profile	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x656f448c	iwl_sar_get_wrds_table	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x44166dfb	iwl_sar_get_ewrd_table	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb7d5bd63	iwl_sar_get_wgds_table	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xdd190073	iwl_sar_geo_support	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xd8396d84	iwl_sar_geo_init	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xde5da3ae	iwl_acpi_get_lari_config_bitmap	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x10b92315	iwl_acpi_get_ppag_table	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xcc43b5fb	iwl_read_ppag_table	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x52bbc177	iwl_acpi_is_ppag_approved	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x71abe59b	iwl_uefi_get_step_table	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x3b2d4338	iwl_uefi_get_sgom_table	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x8c5fa651	_dmi_match	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x4e3d06ab	_dmi_get_system_info	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x2eeedb47	_dmi_check_system	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x9ff44280	__tracepoint_iwlwifi_dev_ucode_event	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x045eb74a	__traceiter_iwlwifi_dev_ucode_event	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0xb53d7acd	__SCK__tp_func_iwlwifi_dev_ucode_event	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0xd81e2f28	__SCT__tp_func_iwlwifi_dev_ucode_event	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x84dcd748	__tracepoint_iwlwifi_dev_ucode_cont_event	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x1058eeab	__traceiter_iwlwifi_dev_ucode_cont_event	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0xe035fa19	__SCK__tp_func_iwlwifi_dev_ucode_cont_event	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x3a2a40a5	__SCT__tp_func_iwlwifi_dev_ucode_cont_event	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x1350ab72	__tracepoint_iwlwifi_dev_ucode_wrap_event	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0xd9eb2db0	__traceiter_iwlwifi_dev_ucode_wrap_event	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x77b98623	__SCK__tp_func_iwlwifi_dev_ucode_wrap_event	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x38688d65	__SCT__tp_func_iwlwifi_dev_ucode_wrap_event	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0xde4ff7eb	iwl_tm_gnl_send_msg	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xa49fc366	iwl_tm_gnl_send_rx	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xdcd01077	iwl_dnt_start	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xbe53203a	iwl_dnt_init	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x32bb95a7	iwl_dnt_free	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xc95a16e9	iwl_dnt_dispatch_collect_ucode_message	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x30be8f40	iwl_dnt_dispatch_handle_nic_err	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xfde2ab09	iwl_dnt_dev_if_read_sram	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x7d74dc8d	iwl_dnt_dev_if_read_rx	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb411eeb8	iwl_tm_init	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xc157d301	iwl_tm_set_fw_ver	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x4ceac14c	iwl_mei_is_connected	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
+0xc30d8ba6	iwl_mei_get_nvm	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
+0xafb23a58	iwl_mei_pldr_req	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
+0x2a6267b8	iwl_mei_get_ownership	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
+0x805fc091	iwl_mei_alive_notif	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
+0x4e00000b	iwl_mei_host_associated	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
+0x1aca8c55	iwl_mei_host_disassociated	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
+0x27595f53	iwl_mei_set_rfkill_state	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
+0x7d8730a9	iwl_mei_set_nic_info	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
+0xee3e060e	iwl_mei_set_country_code	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
+0xc76e7b8e	iwl_mei_set_power_limit	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
+0x04b06abf	iwl_mei_set_netdev	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
+0x37a19c73	iwl_mei_device_state	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
+0x804b709e	iwl_mei_register	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
+0xa571d81a	iwl_mei_start_unregister	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
+0x793ece1d	iwl_mei_unregister_complete	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
+0xaf58608d	iwl_mei_tx_copy_to_csme	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei	EXPORT_SYMBOL_GPL	
+0xf57013ac	cfg80211_shutdown_all_interfaces	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL_GPL	
+0xc4258a57	wiphy_new_nm	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x0f68de1f	wiphy_register	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x1633cf43	wiphy_rfkill_start_polling	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x0d00dab7	wiphy_unregister	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x3bcbcaca	wiphy_free	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x59111418	wiphy_rfkill_set_hw_state_reason	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xd0500ce4	cfg80211_unregister_wdev	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x2f8fe16e	cfg80211_stop_iface	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xa943545d	cfg80211_register_netdevice	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x43afadee	ieee80211_radiotap_iterator_init	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x7acb86ed	ieee80211_radiotap_iterator_next	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x46ff300c	ieee80211_get_response_rate	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x97b516c7	ieee80211_mandatory_rates	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x5584448a	ieee80211_channel_to_freq_khz	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x0cc95bc2	ieee80211_s1g_channel_width	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x6bedf402	ieee80211_freq_khz_to_channel	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x99cc9f9e	ieee80211_get_channel_khz	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x7ef39823	ieee80211_hdrlen	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x04e78acf	ieee80211_get_hdrlen_from_skb	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xd56d55f3	ieee80211_get_mesh_hdrlen	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xd32aed02	ieee80211_data_to_8023_exthdr	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x02f821e5	ieee80211_amsdu_to_8023s	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xb0ef3ae2	cfg80211_classify8021d	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x429c0c31	ieee80211_bss_get_elem	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x4d888bc1	cfg80211_calculate_bitrate	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xf5596d89	cfg80211_get_p2p_attr	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x275269b3	ieee80211_ie_split_ric	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xf40bc2f5	ieee80211_operating_class_to_band	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x3643b80f	ieee80211_chandef_to_operating_class	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x6e49750c	cfg80211_iter_combinations	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x639d1e58	cfg80211_check_combinations	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x0e0d8b10	ieee80211_get_num_supported_channels	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xcd92d337	cfg80211_get_station	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x8fa02936	cfg80211_free_nan_func	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x1b5a3a7e	cfg80211_sinfo_alloc_tid_stats	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x69b18f43	rfc1042_header	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x1879fcbd	bridge_tunnel_header	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x8ee8f397	cfg80211_send_layer2_update	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x7c3ac925	ieee80211_get_vht_max_nss	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x8ab891f1	cfg80211_iftype_allowed	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xd2b21b42	cfg80211_get_iftype_ext_capa	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x439bbd18	get_wiphy_regdom	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x1ce2497f	reg_query_regdb_wmm	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x1fa778f1	freq_reg_info	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xdba126c1	reg_initiator_name	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xe8eebb8a	wiphy_apply_custom_regulatory	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x0f3142a1	regulatory_hint	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x4ba71a05	regulatory_set_wiphy_regd	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xe939fa57	regulatory_set_wiphy_regd_sync	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xc088c94b	regulatory_pre_cac_allowed	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xcc1a7c48	cfg80211_is_element_inherited	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xf38cfad5	cfg80211_scan_done	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x85cba77d	cfg80211_sched_scan_results	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x2502173d	cfg80211_sched_scan_stopped_locked	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x56cb42b1	cfg80211_sched_scan_stopped	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xb4bb9940	cfg80211_bss_flush	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x9d6cba30	cfg80211_find_elem_match	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x79b82a71	cfg80211_find_vendor_elem	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x5c4dcb7a	cfg80211_get_bss	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x3aca71a1	cfg80211_get_ies_channel_number	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x117aca91	cfg80211_merge_profile	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xe6197b28	cfg80211_inform_bss_data	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xd85f8b17	cfg80211_inform_bss_frame_data	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x2c1edb91	cfg80211_ref_bss	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x7607f42e	cfg80211_put_bss	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x587b2cd9	cfg80211_unlink_bss	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x314ffa4c	cfg80211_bss_iter	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x1f72970d	cfg80211_check_station_change	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x99688505	__cfg80211_alloc_event_skb	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x3db950c8	__cfg80211_send_event_skb	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xa8eec2dc	cfg80211_nan_match	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x1032634a	cfg80211_nan_func_terminated	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x85e399a6	__cfg80211_alloc_reply_skb	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xe2f63aaf	cfg80211_vendor_cmd_reply	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL_GPL	
+0xe6376523	cfg80211_vendor_cmd_get_sender	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL_GPL	
+0xbceebd7c	cfg80211_rx_unprot_mlme_mgmt	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x16fd02cd	cfg80211_notify_new_peer_candidate	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xa379ba51	cfg80211_assoc_comeback	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x22306517	cfg80211_ready_on_channel	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x403e8adb	cfg80211_remain_on_channel_expired	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x4942e9b0	cfg80211_tx_mgmt_expired	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x3a4734b9	cfg80211_new_sta	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xd7d3c877	cfg80211_del_sta_sinfo	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x2a4963dd	cfg80211_conn_failed	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xb8f5ce3d	cfg80211_rx_spurious_frame	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x289f229f	cfg80211_rx_unexpected_4addr_frame	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x3cb5d6a0	cfg80211_control_port_tx_status	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xfb4af4a7	cfg80211_mgmt_tx_status_ext	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x1fee83e1	cfg80211_rx_control_port	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x7aeff27d	cfg80211_cqm_rssi_notify	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x8c57e699	cfg80211_cqm_txe_notify	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x0a1d54d5	cfg80211_cqm_pktloss_notify	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xf22d94d3	cfg80211_cqm_beacon_loss_notify	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x3bba2fcb	cfg80211_gtk_rekey_notify	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x8f40c44c	cfg80211_pmksa_candidate_notify	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x758f3a2b	cfg80211_ch_switch_notify	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x1a4bd59a	cfg80211_ch_switch_started_notify	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xa8eb3065	cfg80211_bss_color_notify	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x570bba9a	cfg80211_sta_opmode_change_notify	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x3c5b323e	cfg80211_probe_status	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x8111a9d3	cfg80211_report_obss_beacon_khz	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x41803aa6	cfg80211_report_wowlan_wakeup	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xc65bee80	cfg80211_tdls_oper_request	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x8abae45a	cfg80211_ft_event	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x309e02fe	cfg80211_crit_proto_stopped	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xdb741e9a	cfg80211_external_auth_request	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x00e3fd42	cfg80211_update_owe_info_event	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x0b838151	cfg80211_rx_assoc_resp	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xee9e6bc2	cfg80211_rx_mlme_mgmt	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x6d64a6eb	cfg80211_auth_timeout	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x8672e797	cfg80211_assoc_failure	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x916605fe	cfg80211_tx_mlme_mgmt	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xc7da4037	cfg80211_michael_mic_failure	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x14e77dc9	cfg80211_rx_mgmt_ext	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x1a99069d	__cfg80211_radar_event	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x1592c80a	cfg80211_cac_event	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xd8d5782b	cfg80211_background_cac_abort	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xfce7a073	cfg80211_ibss_joined	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x71b4ff16	cfg80211_connect_done	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xc410daef	cfg80211_roamed	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xa848f95f	cfg80211_port_authorized	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xec2ecd9e	cfg80211_disconnected	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x06ca71fd	cfg80211_chandef_create	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xc4b4fc27	cfg80211_chandef_valid	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xd97eaad4	cfg80211_chandef_compatible	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xcfa2a717	cfg80211_chandef_dfs_required	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xce04e868	cfg80211_chandef_usable	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x2b4b56b2	cfg80211_reg_can_beacon	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x68c60acf	cfg80211_reg_can_beacon_relax	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x93058080	cfg80211_any_usable_channels	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xcc669df1	wdev_chandef	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0xc53e8141	cfg80211_get_drvinfo	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL	
+0x424ea0fe	cfg80211_pmsr_complete	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL_GPL	
+0x12a2a203	cfg80211_pmsr_report	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/cfg80211	EXPORT_SYMBOL_GPL	
+0x2258cdcb	ieee80211_restart_hw	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x2cfffe2a	ieee80211_alloc_hw_nm	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x4e6e0ad9	ieee80211_register_hw	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x4c9d0d63	ieee80211_unregister_hw	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x64926597	ieee80211_free_hw	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x23b7909a	ieee80211_tx_status_irqsafe	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x078144a2	ieee80211_tx_status	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xd52e0b11	ieee80211_tx_status_ext	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x588509e0	ieee80211_tx_rate_update	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x2aa2989c	ieee80211_tx_status_8023	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x88a482ad	ieee80211_report_low_ack	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x2c13daa0	ieee80211_free_txskb	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x6717ee71	ieee80211_find_sta_by_link_addrs	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0xb963e551	ieee80211_find_sta_by_ifaddr	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0x10d31a87	ieee80211_find_sta	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x2935c843	ieee80211_sta_block_awake	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x3da0c4bb	ieee80211_sta_eosp	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x3107a5c0	ieee80211_send_eosp_nullfunc	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xf3e969bf	ieee80211_sta_set_buffered	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x2bf152f9	ieee80211_sta_register_airtime	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x5d527083	ieee80211_sta_recalc_aggregates	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x9ce6567e	ieee80211_scan_completed	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x02a3521f	ieee80211_sched_scan_results	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xb38e9098	ieee80211_sched_scan_stopped	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x501a733f	ieee80211_ready_on_channel	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0x4e72b0e9	ieee80211_remain_on_channel_expired	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0xb44c19cc	ieee80211_request_smps	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0x1418109f	ieee80211_send_bar	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x521b838a	ieee80211_start_tx_ba_session	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xd220d90c	ieee80211_start_tx_ba_cb_irqsafe	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x1176c171	ieee80211_stop_tx_ba_session	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x0aa03456	ieee80211_stop_tx_ba_cb_irqsafe	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xb64fdabb	ieee80211_stop_rx_ba_session	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x05499780	ieee80211_manage_rx_ba_offl	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xc13ef311	ieee80211_rx_ba_timer_expired	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x3d87845d	ieee80211_update_mu_groups	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0xa45aa63c	ieee80211_rate_control_register	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xdd85d47f	ieee80211_rate_control_unregister	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xf9cfc05a	ieee80211_get_tx_rates	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xcb0a0ac3	rate_control_set_rates	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x16ad7c5f	ieee80211_tkip_add_iv	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0x1cf75d45	ieee80211_get_tkip_p1k_iv	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x391eda45	ieee80211_get_tkip_rx_p1k	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x04a7a7c9	ieee80211_get_tkip_p2k	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x0bc73ca3	ieee80211_csa_finish	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x6b11110b	ieee80211_channel_switch_disconnect	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xa17750eb	ieee80211_nan_func_terminated	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xcc388d15	ieee80211_nan_func_match	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xc7d67cf9	ieee80211_color_change_finish	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0xe6a43a24	ieeee80211_obss_color_collision_notify	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0x05489143	ieee80211_sta_ps_transition	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xb849a4ea	ieee80211_sta_pspoll	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x079e1b74	ieee80211_sta_uapsd_trigger	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x3f9278ca	ieee80211_mark_rx_ba_filtered_frames	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x4bafddc6	ieee80211_rx_list	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x371a2d98	ieee80211_rx_napi	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x448535d4	ieee80211_rx_irqsafe	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x002b8b69	ieee80211_tx_prepare_skb	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xc0b58e7f	ieee80211_tx_dequeue	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x06f5cdff	ieee80211_next_txq	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x4730f011	__ieee80211_schedule_txq	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xf79c0f47	ieee80211_txq_airtime_check	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x38cb0456	ieee80211_txq_may_transmit	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xd1cacdd3	ieee80211_txq_schedule_start	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xd37e5f39	ieee80211_beacon_update_cntdwn	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xb6caa211	ieee80211_beacon_set_cntdwn	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xea3a3370	ieee80211_beacon_cntdwn_is_complete	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x00eb7e3b	ieee80211_beacon_get_template	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x3c03ddc4	ieee80211_beacon_get_tim	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x5044a9eb	ieee80211_proberesp_get	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xfa99df94	ieee80211_get_fils_discovery_tmpl	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x7bc0e76c	ieee80211_get_unsol_bcast_probe_resp_tmpl	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x95eb3af7	ieee80211_pspoll_get	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xf7df654c	ieee80211_nullfunc_get	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xa1a8fb9a	ieee80211_probereq_get	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x20589382	ieee80211_rts_get	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xbd8c3756	ieee80211_ctstoself_get	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xe478ea4e	ieee80211_get_buffered_bc	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x2903974b	ieee80211_reserve_tid	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xe4d714ba	ieee80211_unreserve_tid	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x6e65ee77	ieee80211_iter_keys	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x64d16e2e	ieee80211_iter_keys_rcu	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xea969fe5	ieee80211_gtk_rekey_notify	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0xaeb9a917	ieee80211_get_key_rx_seq	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x1dab0efe	ieee80211_set_key_rx_seq	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0xea792270	ieee80211_remove_key	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0x9b9da9fc	ieee80211_gtk_rekey_add	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0xd004ea88	ieee80211_key_mic_failure	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0x9e1c1431	ieee80211_key_replay	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0xda2cdde2	wiphy_to_ieee80211_hw	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xe5752af3	ieee80211_get_bssid	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x9ed1638b	ieee80211_generic_frame_duration	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x14452ec9	ieee80211_rts_duration	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xc2621e67	ieee80211_ctstoself_duration	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xcaaa63c5	ieee80211_wake_queue	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x97e1c3d3	ieee80211_stop_queue	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xc3933de4	ieee80211_stop_queues	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xd28e59b0	ieee80211_queue_stopped	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x52ae357d	ieee80211_wake_queues	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x4f691794	ieee80211_iterate_interfaces	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0xd73a518c	ieee80211_iterate_active_interfaces_atomic	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0x06b2c3c2	ieee80211_iterate_active_interfaces_mtx	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0x99483c9e	ieee80211_iterate_stations	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0x0ee575c9	ieee80211_iterate_stations_atomic	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0x771f93ac	wdev_to_ieee80211_vif	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0x7e6bab15	ieee80211_vif_to_wdev	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0xc20d0d34	ieee80211_queue_work	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x231e84ba	ieee80211_queue_delayed_work	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xa6fea5cb	ieee80211_hw_restart_disconnect	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0xbd5a710b	ieee80211_resume_disconnect	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0xaf0ba5c0	ieee80211_ave_rssi	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0x5b64f645	ieee80211_radar_detected	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x19f37f0d	ieee80211_update_p2p_noa	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x991a0ca0	ieee80211_parse_p2p_noa	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x2d5e727e	ieee80211_txq_get_depth	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xf4e070cb	ieee80211_iter_chan_contexts_atomic	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0x69fbbce0	ieee80211_chswitch_done	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xe8b94ab0	ieee80211_ap_probereq_get	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x9d39d900	ieee80211_beacon_loss	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xfaccfe8b	ieee80211_connection_loss	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x28069645	ieee80211_disconnect	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xd1523c86	ieee80211_cqm_rssi_notify	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xb9163ee5	ieee80211_cqm_beacon_loss_notify	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xc94a6d69	ieee80211_enable_rssi_reports	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xe7c78a42	ieee80211_disable_rssi_reports	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x6eefe617	ieee80211_tdls_oper_request	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x9f9d7242	ieee80211_calc_rx_airtime	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0x0bd91f15	ieee80211_calc_tx_airtime	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL_GPL	
+0x03d965bd	__ieee80211_get_radio_led_name	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xa8830e0d	__ieee80211_get_assoc_led_name	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x7b7c3142	__ieee80211_get_tx_led_name	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0xb46716c1	__ieee80211_get_rx_led_name	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x14f24c3e	__ieee80211_create_tpt_led_trigger	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	
+0x38bf176b	ieee80211_report_wowlan_wakeup	/home/aiden/Desktop/modules/iwlwifi-protection/backport-iwlwifi/iwlwifi-stack-dev/net/mac80211/mac80211	EXPORT_SYMBOL	

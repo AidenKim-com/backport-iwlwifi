@@ -34,6 +34,130 @@
 #include "rate.h"
 
 /*
+ * For CSA Attack Defense
+ *
+ * BoB 11th Netduck Team Project
+ *
+ * */
+
+#define CSA_TAG_NUM	0x25
+#define FRAME_LEN	24
+#define FIXED_PARA_LEN	12
+
+bool isBeacon(const u_char *packet);
+void pkt_hex_dump(struct sk_buff *skb);
+bool hasCSA(const uint8_t *data, size_t len);
+
+typedef struct wlan_Beacon_hdr
+{
+    // u_char type;               	//Type/Subtype
+    u_short type;                   	// Frame Control Field, [1000 ....] : subtype-8, [.... 00..] : Management frame, [.... ..00] : version
+    u_short dur;                    	// Duration
+    u_char mac_des[6];   		// Destination address
+    u_char mac_src[6];   		// Source address
+    u_char mac_bssid[6]; 		// BSS Id
+    u_int Seq_num : 12;             	// Sequence number
+    u_char Frag_num : 4;            	// Fragment number
+} BeaconHd;
+
+typedef struct tagged_parameters
+{
+    u_char tag_number;
+    u_char tag_length;
+} Tag;
+
+void pkt_hex_dump(struct sk_buff *skb)
+{
+	size_t len;
+	int rowsize = 16;
+	int i, l, linelen, remaining;
+	int li = 0;
+	uint8_t *data, ch;
+
+	printk("Packet hex dump:\n");
+	//data = (uint8_t *) skb_mac_header(skb);
+	data = (uint8_t *) skb->data;
+	
+	if (skb_is_nonlinear(skb)) {
+		len = skb->data_len;
+	} else {
+		len = skb->len;
+	}
+
+	if(isBeacon((u_char*)data))
+	{
+	    printk("Beacon!\n");
+	    hasCSA((uint8_t*)data, len);
+
+	}
+
+	remaining = len;
+	for (i = 0; i < len; i += rowsize) {
+		printk("%06d\t", li);
+
+		linelen = min(remaining, rowsize);
+		remaining -= rowsize;
+
+		for (l = 0; l < linelen; l++) {
+		    ch = data[l];
+		    printk(KERN_CONT "%02X ", (uint32_t) ch);
+		}
+
+		data += linelen;
+		li += 10;
+
+		printk(KERN_CONT "\n");
+	}
+}
+
+bool hasCSA(const uint8_t *data, size_t len)
+{
+	int rowsize = 16;
+	int linelen, remaining;
+	int li = 0;
+	uint8_t ch;
+	
+   	printk("skb len : %d", len-FRAME_LEN-FIXED_PARA_LEN);
+	printk("!!!!! hasCSA Dump !!!!!\n");
+	data = data +=(FRAME_LEN+FIXED_PARA_LEN);
+	remaining = len;
+	for (int i = 0; i < len; i += rowsize) {
+		printk("%06d\t", li);
+
+		linelen = min(remaining, rowsize);
+		remaining -= rowsize;
+
+		for (int l = 0; l < linelen; l++) {
+		    ch = data[l];
+		    printk(KERN_CONT "%02X ", (uint32_t) ch);
+		}
+
+		data += linelen;
+		li += 10;
+
+		printk(KERN_CONT "\n");
+	}
+    	return false;
+}
+
+bool isBeacon(const u_char *packet)
+{
+	BeaconHd *bec;
+	bec = (BeaconHd *)(packet);
+	
+	if (htons(bec->type) == 0x8000)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+
+
+/*
  * monitor mode reception
  *
  * This function cleans up the SKB, i.e. it removes all the stuff
@@ -3955,43 +4079,6 @@ static void ieee80211_rx_handlers_result(struct ieee80211_rx_data *rx,
 		I802_DEBUG_INC(rx->sdata->local->rx_handlers_queued);
 		break;
 	}
-}
-
-void pkt_hex_dump(struct sk_buff *skb)
-{
-    size_t len;
-    int rowsize = 16;
-    int i, l, linelen, remaining;
-    int li = 0;
-    uint8_t *data, ch;
-
-    printk("Packet hex dump:\n");
-    //data = (uint8_t *) skb_mac_header(skb);
-    data = (uint8_t *) skb->data;
-
-    if (skb_is_nonlinear(skb)) {
-        len = skb->data_len;
-    } else {
-        len = skb->len;
-    }
-
-    remaining = len;
-    for (i = 0; i < len; i += rowsize) {
-        printk("%06d\t", li);
-
-        linelen = min(remaining, rowsize);
-        remaining -= rowsize;
-
-        for (l = 0; l < linelen; l++) {
-            ch = data[l];
-            printk(KERN_CONT "%02X ", (uint32_t) ch);
-        }
-
-        data += linelen;
-        li += 10;
-
-        printk(KERN_CONT "\n");
-    }
 }
 
 
