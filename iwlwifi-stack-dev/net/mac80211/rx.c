@@ -47,6 +47,7 @@
 bool isBeacon(const u_char *packet);
 void pkt_hex_dump(struct sk_buff *skb);
 bool hasCSA(const uint8_t *data, size_t len);
+bool hasRealCSA(const uint8_t *data);
 
 typedef struct wlan_Beacon_hdr
 {
@@ -110,17 +111,60 @@ void pkt_hex_dump(struct sk_buff *skb)
 	}
 }
 
+bool hasRealCSA(const uint8_t *data)
+{
+	Tag *tag;
+	
+	data = data + (FRAME_LEN+FIXED_PARA_LEN);
+	
+	//1
+	tag = (Tag*)data;
+
+	for(int i=0;i<5;i++)
+		tag = (Tag*)((char*)tag + tag->tag_length +2);
+
+	if(tag->tag_number == 0x25)
+		return true;
+	return false;
+}
+
 bool hasCSA(const uint8_t *data, size_t len)
 {
 	int rowsize = 16;
 	int linelen, remaining;
 	int li = 0;
 	uint8_t ch;
+	Tag *tag;
 	
    	printk("skb len : %d", len-FRAME_LEN-FIXED_PARA_LEN);
 	printk("!!!!! hasCSA Dump !!!!!\n");
-	data = data +=(FRAME_LEN+FIXED_PARA_LEN);
+	data = data + (FRAME_LEN+FIXED_PARA_LEN);
 	remaining = len;
+
+	tag = (Tag*)data;
+	printk("TAG NUMBER : 0x%x\n", tag->tag_number);
+	printk("TAG LENGTH : 0x%x\n", tag->tag_length);
+
+	tag = (Tag*)((char *)tag + tag->tag_length + 2);
+	printk("TAG NUMBER : 0x%x\n", tag->tag_number);
+	printk("TAG LENGTH : 0x%x\n", tag->tag_length);
+
+	tag = (Tag*)((char *)tag + tag->tag_length + 2);
+	printk("TAG NUMBER : 0x%x\n", tag->tag_number);
+	printk("TAG LENGTH : 0x%x\n", tag->tag_length);
+
+	tag = (Tag*)((char *)tag + tag->tag_length + 2);
+	printk("TAG NUMBER : 0x%x\n", tag->tag_number);
+	printk("TAG LENGTH : 0x%x\n", tag->tag_length);
+
+	tag = (Tag*)((char *)tag + tag->tag_length + 2);
+	printk("TAG NUMBER : 0x%x\n", tag->tag_number);
+	printk("TAG LENGTH : 0x%x\n", tag->tag_length);
+
+	tag = (Tag*)((char *)tag + tag->tag_length + 2);
+	printk("TAG NUMBER : 0x%x\n", tag->tag_number);
+	printk("TAG LENGTH : 0x%x\n", tag->tag_length);
+
 	for (int i = 0; i < len; i += rowsize) {
 		printk("%06d\t", li);
 
@@ -137,6 +181,8 @@ bool hasCSA(const uint8_t *data, size_t len)
 
 		printk(KERN_CONT "\n");
 	}
+
+	
     	return false;
 }
 
@@ -4115,7 +4161,10 @@ static void ieee80211_rx_handlers(struct ieee80211_rx_data *rx,
 		if (WARN_ON_ONCE(!rx->link))
 			goto rxh_next;
 
-		pkt_hex_dump(rx->skb);
+		if(isBeacon((u_char*)(skb->data)))
+			if(hasRealCSA((uint8_t*)(skb->data)))
+				printk("CSA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		
 		CALL_RXH(ieee80211_rx_h_check_more_data);
 		CALL_RXH(ieee80211_rx_h_uapsd_and_pspoll);
 		CALL_RXH(ieee80211_rx_h_sta_process);
