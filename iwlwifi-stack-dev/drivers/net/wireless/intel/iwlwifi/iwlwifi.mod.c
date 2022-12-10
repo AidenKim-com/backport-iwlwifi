@@ -26,53 +26,53 @@ __section(".gnu.linkonce.this_module") = {
 MODULE_INFO(retpoline, "Y");
 #endif
 
-SYMBOL_CRC(iwl_write8, 0x1c842ca3, "_gpl");
-SYMBOL_CRC(iwl_write32, 0x4e936095, "_gpl");
-SYMBOL_CRC(iwl_write64, 0x55359f46, "_gpl");
-SYMBOL_CRC(iwl_read32, 0x7b382ea0, "_gpl");
-SYMBOL_CRC(iwl_poll_bit, 0x77db5305, "_gpl");
-SYMBOL_CRC(iwl_read_direct32, 0x27818282, "_gpl");
-SYMBOL_CRC(iwl_write_direct32, 0x3d265e92, "_gpl");
-SYMBOL_CRC(iwl_write_direct64, 0x2680a141, "_gpl");
-SYMBOL_CRC(iwl_poll_direct_bit, 0x1c1aedb1, "_gpl");
-SYMBOL_CRC(iwl_read_prph_no_grab, 0xa10ea8b6, "_gpl");
-SYMBOL_CRC(iwl_write_prph_no_grab, 0x36546930, "_gpl");
-SYMBOL_CRC(iwl_write_prph64_no_grab, 0x3d1d3f18, "_gpl");
-SYMBOL_CRC(iwl_read_prph, 0x59505d92, "_gpl");
-SYMBOL_CRC(iwl_write_prph_delay, 0x72674ee4, "_gpl");
-SYMBOL_CRC(iwl_set_bits_prph, 0xe8a350ef, "_gpl");
-SYMBOL_CRC(iwl_set_bits_mask_prph, 0x1913d078, "_gpl");
-SYMBOL_CRC(iwl_clear_bits_prph, 0xda4ab164, "_gpl");
-SYMBOL_CRC(iwl_force_nmi, 0x146c91f3, "_gpl");
-SYMBOL_CRC(iwl_finish_nic_init, 0x7e7eb716, "_gpl");
-SYMBOL_CRC(iwl_drv_get_dev_container, 0x738241b0, "_gpl");
+SYMBOL_CRC(iwl_write8, 0x0a6861a8, "_gpl");
+SYMBOL_CRC(iwl_write32, 0x9a399197, "_gpl");
+SYMBOL_CRC(iwl_write64, 0x31753968, "_gpl");
+SYMBOL_CRC(iwl_read32, 0x9db05064, "_gpl");
+SYMBOL_CRC(iwl_poll_bit, 0x5939cb29, "_gpl");
+SYMBOL_CRC(iwl_read_direct32, 0xfb293701, "_gpl");
+SYMBOL_CRC(iwl_write_direct32, 0x331a8bc3, "_gpl");
+SYMBOL_CRC(iwl_write_direct64, 0x9856233c, "_gpl");
+SYMBOL_CRC(iwl_poll_direct_bit, 0x5f847831, "_gpl");
+SYMBOL_CRC(iwl_read_prph_no_grab, 0xaba175a4, "_gpl");
+SYMBOL_CRC(iwl_write_prph_no_grab, 0xb7fae7f6, "_gpl");
+SYMBOL_CRC(iwl_write_prph64_no_grab, 0x7484396a, "_gpl");
+SYMBOL_CRC(iwl_read_prph, 0x3d100454, "_gpl");
+SYMBOL_CRC(iwl_write_prph_delay, 0x8970abcb, "_gpl");
+SYMBOL_CRC(iwl_set_bits_prph, 0x47d7f53f, "_gpl");
+SYMBOL_CRC(iwl_set_bits_mask_prph, 0x6d7e8df4, "_gpl");
+SYMBOL_CRC(iwl_clear_bits_prph, 0x8c0adc9d, "_gpl");
+SYMBOL_CRC(iwl_force_nmi, 0xd513d5af, "_gpl");
+SYMBOL_CRC(iwl_finish_nic_init, 0x62144273, "_gpl");
+SYMBOL_CRC(iwl_drv_get_dev_container, 0x258228eb, "_gpl");
 SYMBOL_CRC(iwl_drv_switch_op_mode, 0x6e3bb66e, "_gpl");
 SYMBOL_CRC(iwlwifi_mod_params, 0x6c49291f, "_gpl");
-SYMBOL_CRC(iwl_opmode_register, 0x039f1e1a, "_gpl");
+SYMBOL_CRC(iwl_opmode_register, 0x723d6dde, "_gpl");
 SYMBOL_CRC(iwl_opmode_deregister, 0x5c52e109, "_gpl");
-SYMBOL_CRC(__iwl_warn, 0x72ea0466, "_gpl");
-SYMBOL_CRC(__iwl_info, 0x0e4bb438, "_gpl");
-SYMBOL_CRC(__iwl_crit, 0x3f4ab80e, "_gpl");
-SYMBOL_CRC(__iwl_err, 0xbb02ed7e, "_gpl");
-SYMBOL_CRC(__iwl_dbg, 0x03a7ad90, "_gpl");
-SYMBOL_CRC(iwl_read_eeprom, 0x853f8c09, "_gpl");
-SYMBOL_CRC(iwl_parse_eeprom_data, 0x6f562584, "_gpl");
-SYMBOL_CRC(iwl_phy_db_init, 0xb7efe732, "_gpl");
+SYMBOL_CRC(__iwl_warn, 0x5d898cb5, "_gpl");
+SYMBOL_CRC(__iwl_info, 0xa1911fa3, "_gpl");
+SYMBOL_CRC(__iwl_crit, 0xc42afe6b, "_gpl");
+SYMBOL_CRC(__iwl_err, 0x85c99ac6, "_gpl");
+SYMBOL_CRC(__iwl_dbg, 0x4fc9b44a, "_gpl");
+SYMBOL_CRC(iwl_read_eeprom, 0xb8e23a8a, "_gpl");
+SYMBOL_CRC(iwl_parse_eeprom_data, 0x9c824374, "_gpl");
+SYMBOL_CRC(iwl_phy_db_init, 0x40d39e75, "_gpl");
 SYMBOL_CRC(iwl_phy_db_free, 0x35033c81, "_gpl");
 SYMBOL_CRC(iwl_phy_db_set_section, 0xce0c6460, "_gpl");
 SYMBOL_CRC(iwl_phy_db_get_section_data, 0xa35f2861, "_gpl");
 SYMBOL_CRC(iwl_send_phy_db_data, 0x776221bf, "_gpl");
-SYMBOL_CRC(iwl_parse_mei_nvm_data, 0xb7e2824e, "_gpl");
-SYMBOL_CRC(iwl_parse_nvm_data, 0xdd0fb72a, "_gpl");
-SYMBOL_CRC(iwl_parse_nvm_mcc_info, 0x499155bc, "_gpl");
+SYMBOL_CRC(iwl_parse_mei_nvm_data, 0x49d887ba, "_gpl");
+SYMBOL_CRC(iwl_parse_nvm_data, 0x2000d607, "_gpl");
+SYMBOL_CRC(iwl_parse_nvm_mcc_info, 0x9ec69fe9, "_gpl");
 SYMBOL_CRC(iwl_nvm_fixups, 0xea1b26fc, "_gpl");
-SYMBOL_CRC(iwl_read_external_nvm, 0xaf11575e, "_gpl");
-SYMBOL_CRC(iwl_get_nvm, 0xff3e8145, "_gpl");
-SYMBOL_CRC(iwl_dbg_tlv_del_timers, 0x55a41534, "_gpl");
-SYMBOL_CRC(_iwl_dbg_tlv_time_point, 0xd310307e, "_gpl");
-SYMBOL_CRC(iwl_trans_send_cmd, 0xd725101d, "_gpl");
-SYMBOL_CRC(iwl_get_cmd_string, 0x5fcb2964, "_gpl");
-SYMBOL_CRC(iwl_cmd_groups_verify_sorted, 0x24665da6, "_gpl");
+SYMBOL_CRC(iwl_read_external_nvm, 0xc53df957, "_gpl");
+SYMBOL_CRC(iwl_get_nvm, 0x4350c43f, "_gpl");
+SYMBOL_CRC(iwl_dbg_tlv_del_timers, 0x540bb554, "_gpl");
+SYMBOL_CRC(_iwl_dbg_tlv_time_point, 0x12b6930e, "_gpl");
+SYMBOL_CRC(iwl_trans_send_cmd, 0xb094c3a7, "_gpl");
+SYMBOL_CRC(iwl_get_cmd_string, 0x73b38326, "_gpl");
+SYMBOL_CRC(iwl_cmd_groups_verify_sorted, 0x0e8164db, "_gpl");
 SYMBOL_CRC(iwl_fw_lookup_cmd_ver, 0x1a07215f, "_gpl");
 SYMBOL_CRC(iwl_fw_lookup_notif_ver, 0x9f4784a0, "_gpl");
 SYMBOL_CRC(iwl_fw_lookup_assert_desc, 0x5987fe45, "_gpl");
@@ -90,93 +90,93 @@ SYMBOL_CRC(iwl_new_rate_from_v1, 0x49e0135d, "_gpl");
 SYMBOL_CRC(rs_pretty_print_rate, 0x37956b72, "_gpl");
 SYMBOL_CRC(iwl_he_is_sgi, 0x78971d7e, "_gpl");
 SYMBOL_CRC(iwl_dump_desc_assert, 0x2710c362, "_gpl");
-SYMBOL_CRC(iwl_fw_dbg_collect_desc, 0x267350d7, "_gpl");
-SYMBOL_CRC(iwl_fw_dbg_error_collect, 0xb9606cc5, "_gpl");
-SYMBOL_CRC(iwl_fw_dbg_collect, 0x45e34f1f, "_gpl");
-SYMBOL_CRC(iwl_fw_dbg_collect_trig, 0x38d2c737, "_gpl");
-SYMBOL_CRC(iwl_fw_start_dbg_conf, 0x9f55ba9b, "_gpl");
-SYMBOL_CRC(iwl_fw_dbg_read_d3_debug_data, 0xf43b7655, "_gpl");
-SYMBOL_CRC(iwl_fw_dbg_stop_sync, 0x57d83192, "_gpl");
-SYMBOL_CRC(iwl_fw_dbg_stop_restart_recording, 0xcc387431, "_gpl");
-SYMBOL_CRC(iwl_pnvm_load, 0xe787d582, "_gpl");
-SYMBOL_CRC(iwl_fwrt_dump_error_logs, 0xb1368d57, "_gpl");
-SYMBOL_CRC(iwl_free_fw_paging, 0x9d3769c9, "_gpl");
-SYMBOL_CRC(iwl_init_paging, 0xd10ac263, "_gpl");
-SYMBOL_CRC(iwl_get_shared_mem_conf, 0xbf850b4f, "_gpl");
-SYMBOL_CRC(iwl_fw_runtime_init, 0x4f08bac4, "_gpl");
-SYMBOL_CRC(iwl_fw_runtime_suspend, 0x62d3e8a0, "_gpl");
-SYMBOL_CRC(iwl_fw_runtime_resume, 0x5e2149ed, "_gpl");
-SYMBOL_CRC(iwl_set_soc_latency, 0x60178b57, "_gpl");
-SYMBOL_CRC(iwl_configure_rxq, 0xe3055a19, "_gpl");
+SYMBOL_CRC(iwl_fw_dbg_collect_desc, 0x73f67077, "_gpl");
+SYMBOL_CRC(iwl_fw_dbg_error_collect, 0x377b48b0, "_gpl");
+SYMBOL_CRC(iwl_fw_dbg_collect, 0x2b8c93bf, "_gpl");
+SYMBOL_CRC(iwl_fw_dbg_collect_trig, 0x00ac8b0f, "_gpl");
+SYMBOL_CRC(iwl_fw_start_dbg_conf, 0xd9775e26, "_gpl");
+SYMBOL_CRC(iwl_fw_dbg_read_d3_debug_data, 0x5b8f831b, "_gpl");
+SYMBOL_CRC(iwl_fw_dbg_stop_sync, 0x98a05d3e, "_gpl");
+SYMBOL_CRC(iwl_fw_dbg_stop_restart_recording, 0xd9847c2c, "_gpl");
+SYMBOL_CRC(iwl_pnvm_load, 0xa36b1910, "_gpl");
+SYMBOL_CRC(iwl_fwrt_dump_error_logs, 0x72298f9f, "_gpl");
+SYMBOL_CRC(iwl_free_fw_paging, 0x8030a4e3, "_gpl");
+SYMBOL_CRC(iwl_init_paging, 0x2877bf2e, "_gpl");
+SYMBOL_CRC(iwl_get_shared_mem_conf, 0xa4d4b1f0, "_gpl");
+SYMBOL_CRC(iwl_fw_runtime_init, 0x111acbbd, "_gpl");
+SYMBOL_CRC(iwl_fw_runtime_suspend, 0x85f42fc9, "_gpl");
+SYMBOL_CRC(iwl_fw_runtime_resume, 0x6ab88f65, "_gpl");
+SYMBOL_CRC(iwl_set_soc_latency, 0x12384ac6, "_gpl");
+SYMBOL_CRC(iwl_configure_rxq, 0x0c8105d4, "_gpl");
 SYMBOL_CRC(iwl_guid, 0xfc1e6f41, "_gpl");
 SYMBOL_CRC(iwl_rfi_guid, 0x9038811a, "_gpl");
-SYMBOL_CRC(iwl_acpi_get_object, 0x45f08fa8, "_gpl");
-SYMBOL_CRC(iwl_acpi_get_dsm_u8, 0x3fe808dd, "_gpl");
-SYMBOL_CRC(iwl_acpi_get_dsm_u32, 0xb6d0bef7, "_gpl");
-SYMBOL_CRC(iwl_acpi_get_wifi_pkg_range, 0x0007b4ab, "_gpl");
-SYMBOL_CRC(iwl_acpi_get_tas, 0x680ddb34, "_gpl");
-SYMBOL_CRC(iwl_acpi_get_mcc, 0x3bfba9a5, "_gpl");
-SYMBOL_CRC(iwl_acpi_get_pwr_limit, 0x6710de6f, "_gpl");
-SYMBOL_CRC(iwl_acpi_get_eckv, 0x801c903c, "_gpl");
-SYMBOL_CRC(iwl_sar_select_profile, 0xfe0dcf93, "_gpl");
-SYMBOL_CRC(iwl_sar_get_wrds_table, 0x656f448c, "_gpl");
-SYMBOL_CRC(iwl_sar_get_ewrd_table, 0x44166dfb, "_gpl");
-SYMBOL_CRC(iwl_sar_get_wgds_table, 0xb7d5bd63, "_gpl");
-SYMBOL_CRC(iwl_sar_geo_support, 0xdd190073, "_gpl");
-SYMBOL_CRC(iwl_sar_geo_init, 0xd8396d84, "_gpl");
-SYMBOL_CRC(iwl_acpi_get_lari_config_bitmap, 0xde5da3ae, "_gpl");
-SYMBOL_CRC(iwl_acpi_get_ppag_table, 0x10b92315, "_gpl");
-SYMBOL_CRC(iwl_read_ppag_table, 0xcc43b5fb, "_gpl");
-SYMBOL_CRC(iwl_acpi_is_ppag_approved, 0x52bbc177, "_gpl");
-SYMBOL_CRC(iwl_uefi_get_step_table, 0x71abe59b, "_gpl");
-SYMBOL_CRC(iwl_uefi_get_sgom_table, 0x3b2d4338, "_gpl");
+SYMBOL_CRC(iwl_acpi_get_object, 0x3c9eb5f1, "_gpl");
+SYMBOL_CRC(iwl_acpi_get_dsm_u8, 0x77beabd0, "_gpl");
+SYMBOL_CRC(iwl_acpi_get_dsm_u32, 0x236eebfa, "_gpl");
+SYMBOL_CRC(iwl_acpi_get_wifi_pkg_range, 0x74a25417, "_gpl");
+SYMBOL_CRC(iwl_acpi_get_tas, 0x4d859643, "_gpl");
+SYMBOL_CRC(iwl_acpi_get_mcc, 0x1d0ac45d, "_gpl");
+SYMBOL_CRC(iwl_acpi_get_pwr_limit, 0x3f28e83d, "_gpl");
+SYMBOL_CRC(iwl_acpi_get_eckv, 0xdcee6684, "_gpl");
+SYMBOL_CRC(iwl_sar_select_profile, 0x773e1aa5, "_gpl");
+SYMBOL_CRC(iwl_sar_get_wrds_table, 0x32ca0041, "_gpl");
+SYMBOL_CRC(iwl_sar_get_ewrd_table, 0x70c3f66d, "_gpl");
+SYMBOL_CRC(iwl_sar_get_wgds_table, 0x428b4755, "_gpl");
+SYMBOL_CRC(iwl_sar_geo_support, 0x6c2b3f97, "_gpl");
+SYMBOL_CRC(iwl_sar_geo_init, 0x4eff3399, "_gpl");
+SYMBOL_CRC(iwl_acpi_get_lari_config_bitmap, 0xd06ebd52, "_gpl");
+SYMBOL_CRC(iwl_acpi_get_ppag_table, 0xd9edd1a0, "_gpl");
+SYMBOL_CRC(iwl_read_ppag_table, 0x3a3dafde, "_gpl");
+SYMBOL_CRC(iwl_acpi_is_ppag_approved, 0x0784684d, "_gpl");
+SYMBOL_CRC(iwl_uefi_get_step_table, 0x50132d2a, "_gpl");
+SYMBOL_CRC(iwl_uefi_get_sgom_table, 0x39e237a3, "_gpl");
 SYMBOL_CRC(_dmi_match, 0x8c5fa651, "_gpl");
 SYMBOL_CRC(_dmi_get_system_info, 0x4e3d06ab, "_gpl");
 SYMBOL_CRC(_dmi_check_system, 0x2eeedb47, "_gpl");
-SYMBOL_CRC(__tracepoint_iwlwifi_dev_ucode_event, 0x9ff44280, "");
-SYMBOL_CRC(__traceiter_iwlwifi_dev_ucode_event, 0x045eb74a, "");
-SYMBOL_CRC(__SCK__tp_func_iwlwifi_dev_ucode_event, 0xb53d7acd, "");
+SYMBOL_CRC(__tracepoint_iwlwifi_dev_ucode_event, 0xa925c293, "");
+SYMBOL_CRC(__traceiter_iwlwifi_dev_ucode_event, 0xe08bebfc, "");
+SYMBOL_CRC(__SCK__tp_func_iwlwifi_dev_ucode_event, 0x7214f7b9, "");
 SYMBOL_CRC(__SCT__tp_func_iwlwifi_dev_ucode_event, 0xd81e2f28, "");
-SYMBOL_CRC(__tracepoint_iwlwifi_dev_ucode_cont_event, 0x84dcd748, "");
-SYMBOL_CRC(__traceiter_iwlwifi_dev_ucode_cont_event, 0x1058eeab, "");
-SYMBOL_CRC(__SCK__tp_func_iwlwifi_dev_ucode_cont_event, 0xe035fa19, "");
+SYMBOL_CRC(__tracepoint_iwlwifi_dev_ucode_cont_event, 0x4b924253, "");
+SYMBOL_CRC(__traceiter_iwlwifi_dev_ucode_cont_event, 0x40830527, "");
+SYMBOL_CRC(__SCK__tp_func_iwlwifi_dev_ucode_cont_event, 0x4073ee16, "");
 SYMBOL_CRC(__SCT__tp_func_iwlwifi_dev_ucode_cont_event, 0x3a2a40a5, "");
-SYMBOL_CRC(__tracepoint_iwlwifi_dev_ucode_wrap_event, 0x1350ab72, "");
-SYMBOL_CRC(__traceiter_iwlwifi_dev_ucode_wrap_event, 0xd9eb2db0, "");
-SYMBOL_CRC(__SCK__tp_func_iwlwifi_dev_ucode_wrap_event, 0x77b98623, "");
+SYMBOL_CRC(__tracepoint_iwlwifi_dev_ucode_wrap_event, 0xdc1e3e69, "");
+SYMBOL_CRC(__traceiter_iwlwifi_dev_ucode_wrap_event, 0xe6c79356, "");
+SYMBOL_CRC(__SCK__tp_func_iwlwifi_dev_ucode_wrap_event, 0xd7ff922c, "");
 SYMBOL_CRC(__SCT__tp_func_iwlwifi_dev_ucode_wrap_event, 0x38688d65, "");
-SYMBOL_CRC(iwl_tm_gnl_send_msg, 0xde4ff7eb, "_gpl");
-SYMBOL_CRC(iwl_tm_gnl_send_rx, 0xa49fc366, "_gpl");
-SYMBOL_CRC(iwl_dnt_start, 0xdcd01077, "_gpl");
-SYMBOL_CRC(iwl_dnt_init, 0xbe53203a, "_gpl");
-SYMBOL_CRC(iwl_dnt_free, 0x32bb95a7, "_gpl");
-SYMBOL_CRC(iwl_dnt_dispatch_collect_ucode_message, 0xc95a16e9, "_gpl");
-SYMBOL_CRC(iwl_dnt_dispatch_handle_nic_err, 0x30be8f40, "_gpl");
-SYMBOL_CRC(iwl_dnt_dev_if_read_sram, 0xfde2ab09, "_gpl");
-SYMBOL_CRC(iwl_dnt_dev_if_read_rx, 0x7d74dc8d, "_gpl");
-SYMBOL_CRC(iwl_tm_init, 0xb411eeb8, "_gpl");
-SYMBOL_CRC(iwl_tm_set_fw_ver, 0xc157d301, "_gpl");
+SYMBOL_CRC(iwl_tm_gnl_send_msg, 0xe7eabae1, "_gpl");
+SYMBOL_CRC(iwl_tm_gnl_send_rx, 0x50e6bf7c, "_gpl");
+SYMBOL_CRC(iwl_dnt_start, 0x12bb8efa, "_gpl");
+SYMBOL_CRC(iwl_dnt_init, 0x09f1b14b, "_gpl");
+SYMBOL_CRC(iwl_dnt_free, 0xd6b14441, "_gpl");
+SYMBOL_CRC(iwl_dnt_dispatch_collect_ucode_message, 0x6f9bd436, "_gpl");
+SYMBOL_CRC(iwl_dnt_dispatch_handle_nic_err, 0x12de6e49, "_gpl");
+SYMBOL_CRC(iwl_dnt_dev_if_read_sram, 0xb42875f3, "_gpl");
+SYMBOL_CRC(iwl_dnt_dev_if_read_rx, 0x462bd921, "_gpl");
+SYMBOL_CRC(iwl_tm_init, 0x9e006e3b, "_gpl");
+SYMBOL_CRC(iwl_tm_set_fw_ver, 0x18afe793, "_gpl");
 
 static const struct modversion_info ____versions[]
 __used __section("__versions") = {
 	{ 0x81e6b37f, "dmi_get_system_info" },
 	{ 0xe914e41e, "strcpy" },
 	{ 0xc31db0ce, "is_vmalloc_addr" },
-	{ 0x56c14435, "dmam_pool_create" },
+	{ 0x5177af10, "dmam_pool_create" },
 	{ 0xc8dcc62a, "krealloc" },
-	{ 0x63ec16dc, "pcie_capability_read_word" },
+	{ 0x5f03b59a, "pcie_capability_read_word" },
 	{ 0x1ce2497f, "reg_query_regdb_wmm" },
-	{ 0x12397c54, "try_module_get" },
+	{ 0x7a3cc1aa, "try_module_get" },
 	{ 0x88db9f48, "__check_object_size" },
 	{ 0xc6d09aa9, "release_firmware" },
-	{ 0x131f0716, "pci_find_ext_capability" },
+	{ 0x3140a1e3, "pci_find_ext_capability" },
 	{ 0x12ed942e, "is_acpi_device_node" },
 	{ 0x49cd25ed, "alloc_workqueue" },
-	{ 0x41d11c87, "bpf_trace_run4" },
-	{ 0xd1f65a19, "skb_copy_bits" },
+	{ 0xcffb4d10, "bpf_trace_run4" },
+	{ 0x52635f50, "skb_copy_bits" },
 	{ 0x1918f592, "devm_request_threaded_irq" },
-	{ 0xc92811e, "tso_build_hdr" },
-	{ 0x76814e37, "param_ops_uint" },
+	{ 0x39a75209, "tso_build_hdr" },
+	{ 0x57008212, "param_ops_uint" },
 	{ 0x13c49cc2, "_copy_from_user" },
 	{ 0x7355a995, "devm_kmalloc" },
 	{ 0xf229424a, "preempt_count_add" },
@@ -184,57 +184,57 @@ __used __section("__versions") = {
 	{ 0x4a453f53, "iowrite32" },
 	{ 0x8d522714, "__rcu_read_lock" },
 	{ 0x7f02188f, "__msecs_to_jiffies" },
-	{ 0x438d3892, "firmware_request_nowarn" },
-	{ 0xd655746f, "netif_napi_add_weight" },
+	{ 0xe96a6c9e, "firmware_request_nowarn" },
+	{ 0x93af2be4, "netif_napi_add_weight" },
 	{ 0x656e4a6e, "snprintf" },
 	{ 0xa6257a2f, "complete" },
 	{ 0xc5b6f236, "queue_work_on" },
-	{ 0x67da022c, "trace_raw_output_prep" },
-	{ 0xf0d2fea3, "pci_dev_put" },
+	{ 0xad1a5d00, "trace_raw_output_prep" },
+	{ 0x9c943050, "pci_dev_put" },
 	{ 0x4ceac14c, "iwl_mei_is_connected" },
 	{ 0x608741b5, "__init_swait_queue_head" },
-	{ 0x8ca1cce3, "__trace_trigger_soft_disabled" },
+	{ 0x1e61397b, "__trace_trigger_soft_disabled" },
 	{ 0x92540fbf, "finish_wait" },
-	{ 0x289b022a, "dma_unmap_page_attrs" },
+	{ 0xb41129cd, "dma_unmap_page_attrs" },
 	{ 0x74c134b9, "__sw_hweight32" },
-	{ 0x6fa47526, "request_firmware" },
-	{ 0x7d448b43, "trace_event_printf" },
+	{ 0x54036fab, "request_firmware" },
+	{ 0x3667b221, "trace_event_printf" },
 	{ 0x96848186, "scnprintf" },
-	{ 0x1d36e5cf, "__pci_register_driver" },
+	{ 0x300197a8, "__pci_register_driver" },
 	{ 0x1057a279, "bsearch" },
-	{ 0x6d6f9bfa, "dma_sync_single_for_device" },
-	{ 0x2e4d5637, "genlmsg_put" },
-	{ 0x930889e1, "trace_event_raw_init" },
+	{ 0x60873a6d, "dma_sync_single_for_device" },
+	{ 0xe1ea918, "genlmsg_put" },
+	{ 0x94afd08e, "trace_event_raw_init" },
 	{ 0x69acdf38, "memcpy" },
 	{ 0x3b6c41ea, "kstrtouint" },
 	{ 0x37a0cba, "kfree" },
 	{ 0x1eb9516e, "round_jiffies_relative" },
-	{ 0xb3fcc40a, "seq_lseek" },
+	{ 0xcdeefb6d, "seq_lseek" },
 	{ 0xc3055d20, "usleep_range_state" },
 	{ 0x8c26d495, "prepare_to_wait_event" },
 	{ 0xf6ebc03b, "net_ratelimit" },
 	{ 0x3eeb2322, "__wake_up" },
 	{ 0x4302d0eb, "free_pages" },
 	{ 0x148653, "vsnprintf" },
-	{ 0x9ec5aa57, "__netif_napi_del" },
-	{ 0xa3b6322f, "kmem_cache_create" },
+	{ 0xcaa603be, "__netif_napi_del" },
+	{ 0x38059f79, "kmem_cache_create" },
 	{ 0xddbeeecc, "pci_lock_rescan_remove" },
 	{ 0x34db050b, "_raw_spin_lock_irqsave" },
 	{ 0xb19a5453, "__per_cpu_offset" },
 	{ 0x248efd3, "kstrtobool_from_user" },
 	{ 0xba8fbd64, "_raw_spin_lock" },
-	{ 0xf940fc7b, "kmem_cache_alloc_trace" },
-	{ 0xba9ea33f, "pci_unregister_driver" },
+	{ 0xb9073466, "kmem_cache_alloc_trace" },
+	{ 0xa38bc84f, "pci_unregister_driver" },
 	{ 0xcbd4898c, "fortify_panic" },
 	{ 0xbdfb6dbb, "__fentry__" },
 	{ 0x50cf7585, "hex2bin" },
 	{ 0x678b96ec, "dma_pool_alloc" },
-	{ 0x27baf677, "dev_driver_string" },
-	{ 0x6aa5d3bb, "trace_event_buffer_commit" },
-	{ 0xe28c82a6, "pci_read_config_dword" },
+	{ 0xbe9e5656, "dev_driver_string" },
+	{ 0xa02fcab7, "trace_event_buffer_commit" },
+	{ 0xf6148ae2, "pci_read_config_dword" },
 	{ 0x65487097, "__x86_indirect_thunk_rax" },
-	{ 0xdcd7b683, "dma_map_page_attrs" },
-	{ 0xdc510c1, "napi_complete_done" },
+	{ 0xaeeee4c8, "dma_map_page_attrs" },
+	{ 0x4ad9654f, "napi_complete_done" },
 	{ 0x6b2dc060, "dump_stack" },
 	{ 0x4af6ddf0, "kstrtou16" },
 	{ 0x92997ed8, "_printk" },
@@ -245,64 +245,64 @@ __used __section("__versions") = {
 	{ 0xd0da656b, "__stack_chk_fail" },
 	{ 0xb2fcb56d, "queue_delayed_work_on" },
 	{ 0xe46021ca, "_raw_spin_unlock_bh" },
-	{ 0x4101f4ae, "tso_build_data" },
-	{ 0x24ecd9a6, "__napi_schedule" },
-	{ 0x6e049b4b, "netlink_broadcast" },
-	{ 0xe03e9b3a, "pci_enable_msix_range" },
+	{ 0xd7ef5775, "tso_build_data" },
+	{ 0x8d97200e, "__napi_schedule" },
+	{ 0x70056be9, "netlink_broadcast" },
+	{ 0xda40cd49, "pci_enable_msix_range" },
 	{ 0xa916b694, "strnlen" },
-	{ 0x63c074ac, "__alloc_skb" },
+	{ 0xf4952fbc, "__alloc_skb" },
 	{ 0x6383b27c, "__x86_indirect_thunk_rdx" },
-	{ 0x24a74534, "pci_disable_link_state" },
-	{ 0xe8dbe1ee, "__free_pages" },
+	{ 0xb2c1f21c, "pci_disable_link_state" },
+	{ 0xf3b7f8c4, "__free_pages" },
 	{ 0x40a9b349, "vzalloc" },
-	{ 0xcaead107, "_dev_info" },
+	{ 0xfe6b0cc8, "_dev_info" },
 	{ 0x47cfd825, "kstrtouint_from_user" },
-	{ 0xd49bc440, "module_put" },
+	{ 0xbda61442, "module_put" },
 	{ 0x167c5967, "print_hex_dump" },
 	{ 0x7cd8d75e, "page_offset_base" },
-	{ 0xd1edfa2, "sysfs_create_link" },
+	{ 0xd5bbec7c, "sysfs_create_link" },
 	{ 0x9975dc22, "acpi_get_handle" },
 	{ 0xbcb36fe4, "hugetlb_optimize_vmemmap_key" },
-	{ 0xdbe5f248, "device_create_file" },
+	{ 0x473902c9, "device_create_file" },
 	{ 0xe523ad75, "synchronize_irq" },
 	{ 0x9eacf8a5, "kstrndup" },
 	{ 0x9f46ced8, "__sw_hweight64" },
-	{ 0x5d7ef5be, "kobject_uevent_env" },
+	{ 0x8b266772, "kobject_uevent_env" },
 	{ 0xfe487975, "init_wait_entry" },
 	{ 0x68f31cbd, "__list_add_valid" },
 	{ 0xae5a04bb, "acpi_evaluate_dsm" },
 	{ 0xad5f0017, "perf_trace_buf_alloc" },
-	{ 0xe57fbbde, "pci_enable_msi" },
+	{ 0xbd629e30, "pci_enable_msi" },
 	{ 0x1f1821ae, "efi" },
-	{ 0xf9a294a2, "perf_trace_run_bpf_submit" },
+	{ 0xa3b5fdbe, "perf_trace_run_bpf_submit" },
 	{ 0x199c4833, "__irq_apply_affinity_hint" },
-	{ 0xb782e8c0, "_dev_err" },
-	{ 0x7aaa5941, "init_net" },
-	{ 0x1dc738a9, "request_firmware_nowait" },
-	{ 0x30827e55, "simple_open" },
-	{ 0x75718fc3, "skb_pull" },
+	{ 0x47c574d4, "_dev_err" },
+	{ 0x41c1a92, "init_net" },
+	{ 0xdc5a7c9b, "request_firmware_nowait" },
+	{ 0x9d741fe, "simple_open" },
+	{ 0x5b65aded, "skb_pull" },
 	{ 0x6091797f, "synchronize_rcu" },
-	{ 0x58cd03bf, "sysfs_remove_link" },
+	{ 0x436723ff, "sysfs_remove_link" },
 	{ 0x8c8569cb, "kstrtoint" },
-	{ 0xa78943b0, "pcim_iomap_regions_request_all" },
+	{ 0xe50e60ba, "pcim_iomap_regions_request_all" },
 	{ 0x2f7754a8, "dma_pool_free" },
 	{ 0x2469810f, "__rcu_read_unlock" },
-	{ 0xe3bfd1e, "netlink_unicast" },
+	{ 0x5be4b83f, "netlink_unicast" },
 	{ 0xc38c83b8, "mod_timer" },
-	{ 0x9c4f8035, "bpf_trace_run5" },
+	{ 0xc0672f8c, "bpf_trace_run5" },
 	{ 0x1e6d26a8, "strstr" },
 	{ 0xf1969a8e, "__usecs_to_jiffies" },
-	{ 0x8a77259e, "kfree_skb_reason" },
+	{ 0x4930eabd, "kfree_skb_reason" },
 	{ 0x8c03d20c, "destroy_workqueue" },
 	{ 0x4dfa8d4b, "mutex_lock" },
-	{ 0x96efca10, "skb_push" },
-	{ 0x6abb8ba, "dma_alloc_attrs" },
-	{ 0x980f1ddc, "debugfs_remove" },
-	{ 0xdfee9933, "pci_read_config_word" },
-	{ 0x5148dbc3, "napi_enable" },
+	{ 0x8ebc2637, "skb_push" },
+	{ 0xf7825065, "dma_alloc_attrs" },
+	{ 0xac1d7178, "debugfs_remove" },
+	{ 0xa3f5c8c4, "pci_read_config_word" },
+	{ 0x4069fb94, "napi_enable" },
 	{ 0x5a921311, "strncmp" },
 	{ 0x57f4a7d2, "nla_put" },
-	{ 0x13534616, "trace_event_reg" },
+	{ 0x4f8e7549, "trace_event_reg" },
 	{ 0x9166fada, "strncpy" },
 	{ 0xd0760fc0, "kfree_sensitive" },
 	{ 0x1a79c8e9, "__x86_indirect_thunk_r13" },
@@ -315,116 +315,116 @@ __used __section("__versions") = {
 	{ 0x3c3fce39, "__local_bh_enable_ip" },
 	{ 0xbcab6ee6, "sscanf" },
 	{ 0xcefb0c9f, "__mutex_init" },
-	{ 0xad9a1d73, "__seq_open_private" },
+	{ 0xfb02152, "__seq_open_private" },
 	{ 0x37befc70, "jiffies_to_msecs" },
 	{ 0xd35cce70, "_raw_spin_unlock_irqrestore" },
 	{ 0x6a6e05bf, "kstrtou8" },
-	{ 0x9b8a640a, "bpf_trace_run1" },
+	{ 0x42749794, "bpf_trace_run1" },
 	{ 0x124bad4d, "kstrtobool" },
-	{ 0xacbf919f, "tso_start" },
+	{ 0x8d79ce00, "tso_start" },
 	{ 0x9e683f75, "__cpu_possible_mask" },
-	{ 0x86873d96, "dma_sync_single_for_cpu" },
+	{ 0x5c347815, "dma_sync_single_for_cpu" },
 	{ 0xfb578fc5, "memset" },
-	{ 0x276fd602, "_dev_warn" },
+	{ 0x9ddea2c8, "_dev_warn" },
 	{ 0xd4835ef8, "dmi_check_system" },
 	{ 0x31549b2a, "__x86_indirect_thunk_r10" },
 	{ 0x97934ecf, "del_timer_sync" },
-	{ 0x462228e1, "pci_set_master" },
-	{ 0x5f1d1282, "param_ops_charp" },
+	{ 0x23e88b58, "pci_set_master" },
+	{ 0x14384709, "param_ops_charp" },
 	{ 0x25974000, "wait_for_completion" },
 	{ 0x5b8239ca, "__x86_return_thunk" },
 	{ 0x17de3d5, "nr_cpu_ids" },
 	{ 0x6b10bee1, "_copy_to_user" },
 	{ 0xd9a5ea54, "__init_waitqueue_head" },
-	{ 0x20759126, "__pskb_pull_tail" },
+	{ 0x8c35c05d, "__pskb_pull_tail" },
 	{ 0x2cb2e967, "kobject_create_and_add" },
 	{ 0xe2d5255a, "strcmp" },
-	{ 0xa95562b4, "skb_trim" },
+	{ 0x34b20071, "skb_trim" },
 	{ 0xc9ec4e21, "free_percpu" },
 	{ 0x15ba50a6, "jiffies" },
-	{ 0x7d513e72, "dma_set_coherent_mask" },
+	{ 0x7cdfd303, "dma_set_coherent_mask" },
 	{ 0x59043d69, "devm_kasprintf" },
 	{ 0x2d39b0a7, "kstrdup" },
-	{ 0xc4db0f0d, "bpf_trace_run3" },
-	{ 0xd65d3f3e, "seq_read" },
-	{ 0xa98a9626, "dev_coredumpsg" },
+	{ 0x8d3b959c, "bpf_trace_run3" },
+	{ 0xd50f081f, "seq_read" },
+	{ 0x282c5b36, "dev_coredumpsg" },
 	{ 0x3c3ff9fd, "sprintf" },
 	{ 0x97651e6c, "vmemmap_base" },
 	{ 0x7a2af7b4, "cpu_number" },
 	{ 0x4629334c, "__preempt_count" },
-	{ 0xce7c0204, "debugfs_create_file" },
-	{ 0xcb8549a2, "pci_pme_capable" },
-	{ 0xd1d437cc, "dma_free_attrs" },
+	{ 0x955633ad, "debugfs_create_file" },
+	{ 0xaa33606f, "pci_pme_capable" },
+	{ 0xa52106a5, "dma_free_attrs" },
 	{ 0x999e8297, "vfree" },
-	{ 0xc30a950c, "trace_event_buffer_reserve" },
+	{ 0xcefc58ae, "trace_event_buffer_reserve" },
 	{ 0x3213f038, "mutex_unlock" },
 	{ 0x9fa7184a, "cancel_delayed_work_sync" },
 	{ 0x5790e7a0, "pci_unlock_rescan_remove" },
 	{ 0xc6f46339, "init_timer_key" },
-	{ 0x2f3a817, "param_ops_bool" },
+	{ 0x23726432, "param_ops_bool" },
 	{ 0xdf54a8f7, "netlink_unregister_notifier" },
 	{ 0xeae3dfd6, "__const_udelay" },
-	{ 0x3b89f507, "pci_write_config_byte" },
+	{ 0x7aef5a65, "pci_write_config_byte" },
 	{ 0x949f7342, "__alloc_percpu" },
 	{ 0xd0fe8d51, "sg_pcopy_from_buffer" },
 	{ 0xd92deb6b, "acpi_evaluate_object" },
-	{ 0x2e680f73, "alloc_pages" },
+	{ 0x8467e2ca, "alloc_pages" },
 	{ 0x87b8798d, "sg_next" },
 	{ 0x66cca4f9, "__x86_indirect_thunk_rcx" },
-	{ 0x8c5a9590, "pci_dev_get" },
+	{ 0x72a38627, "pci_dev_get" },
 	{ 0x66b4cc41, "kmemdup" },
 	{ 0x3c12dfe, "cancel_work_sync" },
 	{ 0x56470118, "__warn_printk" },
-	{ 0x712ffeb3, "seq_printf" },
+	{ 0x7e4c5629, "seq_printf" },
 	{ 0x5584448a, "ieee80211_channel_to_freq_khz" },
 	{ 0xffeedf6a, "delayed_work_timer_fn" },
 	{ 0x7ef39823, "ieee80211_hdrlen" },
 	{ 0xc3690fc, "_raw_spin_lock_bh" },
 	{ 0xc07351b3, "__SCT__cond_resched" },
-	{ 0xa5e62076, "seq_puts" },
-	{ 0x5a1f8e87, "dma_set_mask" },
-	{ 0xb6a30d89, "pci_stop_and_remove_bus_device" },
-	{ 0xee2182ae, "_dev_crit" },
+	{ 0xd718b04d, "seq_puts" },
+	{ 0x89f4e290, "dma_set_mask" },
+	{ 0x31fdec2d, "pci_stop_and_remove_bus_device" },
+	{ 0xecd8302b, "_dev_crit" },
 	{ 0x461d16ca, "sg_nents" },
 	{ 0xfa599bb2, "netlink_register_notifier" },
-	{ 0x3f45577, "seq_release_private" },
-	{ 0xdbd1ad1d, "genl_unregister_family" },
-	{ 0x6b7775a6, "pcim_iomap_table" },
-	{ 0x6d6ad7f7, "napi_schedule_prep" },
+	{ 0xa7df3f7, "seq_release_private" },
+	{ 0x2c6807a7, "genl_unregister_family" },
+	{ 0xf60c28dd, "pcim_iomap_table" },
+	{ 0xe01f17d4, "napi_schedule_prep" },
 	{ 0x60a13e90, "rcu_barrier" },
-	{ 0xe2fcd88c, "device_release_driver" },
+	{ 0x1d20700a, "device_release_driver" },
 	{ 0x754d539c, "strlen" },
-	{ 0xf834d116, "napi_disable" },
+	{ 0x4691b5dc, "napi_disable" },
 	{ 0x2b68bd2f, "del_timer" },
 	{ 0x420964e3, "__nla_parse" },
-	{ 0xa5735fc7, "bpf_trace_run7" },
-	{ 0x91ce46d2, "param_ops_int" },
-	{ 0xa5a33d49, "_dev_printk" },
+	{ 0x632e6111, "bpf_trace_run7" },
+	{ 0xa4f6d6e6, "param_ops_int" },
+	{ 0xfdc0dbee, "_dev_printk" },
 	{ 0x688e72e1, "__SCT__preempt_schedule_notrace" },
-	{ 0x72c359c6, "pcim_enable_device" },
+	{ 0xa5c99ce1, "pcim_enable_device" },
 	{ 0xd6ee688f, "vmalloc" },
-	{ 0xf0ed70e8, "pci_write_config_word" },
-	{ 0x6bb9ed34, "debugfs_create_dir" },
+	{ 0x1c50893d, "pci_write_config_word" },
+	{ 0x4923dc7e, "debugfs_create_dir" },
 	{ 0xb43a926b, "backport_dependency_symbol" },
-	{ 0x19725b16, "genl_register_family" },
-	{ 0xe2ff8dd7, "generic_file_llseek" },
+	{ 0x9ae4eeac, "genl_register_family" },
+	{ 0xfd6789e3, "generic_file_llseek" },
 	{ 0xb5b54b34, "_raw_spin_unlock" },
 	{ 0x619cb7dd, "simple_read_from_buffer" },
 	{ 0x7381287f, "trace_handle_return" },
 	{ 0xf90a1e85, "__x86_indirect_thunk_r8" },
-	{ 0xd024b150, "init_dummy_netdev" },
+	{ 0x5ffe077f, "init_dummy_netdev" },
 	{ 0xf888ca21, "sg_init_table" },
 	{ 0xf9a482f9, "msleep" },
 	{ 0xeb233a45, "__kmalloc" },
 	{ 0xe2c17b5d, "__SCT__might_resched" },
-	{ 0xccdaf4e0, "kmalloc_caches" },
-	{ 0xeafa63ea, "device_remove_file" },
+	{ 0x47814ab3, "kmalloc_caches" },
+	{ 0x8a637d85, "device_remove_file" },
 	{ 0xa24f23d8, "__request_module" },
-	{ 0xf3882bb8, "kmem_cache_destroy" },
+	{ 0x5b0cf712, "kmem_cache_destroy" },
 	{ 0x2d3385d3, "system_wq" },
 	{ 0xd9309cda, "kobject_put" },
 	{ 0x609f1c7e, "synchronize_net" },
-	{ 0x1378c861, "module_layout" },
+	{ 0x6666e4b6, "module_layout" },
 };
 
 MODULE_INFO(depends, "cfg80211,iwlmei,compat");

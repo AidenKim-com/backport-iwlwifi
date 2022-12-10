@@ -32,10 +32,10 @@ static const struct modversion_info ____versions[]
 __used __section("__versions") = {
 	{ 0xbdfb6dbb, "__fentry__" },
 	{ 0x92997ed8, "_printk" },
-	{ 0x5f1d1282, "param_ops_charp" },
+	{ 0x14384709, "param_ops_charp" },
 	{ 0x5b8239ca, "__x86_return_thunk" },
 	{ 0x60a13e90, "rcu_barrier" },
-	{ 0x1378c861, "module_layout" },
+	{ 0x6666e4b6, "module_layout" },
 };
 
 MODULE_INFO(depends, "");

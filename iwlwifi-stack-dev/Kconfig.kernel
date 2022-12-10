@@ -19946,6 +19946,10 @@ config XIAOMI_WMI
     tristate
     default m
 
+config GIGABYTE_WMI
+    tristate
+    default m
+
 config ACERHDF
     tristate
     default m
@@ -22551,10 +22555,6 @@ config CIFS_STATS2
     default y
 
 config CIFS_ALLOW_INSECURE_LEGACY
-    bool
-    default y
-
-config CIFS_WEAK_PW_HASH
     bool
     default y
 

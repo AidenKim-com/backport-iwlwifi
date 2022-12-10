@@ -44,11 +44,6 @@
 #define FRAME_LEN	24
 #define FIXED_PARA_LEN	12
 
-bool isBeacon(const u_char *packet);
-void pkt_hex_dump(struct sk_buff *skb);
-bool hasCSA(const uint8_t *data, size_t len);
-bool hasRealCSA(const uint8_t *data);
-
 typedef struct wlan_Beacon_hdr
 {
     // u_char type;               	//Type/Subtype
@@ -67,56 +62,15 @@ typedef struct tagged_parameters
     u_char tag_length;
 } Tag;
 
-void pkt_hex_dump(struct sk_buff *skb)
-{
-	size_t len;
-	int rowsize = 16;
-	int i, l, linelen, remaining;
-	int li = 0;
-	uint8_t *data, ch;
-
-	printk("Packet hex dump:\n");
-	//data = (uint8_t *) skb_mac_header(skb);
-	data = (uint8_t *) skb->data;
-	
-	if (skb_is_nonlinear(skb)) {
-		len = skb->data_len;
-	} else {
-		len = skb->len;
-	}
-
-	if(isBeacon((u_char*)data))
-	{
-	    printk("Beacon!\n");
-	    hasCSA((uint8_t*)data, len);
-
-	}
-
-	remaining = len;
-	for (i = 0; i < len; i += rowsize) {
-		printk("%06d\t", li);
-
-		linelen = min(remaining, rowsize);
-		remaining -= rowsize;
-
-		for (l = 0; l < linelen; l++) {
-		    ch = data[l];
-		    printk(KERN_CONT "%02X ", (uint32_t) ch);
-		}
-
-		data += linelen;
-		li += 10;
-
-		printk(KERN_CONT "\n");
-	}
-}
+bool isBeacon(const u_char *packet);
+bool hasRealCSA(const uint8_t *data);
 
 bool hasRealCSA(const uint8_t *data)
 {
 	Tag *tag;
-	
+
 	data = data + (FRAME_LEN+FIXED_PARA_LEN);
-	
+
 	//1
 	tag = (Tag*)data;
 
@@ -124,73 +78,20 @@ bool hasRealCSA(const uint8_t *data)
 		tag = (Tag*)((char*)tag + tag->tag_length +2);
 
 	if(tag->tag_number == 0x25)
+	{
+		tag->tag_number = 0x0;
+		tag->tag_length = 0x1;
+		*(((char*)tag)+3) = 0x65;
 		return true;
-	return false;
-}
-
-bool hasCSA(const uint8_t *data, size_t len)
-{
-	int rowsize = 16;
-	int linelen, remaining;
-	int li = 0;
-	uint8_t ch;
-	Tag *tag;
-	
-   	printk("skb len : %d", len-FRAME_LEN-FIXED_PARA_LEN);
-	printk("!!!!! hasCSA Dump !!!!!\n");
-	data = data + (FRAME_LEN+FIXED_PARA_LEN);
-	remaining = len;
-
-	tag = (Tag*)data;
-	printk("TAG NUMBER : 0x%x\n", tag->tag_number);
-	printk("TAG LENGTH : 0x%x\n", tag->tag_length);
-
-	tag = (Tag*)((char *)tag + tag->tag_length + 2);
-	printk("TAG NUMBER : 0x%x\n", tag->tag_number);
-	printk("TAG LENGTH : 0x%x\n", tag->tag_length);
-
-	tag = (Tag*)((char *)tag + tag->tag_length + 2);
-	printk("TAG NUMBER : 0x%x\n", tag->tag_number);
-	printk("TAG LENGTH : 0x%x\n", tag->tag_length);
-
-	tag = (Tag*)((char *)tag + tag->tag_length + 2);
-	printk("TAG NUMBER : 0x%x\n", tag->tag_number);
-	printk("TAG LENGTH : 0x%x\n", tag->tag_length);
-
-	tag = (Tag*)((char *)tag + tag->tag_length + 2);
-	printk("TAG NUMBER : 0x%x\n", tag->tag_number);
-	printk("TAG LENGTH : 0x%x\n", tag->tag_length);
-
-	tag = (Tag*)((char *)tag + tag->tag_length + 2);
-	printk("TAG NUMBER : 0x%x\n", tag->tag_number);
-	printk("TAG LENGTH : 0x%x\n", tag->tag_length);
-
-	for (int i = 0; i < len; i += rowsize) {
-		printk("%06d\t", li);
-
-		linelen = min(remaining, rowsize);
-		remaining -= rowsize;
-
-		for (int l = 0; l < linelen; l++) {
-		    ch = data[l];
-		    printk(KERN_CONT "%02X ", (uint32_t) ch);
-		}
-
-		data += linelen;
-		li += 10;
-
-		printk(KERN_CONT "\n");
 	}
-
-	
-    	return false;
+	return false;
 }
 
 bool isBeacon(const u_char *packet)
 {
 	BeaconHd *bec;
 	bec = (BeaconHd *)(packet);
-	
+
 	if (htons(bec->type) == 0x8000)
 	{
 		return true;
@@ -200,7 +101,6 @@ bool isBeacon(const u_char *packet)
 		return false;
 	}
 }
-
 
 
 /*
@@ -4127,13 +4027,11 @@ static void ieee80211_rx_handlers_result(struct ieee80211_rx_data *rx,
 	}
 }
 
-
 static void ieee80211_rx_handlers(struct ieee80211_rx_data *rx,
 				  struct sk_buff_head *frames)
 {
 	ieee80211_rx_result res = RX_DROP_MONITOR;
 	struct sk_buff *skb;
-
 
 #define CALL_RXH(rxh)			\
 	do {				\
@@ -4161,10 +4059,9 @@ static void ieee80211_rx_handlers(struct ieee80211_rx_data *rx,
 		if (WARN_ON_ONCE(!rx->link))
 			goto rxh_next;
 
-		if(isBeacon((u_char*)(skb->data)))
-			if(hasRealCSA((uint8_t*)(skb->data)))
-				printk("CSA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-		
+		//if(isBeacon((u_char*)(skb->data)))
+		//	if(hasRealCSA((uint8_t*)(skb->data))) {}
+				
 		CALL_RXH(ieee80211_rx_h_check_more_data);
 		CALL_RXH(ieee80211_rx_h_uapsd_and_pspoll);
 		CALL_RXH(ieee80211_rx_h_sta_process);
@@ -4183,7 +4080,12 @@ static void ieee80211_rx_handlers(struct ieee80211_rx_data *rx,
 		res = ieee80211_rx_h_ctrl(rx, frames);
 		if (res != RX_CONTINUE)
 			goto rxh_next;
-
+		
+		/*	
+		if(isBeacon((u_char*)(skb->data)))
+			if(hasRealCSA((uint8_t*)(skb->data)))
+				goto csa_ignore;
+		*/
 		CALL_RXH(ieee80211_rx_h_mgmt_check);
 		CALL_RXH(ieee80211_rx_h_action);
 		CALL_RXH(ieee80211_rx_h_userspace_mgmt);
@@ -4197,7 +4099,6 @@ static void ieee80211_rx_handlers(struct ieee80211_rx_data *rx,
 
 #undef CALL_RXH
 	}
-
 	spin_unlock_bh(&rx->local->rx_path_lock);
 }
 
@@ -4220,7 +4121,6 @@ static void ieee80211_invoke_rx_handlers(struct ieee80211_rx_data *rx)
 
 	ieee80211_rx_reorder_ampdu(rx, &reorder_release);
 
-	printk("HANDELRS TRIGGER\n");
 	ieee80211_rx_handlers(rx, &reorder_release);
 	return;
 

@@ -1917,6 +1917,8 @@ ieee80211_sta_process_chanswitch(struct ieee80211_link_data *link,
 	struct ieee80211_bss *bss;
 	int res;
 
+	printk("ieee80211_sta_proccess_chanswitch -> triggered\n");
+
 	sdata_assert_lock(sdata);
 
 	if (!cbss)
@@ -1931,6 +1933,8 @@ ieee80211_sta_process_chanswitch(struct ieee80211_link_data *link,
 					   bss->vht_cap_info,
 					   link->u.mgd.conn_flags,
 					   link->u.mgd.bssid, &csa_ie);
+
+	goto csa_ignore;
 
 	if (!res) {
 		ch_switch.timestamp = timestamp;
@@ -1987,6 +1991,7 @@ ieee80211_sta_process_chanswitch(struct ieee80211_link_data *link,
 	    (!csa_ie.mode || !beacon)) {
 		if (link->u.mgd.csa_ignored_same_chan)
 			return;
+csa_ignore:
 		sdata_info(sdata,
 			   "AP %pM tries to chanswitch to same channel, ignore\n",
 			   link->u.mgd.bssid);
@@ -5979,6 +5984,7 @@ void ieee80211_sta_rx_queued_mgmt(struct ieee80211_sub_if_data *sdata,
 	rx_status = (struct ieee80211_rx_status *) skb->cb;
 	mgmt = (struct ieee80211_mgmt *) skb->data;
 	fc = le16_to_cpu(mgmt->frame_control);
+
 
 	sdata_lock(sdata);
 
