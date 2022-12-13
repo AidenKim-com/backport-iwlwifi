@@ -328,9 +328,6 @@ enum iwl_trans_status {
 	STATUS_TA_ACTIVE,
 	STATUS_TRANS_DEAD,
 	STATUS_SUPPRESS_CMD_ERROR_ONCE,
-#ifdef CPTCFG_IWLWIFI_DHC_PRIVATE
-	STATUS_DISABLE_STUCK_TIMER,
-#endif
 };
 
 static inline int
@@ -640,12 +637,6 @@ struct iwl_trans_ops {
 	int (*set_reduce_power)(struct iwl_trans *trans,
 				const void *data, u32 len);
 
-#ifdef CPTCFG_IWLWIFI_SIMULATION
-	int (*request_firmware)(struct iwl_trans *trans, const char *name,
-				void *context,
-				void (*cont)(const struct firmware *fw,
-					     void *context));
-#endif
 	void (*interrupts)(struct iwl_trans *trans, bool enable);
 	int (*imr_dma_data)(struct iwl_trans *trans,
 			    u32 dst_addr, u64 src_addr,
@@ -923,6 +914,7 @@ struct iwl_pcie_first_tb_buf {
  * @read_ptr: last used entry (index) host_r
  * @dma_addr:  physical addr for BD's
  * @n_window: safe queue window
+ * @n_reduced_win: reduced @n_window in case of HW allocation workarounds
  * @id: queue id
  * @low_mark: low watermark, resume queue if free space more than this
  * @high_mark: high watermark, stop queue if free space less than this
@@ -965,6 +957,7 @@ struct iwl_txq {
 	int read_ptr;
 	dma_addr_t dma_addr;
 	int n_window;
+	int n_reduced_win;
 	u32 id;
 	int low_mark;
 	int high_mark;
@@ -1228,7 +1221,7 @@ static inline int iwl_trans_d3_suspend(struct iwl_trans *trans, bool test,
 {
 	might_sleep();
 	if (!trans->ops->d3_suspend)
-		return 0;
+		return -EOPNOTSUPP;
 
 	return trans->ops->d3_suspend(trans, test, reset);
 }
@@ -1239,7 +1232,7 @@ static inline int iwl_trans_d3_resume(struct iwl_trans *trans,
 {
 	might_sleep();
 	if (!trans->ops->d3_resume)
-		return 0;
+		return -EOPNOTSUPP;
 
 	return trans->ops->d3_resume(trans, status, test, reset);
 }

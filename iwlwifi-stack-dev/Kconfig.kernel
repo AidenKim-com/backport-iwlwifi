@@ -10038,6 +10038,10 @@ config IWL3945
     tristate
     default m
 
+config IWLDVM
+    tristate
+    default m
+
 config WLAN_VENDOR_INTERSIL
     bool
     default y

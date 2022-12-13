@@ -29,7 +29,7 @@ static int iwl_mvm_netlink_notifier(struct notifier_block *nb,
 
 	spin_lock_bh(&device_list_lock);
 	list_for_each_entry(mvm, &device_list, list) {
-		if (mvm->csi_portid == netlink_notify_portid(notify))
+		if (mvm->csi_portid == notify->portid)
 			mvm->csi_portid = 0;
 	}
 	spin_unlock_bh(&device_list_lock);
@@ -651,13 +651,7 @@ static int iwl_mvm_oppps_wa_update_quota(struct iwl_mvm *mvm,
 
 	if (fw_has_capa(&mvm->fw->ucode_capa,
 			IWL_UCODE_TLV_CAPA_DYNAMIC_QUOTA)) {
-#ifdef CPTCFG_IWLWIFI_DHC_PRIVATE
-		return iwl_mvm_dhc_quota_enforce(mvm,
-						 mvm->p2p_opps_test_wa_vif,
-						 0);
-#else
 		return -EOPNOTSUPP;
-#endif
 	}
 
 	return iwl_mvm_update_quotas(mvm, force_update, NULL);

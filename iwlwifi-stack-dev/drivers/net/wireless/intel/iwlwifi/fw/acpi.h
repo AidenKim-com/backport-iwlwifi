@@ -6,10 +6,6 @@
 #ifndef __iwl_fw_acpi__
 #define __iwl_fw_acpi__
 
-#ifdef CPTCFG_IWLWIFI_PLATFORM_MOCKUPS
-#include "fw/platform-mockups.h"
-#endif /* CPTCFG_IWLWIFI_PLATFORM_MOCKUPS */
-
 #include <linux/acpi.h>
 #include "fw/api/commands.h"
 #include "fw/api/power.h"

@@ -1357,9 +1357,6 @@ static void _iwl_trans_pcie_stop_device(struct iwl_trans *trans)
 	clear_bit(STATUS_SYNC_HCMD_ACTIVE, &trans->status);
 	clear_bit(STATUS_INT_ENABLED, &trans->status);
 	clear_bit(STATUS_TPOWER_PMI, &trans->status);
-#ifdef CPTCFG_IWLWIFI_DHC_PRIVATE
-	clear_bit(STATUS_DISABLE_STUCK_TIMER, &trans->status);
-#endif
 
 	/*
 	 * Even if we stop the HW, we still want the RF kill
@@ -2279,51 +2276,11 @@ out:
 	spin_unlock_bh(&trans_pcie->reg_lock);
 }
 
-#ifdef CPTCFG_IWLWIFI_SIMULATION
-static int iwl_trans_pcie_read_mem_sim(struct iwl_trans *trans, u32 addr,
-				       void *buf, int dwords)
-{
-	struct iwl_trans_pcie *trans_pcie = IWL_TRANS_GET_PCIE_TRANS(trans);
-
-	if (iwl_trans_grab_nic_access(trans)) {
-		u8 __iomem *ioaddr = pcim_iomap_table(trans_pcie->pci_dev)[2];
-		void *tmpbuf = kmalloc(4 * dwords, GFP_ATOMIC);
-
-		if (!tmpbuf) {
-			iwl_trans_release_nic_access(trans);
-			return -ENOMEM;
-		}
-
-#define SMEM_WINDOW_START (8 * 1024 * 1024)
-		ioaddr += SMEM_WINDOW_START;
-
-		/* set the pointer */
-		writel(addr, ioaddr);
-		/* and copy data */
-		memcpy_fromio(tmpbuf, ioaddr, 4 * dwords);
-
-		memcpy(buf, tmpbuf, 4 * dwords);
-		kfree(tmpbuf);
-		iwl_trans_release_nic_access(trans);
-		return 0;
-	}
-
-	return -EBUSY;
-}
-#endif
-
 static int iwl_trans_pcie_read_mem(struct iwl_trans *trans, u32 addr,
 				   void *buf, int dwords)
 {
 	int offs = 0;
 	u32 *vals = buf;
-
-#ifdef CPTCFG_IWLWIFI_SIMULATION
-	/* for large reads, do magic BAR - keep smaller as normal to test */
-	if (dwords > 100 &&
-	    pcim_iomap_table(IWL_TRANS_GET_PCIE_TRANS(trans)->pci_dev)[2])
-		return iwl_trans_pcie_read_mem_sim(trans, addr, buf, dwords);
-#endif
 
 	while (offs < dwords) {
 		/* limit the time we spin here under lock to 1/2s */
@@ -3549,95 +3506,7 @@ static void iwl_trans_pcie_sync_nmi(struct iwl_trans *trans)
 	iwl_trans_sync_nmi_with_addr(trans, inta_addr, sw_err_bit);
 }
 
-#ifdef CPTCFG_IWLWIFI_SIMULATION
-struct request_fw_work {
-	struct work_struct work;
-	struct iwl_trans *trans;
-	void (*cont)(const struct firmware *fw, void *context);
-	void *context;
-	const char *name;
-	const u8 __iomem *iomem;
-};
-
-static void iwl_trans_pci_load_firmware(struct work_struct *work)
-{
-	struct request_fw_work *wk =
-		container_of(work, struct request_fw_work, work);
-	u32 image_size;
-	void *fw_image, *vdata;
-	struct firmware *fw;
-
-	if (WARN(!wk->cont, "no callback function set\n"))
-		return;
-
-	/* This BAR is really magic ... */
-	/* ... first, we read the size */
-	image_size = readl(wk->iomem);
-	if (!image_size || image_size == ~0)
-		goto finish;
-
-	fw = kzalloc(sizeof(*fw), GFP_KERNEL);
-	fw_image = kmalloc(image_size, GFP_KERNEL);
-	if (!fw_image || !fw)
-		goto free;
-
-	vdata = vmalloc(image_size);
-	if (!vdata)
-		goto free;
-
-	fw->data = vdata;
-	fw->size = image_size;
-
-	/* ... secondly, we can memcpy the data from that place */
-	memcpy_fromio(fw_image, wk->iomem, image_size);
-	memcpy(vdata, fw_image, image_size);
-
-	kfree(fw_image);
-	/* fw, and vdata memory release happens in the callback */
-	wk->cont(fw, wk->context);
-	kfree(wk);
-	return;
-free:
-	kfree(fw);
-	kfree(fw_image);
-finish:
-	wk->cont(NULL, wk->context);
-	kfree(wk);
-}
-
-static int iwl_trans_pci_request_firmware(struct iwl_trans *trans,
-					  const char *name,
-					  void *context,
-					  void (*cont)(const struct firmware *fw,
-						       void *context))
-{
-	struct iwl_trans_pcie *trans_pcie = IWL_TRANS_GET_PCIE_TRANS(trans);
-	struct request_fw_work *wk;
-	void __iomem * const *table;
-
-	table = pcim_iomap_table(trans_pcie->pci_dev);
-	if (!table || !table[2])
-		return -ENOENT;
-
-	wk = kzalloc(sizeof(*wk), GFP_KERNEL);
-	if (!wk)
-		return -ENOMEM;
-
-	wk->trans = trans;
-	wk->cont = cont;
-	wk->context = context;
-	wk->name = name;
-	wk->iomem = table[2];
-	INIT_WORK(&wk->work, iwl_trans_pci_load_firmware);
-	schedule_work(&wk->work);
-
-	return 0;
-}
-
-#define IWL_TRANS_REQUEST_FW .request_firmware = iwl_trans_pci_request_firmware,
-#else
 #define IWL_TRANS_REQUEST_FW
-#endif
 #define IWL_TRANS_COMMON_OPS						\
 	IWL_TRANS_REQUEST_FW						\
 	.op_mode_leave = iwl_trans_pcie_op_mode_leave,			\
@@ -3754,6 +3623,7 @@ struct iwl_trans *iwl_trans_pcie_alloc(struct pci_dev *pdev,
 		goto out_free_trans;
 	}
 	INIT_WORK(&trans_pcie->rba.rx_alloc, iwl_pcie_rx_allocator_work);
+	printk("???\n");
 
 	trans_pcie->debug_rfkill = -1;
 
@@ -3783,14 +3653,6 @@ struct iwl_trans *iwl_trans_pcie_alloc(struct pci_dev *pdev,
 		}
 	}
 
-#ifdef CPTCFG_IWLWIFI_SIMULATION
-	ret = pcim_iomap_regions_request_all(pdev, BIT(2) | BIT(0), DRV_NAME);
-	/*
-	 * If this fails we might be dealing with a simulated device
-	 * that doesn't have the magic second BAR - try just one region.
-	 */
-	if (ret)
-#endif
 	ret = pcim_iomap_regions_request_all(pdev, BIT(0), DRV_NAME);
 	if (ret) {
 		dev_err(&pdev->dev, "pcim_iomap_regions_request_all failed\n");

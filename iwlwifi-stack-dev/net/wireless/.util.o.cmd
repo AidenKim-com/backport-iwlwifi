@@ -1,19 +1,19 @@
-cmd_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/util.o :=  gcc-12 -Wp,-MMD,/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/.util.o.d -nostdinc -I/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/ -I/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/uapi -I/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/include/ -I/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/include/uapi -include /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/backport/backport.h -Wno-unused-but-set-variable -DCPTCFG_VERSION=\""(see git)"\" -DCPTCFG_KERNEL_VERSION=\""(see git)"\" -DCPTCFG_KERNEL_NAME=\""iwlwifi"\" -DBACKPORTS_GIT_TRACKED=\""iwlwifi-stack-dev:tags/jenkins-Core_build_core74_pv-44^0:jenkins-Core_build_core74_pv-60:128e12f4202f"\" "-DBACKPORTS_BUILD_TSTAMP=\"Nov 06 2022  2:20:10\""   -I/usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include -I./arch/x86/include/generated -I/usr/src/linux-headers-6.0.0-kali5-common/include -I./include -I/usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I/usr/src/linux-headers-6.0.0-kali5-common/include/uapi -I./include/generated/uapi -include /usr/src/linux-headers-6.0.0-kali5-common/include/linux/compiler-version.h -include /usr/src/linux-headers-6.0.0-kali5-common/include/linux/kconfig.h -include /usr/src/linux-headers-6.0.0-kali5-common/include/linux/compiler_types.h -D__KERNEL__ -fmacro-prefix-map=/usr/src/linux-headers-6.0.0-kali5-common/= -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Wno-format-security -std=gnu11 -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -fcf-protection=none -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -mindirect-branch-cs-prefix -mfunction-return=thunk-extern -fno-jump-tables -mharden-sls=all -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -O2 -fno-allow-store-data-races -Wframe-larger-than=2048 -fstack-protector-strong -Wno-array-bounds -Wimplicit-fallthrough=5 -Wno-main -Wno-unused-but-set-variable -Wno-unused-const-variable -Wno-dangling-pointer -ftrivial-auto-var-init=zero -fno-stack-clash-protection -pg -mrecord-mcount -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -Wcast-function-type -Wno-stringop-truncation -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -Wno-alloc-size-larger-than -fno-strict-overflow -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -Wno-packed-not-aligned -g -Wformat-security -Wno-error=date-time -Wno-date-time -fno-pie -no-pie -D__CHECK_ENDIAN__ -Wunused-but-set-variable -Wimplicit-fallthrough  -DMODULE  -DKBUILD_BASENAME='"util"' -DKBUILD_MODNAME='"cfg80211"' -D__KBUILD_MODNAME=kmod_cfg80211 -c -o /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/util.o /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/util.c   ; ./tools/objtool/objtool  --hacks=jump_label  --hacks=noinstr    --orc  --retpoline  --rethunk  --sls   --static-call  --uaccess   --module  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/util.o
+cmd_/home/aiden/Desktop/abc/backport-iwlwifi/net/wireless/util.o :=  gcc-12 -Wp,-MMD,/home/aiden/Desktop/abc/backport-iwlwifi/net/wireless/.util.o.d -nostdinc -I/home/aiden/Desktop/abc/backport-iwlwifi/backport-include/ -I/home/aiden/Desktop/abc/backport-iwlwifi/backport-include/uapi -I/home/aiden/Desktop/abc/backport-iwlwifi/include/ -I/home/aiden/Desktop/abc/backport-iwlwifi/include/uapi -include /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/backport/backport.h -Wno-unused-but-set-variable -DCPTCFG_VERSION=\""(see git)"\" -DCPTCFG_KERNEL_VERSION=\""(see git)"\" -DCPTCFG_KERNEL_NAME=\""iwlwifi"\" -DBACKPORTS_GIT_TRACKED=\""iwlwifi-stack-public:master:10746:7e3b33f9"\" "-DBACKPORTS_BUILD_TSTAMP=__DATE__ \" \" __TIME__"   -I/usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include -I./arch/x86/include/generated -I/usr/src/linux-headers-6.0.0-kali5-common/include -I./include -I/usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I/usr/src/linux-headers-6.0.0-kali5-common/include/uapi -I./include/generated/uapi -include /usr/src/linux-headers-6.0.0-kali5-common/include/linux/compiler-version.h -include /usr/src/linux-headers-6.0.0-kali5-common/include/linux/kconfig.h -include /usr/src/linux-headers-6.0.0-kali5-common/include/linux/compiler_types.h -D__KERNEL__ -fmacro-prefix-map=/usr/src/linux-headers-6.0.0-kali5-common/= -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Wno-format-security -std=gnu11 -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -fcf-protection=none -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -mindirect-branch-cs-prefix -mfunction-return=thunk-extern -fno-jump-tables -mharden-sls=all -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -O2 -fno-allow-store-data-races -Wframe-larger-than=2048 -fstack-protector-strong -Wno-array-bounds -Wimplicit-fallthrough=5 -Wno-main -Wno-unused-but-set-variable -Wno-unused-const-variable -Wno-dangling-pointer -ftrivial-auto-var-init=zero -fno-stack-clash-protection -pg -mrecord-mcount -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -Wcast-function-type -Wno-stringop-truncation -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -Wno-alloc-size-larger-than -fno-strict-overflow -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -Wno-packed-not-aligned -g -Wformat-security -Wno-error=date-time -Wno-date-time -fno-pie -no-pie -D__CHECK_ENDIAN__ -Wunused-but-set-variable -Wimplicit-fallthrough  -DMODULE  -DKBUILD_BASENAME='"util"' -DKBUILD_MODNAME='"cfg80211"' -D__KBUILD_MODNAME=kmod_cfg80211 -c -o /home/aiden/Desktop/abc/backport-iwlwifi/net/wireless/util.o /home/aiden/Desktop/abc/backport-iwlwifi/net/wireless/util.c   ; ./tools/objtool/objtool  --hacks=jump_label  --hacks=noinstr    --orc  --retpoline  --rethunk  --sls   --static-call  --uaccess   --module  /home/aiden/Desktop/abc/backport-iwlwifi/net/wireless/util.o
 
-source_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/util.o := /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/util.c
+source_/home/aiden/Desktop/abc/backport-iwlwifi/net/wireless/util.o := /home/aiden/Desktop/abc/backport-iwlwifi/net/wireless/util.c
 
-deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/util.o := \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/backport/backport.h \
+deps_/home/aiden/Desktop/abc/backport-iwlwifi/net/wireless/util.o := \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/backport/backport.h \
     $(wildcard include/config/BACKPORT_INTEGRATE) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/backport/autoconf.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/kconfig.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/backport/autoconf.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/kconfig.h \
     $(wildcard include/config/FOO) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/version.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/version.h \
   include/generated/uapi/linux/version.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/kconfig.h \
     $(wildcard include/config/CPU_BIG_ENDIAN) \
     $(wildcard include/config/BOOGER) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/backport/checks.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/backport/checks.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/compiler-version.h \
     $(wildcard include/config/CC_VERSION_TEXT) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/kconfig.h \
@@ -22,21 +22,21 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/PAHOLE_HAS_BTF_TAG) \
     $(wildcard include/config/HAVE_ARCH_COMPILER_H) \
     $(wildcard include/config/CC_HAS_ASM_INLINE) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/compiler_attributes.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/compiler_attributes.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/compiler_attributes.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/compiler-gcc.h \
     $(wildcard include/config/RETPOLINE) \
     $(wildcard include/config/ARCH_USE_BUILTIN_BSWAP) \
     $(wildcard include/config/SHADOW_CALL_STACK) \
     $(wildcard include/config/KCOV) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/export.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/export.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/export.h \
     $(wildcard include/config/MODVERSIONS) \
     $(wildcard include/config/HAVE_ARCH_PREL32_RELOCATIONS) \
     $(wildcard include/config/MODULES) \
     $(wildcard include/config/TRIM_UNUSED_KSYMS) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/stringify.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/compiler.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/compiler.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/compiler.h \
     $(wildcard include/config/TRACE_BRANCH_PROFILING) \
     $(wildcard include/config/PROFILE_ALL_BRANCHES) \
@@ -48,7 +48,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/kasan-checks.h \
     $(wildcard include/config/KASAN_GENERIC) \
     $(wildcard include/config/KASAN_SW_TAGS) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/types.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/types.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/types.h \
     $(wildcard include/config/HAVE_UID16) \
     $(wildcard include/config/UID16) \
@@ -65,7 +65,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/asm-generic/bitsperlong.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/asm-generic/bitsperlong.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/posix_types.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/stddef.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/stddef.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/stddef.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/stddef.h \
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/posix_types.h \
@@ -76,21 +76,21 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/KCSAN) \
     $(wildcard include/config/KCSAN_WEAK_MEMORY) \
     $(wildcard include/config/KCSAN_IGNORE_ATOMICS) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/bitops.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/bitops.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/bitops.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/bits.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/bits.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/bits.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/const.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/vdso/const.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/const.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/vdso/bits.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/build_bug.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/build_bug.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/build_bug.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/typecheck.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/kernel.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/sysinfo.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/asm-generic/bitops/generic-non-atomic.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/asm/barrier.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/asm/barrier.h \
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/barrier.h \
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/alternative.h \
     $(wildcard include/config/SMP) \
@@ -139,15 +139,15 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/uapi/asm/swab.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/byteorder/generic.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/asm-generic/bitops/ext2-atomic-setbit.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/generated/utsrelease.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/generated/utsrelease.h \
     $(wildcard include/config/VERSION_SIGNATURE) \
   include/generated/utsrelease.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/etherdevice.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/etherdevice.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/etherdevice.h \
     $(wildcard include/config/HAVE_EFFICIENT_UNALIGNED_ACCESS) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/if_ether.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/if_ether.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/if_ether.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/skbuff.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/skbuff.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/skbuff.h \
     $(wildcard include/config/NF_CONNTRACK) \
     $(wildcard include/config/BRIDGE_NETFILTER) \
@@ -176,7 +176,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/NETFILTER_XT_TARGET_TRACE) \
     $(wildcard include/config/NF_TABLES) \
     $(wildcard include/config/IP_VS) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/kernel.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/kernel.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/kernel.h \
     $(wildcard include/config/PREEMPT_VOLUNTARY_BUILD) \
     $(wildcard include/config/PREEMPT_DYNAMIC) \
@@ -202,7 +202,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/X86_KERNEL_IBT) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/container_of.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/err.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/asm/errno.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/asm/errno.h \
     $(wildcard include/config/ALPHA) \
     $(wildcard include/config/MIPS) \
     $(wildcard include/config/PARISC) \
@@ -214,10 +214,11 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/log2.h \
     $(wildcard include/config/ARCH_HAS_ILOG2_U32) \
     $(wildcard include/config/ARCH_HAS_ILOG2_U64) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/math.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/math.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/math.h \
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/div64.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/asm-generic/div64.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/minmax.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/minmax.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/panic.h \
     $(wildcard include/config/PANIC_TIMEOUT) \
@@ -230,7 +231,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/PRINTK_INDEX) \
     $(wildcard include/config/DYNAMIC_DEBUG) \
     $(wildcard include/config/DYNAMIC_DEBUG_CORE) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/init.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/init.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/init.h \
     $(wildcard include/config/STRICT_KERNEL_RWX) \
     $(wildcard include/config/STRICT_MODULE_RWX) \
@@ -256,7 +257,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/once_lite.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/dynamic_debug.h \
     $(wildcard include/config/JUMP_LABEL) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/jump_label.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/jump_label.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/jump_label.h \
     $(wildcard include/config/HAVE_ARCH_JUMP_LABEL_RELATIVE) \
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/jump_label.h \
@@ -265,7 +266,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/HAVE_STATIC_CALL) \
     $(wildcard include/config/HAVE_STATIC_CALL_INLINE) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/instruction_pointer.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/bug.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/bug.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/bug.h \
     $(wildcard include/config/GENERIC_BUG) \
     $(wildcard include/config/BUG_ON_DATA_CORRUPTION) \
@@ -275,21 +276,21 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/NOINSTR_VALIDATION) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/objtool.h \
     $(wildcard include/config/FRAME_POINTER) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/asm-generic/bug.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/asm-generic/bug.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/asm-generic/bug.h \
     $(wildcard include/config/BUG) \
     $(wildcard include/config/GENERIC_BUG_RELATIVE_POINTERS) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/time.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/time.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/time.h \
     $(wildcard include/config/POSIX_TIMERS) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/cache.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/cache.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/cache.h \
     $(wildcard include/config/ARCH_HAS_CACHE_LINE_SIZE) \
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/cache.h \
     $(wildcard include/config/X86_L1_CACHE_SHIFT) \
     $(wildcard include/config/X86_INTERNODE_CACHE_SHIFT) \
     $(wildcard include/config/X86_VSMP) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/math64.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/math64.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/math64.h \
     $(wildcard include/config/ARCH_SUPPORTS_INT128) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/vdso/math64.h \
@@ -380,7 +381,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/HAVE_SETUP_PER_CPU_AREA) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/threads.h \
     $(wildcard include/config/BASE_SMALL) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/percpu-defs.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/percpu-defs.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/percpu-defs.h \
     $(wildcard include/config/DEBUG_FORCE_WEAK_PER_CPU) \
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/GEN-for-each-reg.h \
@@ -407,7 +408,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/DEBUG_PER_CPU_MAPS) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/bitmap.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/find.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/string.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/string.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/string.h \
     $(wildcard include/config/BINARY_PRINTF) \
     $(wildcard include/config/FORTIFY_SOURCE) \
@@ -418,7 +419,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/string_64.h \
     $(wildcard include/config/ARCH_HAS_UACCESS_FLUSHCACHE) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/fortify-string.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/atomic.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/atomic.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/atomic.h \
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/atomic.h \
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/cmpxchg.h \
@@ -461,7 +462,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/vdso/time.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/bvec.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/highmem.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/fs.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/fs.h \
     $(wildcard include/config/COMPAT) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/fs.h \
     $(wildcard include/config/READ_ONLY_THP_FOR_FS) \
@@ -480,13 +481,13 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/FS_DAX) \
     $(wildcard include/config/BLOCK) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/wait_bit.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/wait.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/wait.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/wait.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/list.h \
     $(wildcard include/config/DEBUG_LIST) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/poison.h \
     $(wildcard include/config/ILLEGAL_POINTER_VALUE) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/spinlock.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/spinlock.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/spinlock.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/preempt.h \
     $(wildcard include/config/PREEMPT_COUNT) \
@@ -501,7 +502,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/restart_block.h \
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/thread_info.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/bottom_half.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/lockdep.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/lockdep.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/lockdep.h \
     $(wildcard include/config/DEBUG_LOCKING_API_SELFTESTS) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/smp.h \
@@ -559,10 +560,10 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/kdev_t.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/kdev_t.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/dcache.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/rculist.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/rculist.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/rculist.h \
     $(wildcard include/config/PROVE_RCU_LIST) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/rcupdate.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/rcupdate.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/rcupdate.h \
     $(wildcard include/config/PREEMPT_RCU) \
     $(wildcard include/config/TINY_RCU) \
@@ -609,7 +610,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/list_lru.h \
     $(wildcard include/config/MEMCG_KMEM) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/nodemask.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/random.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/random.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/random.h \
     $(wildcard include/config/VMGENID) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/once.h \
@@ -630,7 +631,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/SHRINKER_DEBUG) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/xarray.h \
     $(wildcard include/config/XARRAY_MULTI) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/gfp.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/gfp.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/gfp.h \
     $(wildcard include/config/ZONE_DMA) \
     $(wildcard include/config/ZONE_DMA32) \
@@ -674,9 +675,9 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/auxvec.h \
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/uapi/asm/auxvec.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/kref.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/include/linux/refcount.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/include/linux/refcount.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/refcount.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/rbtree.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/rbtree.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/rbtree.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/rbtree_types.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/rwsem.h \
@@ -697,7 +698,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/FREEZER) \
     $(wildcard include/config/SYSFS) \
     $(wildcard include/config/WQ_WATCHDOG) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/timer.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/timer.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/timer.h \
     $(wildcard include/config/DEBUG_OBJECTS_TIMERS) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/ktime.h \
@@ -705,7 +706,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/vdso/jiffies.h \
   include/generated/timeconst.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/vdso/ktime.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/timekeeping.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/timekeeping.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/timekeeping.h \
     $(wildcard include/config/GENERIC_CMOS_UPDATE) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/clocksource_ids.h \
@@ -749,7 +750,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/asm-generic/topology.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/sched/mm.h \
     $(wildcard include/config/ARCH_HAS_MEMBARRIER_CALLBACKS) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/sched.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/sched.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/sched.h \
     $(wildcard include/config/VIRT_CPU_ACCOUNTING_NATIVE) \
     $(wildcard include/config/SCHED_INFO) \
@@ -812,7 +813,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/sem.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/sem.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/ipc.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/include/linux/rhashtable-types.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/include/linux/rhashtable-types.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/rhashtable-types.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/ipc.h \
   arch/x86/include/generated/uapi/asm/ipcbuf.h \
@@ -826,7 +827,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/shmparam.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/plist.h \
     $(wildcard include/config/DEBUG_PLIST) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/hrtimer.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/hrtimer.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/hrtimer.h \
     $(wildcard include/config/HIGH_RES_TIMERS) \
     $(wildcard include/config/TIME_LOW_RES) \
@@ -896,7 +897,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/migrate_mode.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/percpu-rwsem.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/rcuwait.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/sched/signal.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/sched/signal.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/sched/signal.h \
     $(wildcard include/config/SCHED_AUTOGROUP) \
     $(wildcard include/config/BSD_PROCESS_ACCT) \
@@ -926,7 +927,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/uaccess_64.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/cred.h \
     $(wildcard include/config/DEBUG_CREDENTIALS) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/key.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/key.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/key.h \
     $(wildcard include/config/KEY_NOTIFICATIONS) \
     $(wildcard include/config/NET) \
@@ -942,7 +943,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/ratelimit.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/rcu_sync.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/delayed_call.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/uuid.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/uuid.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/uuid.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/uuid.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/errseq.h \
@@ -954,14 +955,14 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/fs_types.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/mount.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/mnt_idmapping.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/slab.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/slab.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/slab.h \
     $(wildcard include/config/DEBUG_SLAB) \
     $(wildcard include/config/FAILSLAB) \
     $(wildcard include/config/SLAB) \
     $(wildcard include/config/SLUB) \
     $(wildcard include/config/SLOB) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/include/linux/overflow.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/include/linux/overflow.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/percpu-refcount.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/kasan.h \
     $(wildcard include/config/KASAN_STACK) \
@@ -980,7 +981,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/nfs_fs_i.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/cacheflush.h \
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/cacheflush.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/mm.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/mm.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/mm.h \
     $(wildcard include/config/HAVE_ARCH_MMAP_RND_BITS) \
     $(wildcard include/config/HAVE_ARCH_MMAP_RND_COMPAT_BITS) \
@@ -1012,7 +1013,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/HAVE_RELIABLE_STACKTRACE) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/stackdepot.h \
     $(wildcard include/config/STACKDEPOT) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/page_ref.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/page_ref.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/page_ref.h \
     $(wildcard include/config/DEBUG_PAGE_REF) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/sizes.h \
@@ -1046,7 +1047,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/memremap.h \
     $(wildcard include/config/DEVICE_PRIVATE) \
     $(wildcard include/config/PCI_P2PDMA) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/ioport.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/ioport.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/ioport.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/huge_mm.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/sched/coredump.h \
@@ -1083,7 +1084,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/X86_HV_CALLBACK_VECTOR) \
     $(wildcard include/config/HYPERV) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/highmem-internal.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/socket.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/socket.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/socket.h \
   arch/x86/include/generated/uapi/asm/socket.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/asm-generic/socket.h \
@@ -1093,7 +1094,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/uio.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/uio.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/socket.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/net.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/net.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/net.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/sockptr.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/net.h \
@@ -1101,12 +1102,12 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/checksum.h \
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/checksum.h \
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/checksum_64.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/dma-mapping.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/dma-mapping.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/dma-mapping.h \
     $(wildcard include/config/DMA_API_DEBUG) \
     $(wildcard include/config/HAS_DMA) \
     $(wildcard include/config/NEED_DMA_MAP_STATE) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/device.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/device.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/device.h \
     $(wildcard include/config/GENERIC_MSI_IRQ_DOMAIN) \
     $(wildcard include/config/GENERIC_MSI_IRQ) \
@@ -1128,11 +1129,11 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/kobject.h \
     $(wildcard include/config/UEVENT_HELPER) \
     $(wildcard include/config/DEBUG_KOBJECT_RELEASE) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/sysfs.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/sysfs.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/sysfs.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/kernfs.h \
     $(wildcard include/config/KERNFS) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/idr.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/idr.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/idr.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/kobject_ns.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/sched/cpufreq.h \
@@ -1145,7 +1146,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/sched/idle.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/sched/sd_flags.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/klist.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/pm.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/pm.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/pm.h \
     $(wildcard include/config/VT_CONSOLE_SLEEP) \
     $(wildcard include/config/CXL_SUSPEND) \
@@ -1156,7 +1157,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/ACPI) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/device/class.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/device/driver.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/module.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/module.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/module.h \
     $(wildcard include/config/MODULES_TREE_LOOKUP) \
     $(wildcard include/config/STACKTRACE_BUILD_ID) \
@@ -1186,7 +1187,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/elf-em.h \
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/vdso.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/elf.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/moduleparam.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/moduleparam.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/moduleparam.h \
     $(wildcard include/config/PPC64) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/rbtree_latch.h \
@@ -1204,7 +1205,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/device.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/pm_wakeup.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/dma-direction.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/scatterlist.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/scatterlist.h \
     $(wildcard include/config/DEBUG_SG) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/scatterlist.h \
     $(wildcard include/config/NEED_SG_DMA_LENGTH) \
@@ -1231,7 +1232,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/logic_pio.h \
     $(wildcard include/config/INDIRECT_PIO) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/fwnode.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/netdev_features.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/netdev_features.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/netdev_features.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/sched/clock.h \
     $(wildcard include/config/HAVE_UNSTABLE_SCHED_CLOCK) \
@@ -1252,7 +1253,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/netfilter/nf_conntrack_common.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/net_debug.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/dropreason.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/netdevice.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/netdevice.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/netdevice.h \
     $(wildcard include/config/DCB) \
     $(wildcard include/config/HYPERV_NET) \
@@ -1297,7 +1298,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/NET_EGRESS) \
     $(wildcard include/config/NET_DEV_REFCNT_TRACKER) \
     $(wildcard include/config/ETHTOOL_NETLINK) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/delay.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/delay.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/delay.h \
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/delay.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/asm-generic/delay.h \
@@ -1323,7 +1324,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/TLS) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/snmp.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/snmp.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/u64_stats_sync.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/u64_stats_sync.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/u64_stats_sync.h \
   arch/x86/include/generated/asm/local64.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/asm-generic/local64.h \
@@ -1361,7 +1362,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/NF_CT_PROTO_GRE) \
     $(wildcard include/config/NF_CONNTRACK_EVENTS) \
     $(wildcard include/config/NF_CONNTRACK_LABELS) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/list_nulls.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/list_nulls.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/list_nulls.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/netfilter/nf_conntrack_tcp.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/netfilter/nf_conntrack_tcp.h \
@@ -1384,7 +1385,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/REF_TRACKER) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/ns_common.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/seq_file_net.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/seq_file.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/seq_file.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/seq_file.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/string_helpers.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/ctype.h \
@@ -1404,7 +1405,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/FANOTIFY) \
     $(wildcard include/config/PERSISTENT_KEYRINGS) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/kernel_stat.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/interrupt.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/interrupt.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/interrupt.h \
     $(wildcard include/config/IRQ_FORCED_THREADING) \
     $(wildcard include/config/GENERIC_IRQ_PROBE) \
@@ -1421,7 +1422,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/bpf-cgroup-defs.h \
     $(wildcard include/config/BPF_LSM) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/psi_types.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/kthread.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/kthread.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/kthread.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/cgroup_subsys.h \
     $(wildcard include/config/CGROUP_DEVICE) \
@@ -1434,7 +1435,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/CGROUP_DEBUG) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/xdp.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/neighbour.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/netlink.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/netlink.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/netlink.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/scm.h \
     $(wildcard include/config/SECURITY_NETWORK) \
@@ -1455,19 +1456,19 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/pkt_cls.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/pkt_sched.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/hashtable.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/backport/magic.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/backport/magic.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/crc32.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/bitrev.h \
     $(wildcard include/config/HAVE_ARCH_BITREVERSE) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/asm/unaligned.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/asm/unaligned.h \
   arch/x86/include/generated/asm/unaligned.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/asm-generic/unaligned.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/unaligned/packed_struct.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/include/linux/ieee80211.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/include/linux/bitfield.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/net/cfg80211.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/include/net/cfg80211.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/ethtool.h \
+  /usr/src/linux-headers-6.0.0-kali5-common/include/linux/property.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/include/linux/ieee80211.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/include/linux/bitfield.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/include/net/cfg80211.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/ethtool.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/ethtool.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/compat.h \
     $(wildcard include/config/ARCH_HAS_SYSCALL_WRAPPER) \
@@ -1484,16 +1485,16 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/arch/x86/include/asm/syscall_wrapper.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/ethtool.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/rfkill.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/debugfs.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/debugfs.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/debugfs.h \
     $(wildcard include/config/DEBUG_FS) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/include/uapi/linux/nl80211.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/rfkill.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/include/uapi/linux/nl80211.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/rfkill.h \
     $(wildcard include/config/WLAN_VENDOR_INTEL_MEI) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/rfkill.h \
     $(wildcard include/config/RFKILL) \
     $(wildcard include/config/RFKILL_LEDS) \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/leds.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/leds.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/leds.h \
     $(wildcard include/config/LEDS_TRIGGERS) \
     $(wildcard include/config/LEDS_BRIGHTNESS_HW_CHANGED) \
@@ -1504,8 +1505,8 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/LEDS_TRIGGER_CPU) \
     $(wildcard include/config/LEDS_TRIGGER_AUDIO) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/dt-bindings/leds/common.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/include/net/regulatory.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/net/netlink.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/include/net/regulatory.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/net/netlink.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/netlink.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/ip.h \
     $(wildcard include/config/INET) \
@@ -1513,7 +1514,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/ip.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/jhash.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/inet_sock.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/net/sock.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/net/sock.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/sock.h \
     $(wildcard include/config/SOCK_RX_QUEUE_MAPPING) \
     $(wildcard include/config/SOCK_VALIDATE_XMIT) \
@@ -1532,12 +1533,12 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/bio.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/mempool.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/rculist_nulls.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/poll.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/poll.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/poll.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/poll.h \
   arch/x86/include/generated/uapi/asm/poll.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/asm-generic/poll.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/uapi/linux/eventpoll.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/uapi/linux/eventpoll.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/eventpoll.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/indirect_call_wrapper.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/dst.h \
@@ -1557,7 +1558,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/netns/hash.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/route.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/inetpeer.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/net/ipv6.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/net/ipv6.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/ipv6.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/ipv6.h \
     $(wildcard include/config/IPV6_ROUTER_PREF) \
@@ -1566,6 +1567,7 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/IPV6_SEG6_HMAC) \
     $(wildcard include/config/IPV6_MIP6) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/ipv6.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/tcp.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/tcp.h \
     $(wildcard include/config/BPF) \
     $(wildcard include/config/TCP_MD5SIG) \
@@ -1581,12 +1583,12 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/inet_dscp.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/ip_fib.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/arp.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/if_arp.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/if_arp.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/if_arp.h \
     $(wildcard include/config/FIREWIRE_NET) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/if_arp.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/ndisc.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/net/ipv6_stubs.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/net/ipv6_stubs.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/ipv6_stubs.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/icmpv6.h \
     $(wildcard include/config/NF_NAT) \
@@ -1598,20 +1600,20 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/dsfield.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/if_vlan.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/if_vlan.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/include/linux/mpls.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/include/uapi/linux/mpls.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/include/linux/mpls.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/include/uapi/linux/mpls.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/gcd.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/nospec.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/nospec.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/nospec.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/core.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/net/genetlink.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/net/wireless/core.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/net/genetlink.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/net/genetlink.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/linux/genetlink.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/backport-include/uapi/linux/genetlink.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/linux/genetlink.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/backport-include/uapi/linux/genetlink.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/uapi/linux/genetlink.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/reg.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/rdev-ops.h \
-  /home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/trace.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/net/wireless/reg.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/net/wireless/rdev-ops.h \
+  /home/aiden/Desktop/abc/backport-iwlwifi/net/wireless/trace.h \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/tracepoint.h \
     $(wildcard include/config/HAVE_SYSCALL_TRACEPOINTS) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/linux/static_call.h \
@@ -1627,38 +1629,38 @@ deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless
     $(wildcard include/config/UML_X86) \
   /usr/src/linux-headers-6.0.0-kali5-common/include/trace/define_trace.h \
 
-/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/util.o: $(deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/util.o)
+/home/aiden/Desktop/abc/backport-iwlwifi/net/wireless/util.o: $(deps_/home/aiden/Desktop/abc/backport-iwlwifi/net/wireless/util.o)
 
-$(deps_/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/util.o):
+$(deps_/home/aiden/Desktop/abc/backport-iwlwifi/net/wireless/util.o):
 
-/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/net/wireless/util.o: $(wildcard ./tools/objtool/objtool)
+/home/aiden/Desktop/abc/backport-iwlwifi/net/wireless/util.o: $(wildcard ./tools/objtool/objtool)
 #SYMVER ieee80211_get_response_rate 0x46ff300c
 #SYMVER ieee80211_mandatory_rates 0x97b516c7
 #SYMVER ieee80211_channel_to_freq_khz 0x5584448a
 #SYMVER ieee80211_s1g_channel_width 0x0cc95bc2
 #SYMVER ieee80211_freq_khz_to_channel 0x6bedf402
-#SYMVER ieee80211_get_channel_khz 0x827a459c
+#SYMVER ieee80211_get_channel_khz 0xa9fc503b
 #SYMVER ieee80211_hdrlen 0x7ef39823
-#SYMVER ieee80211_get_hdrlen_from_skb 0xf53091e8
+#SYMVER ieee80211_get_hdrlen_from_skb 0xdbb0be69
 #SYMVER ieee80211_get_mesh_hdrlen 0xd56d55f3
-#SYMVER ieee80211_data_to_8023_exthdr 0x099181fa
-#SYMVER ieee80211_amsdu_to_8023s 0x3eb8ed84
-#SYMVER cfg80211_classify8021d 0xe4a9e001
+#SYMVER ieee80211_data_to_8023_exthdr 0x9b46d4ee
+#SYMVER ieee80211_amsdu_to_8023s 0xa74f52c4
+#SYMVER cfg80211_classify8021d 0x1f771356
 #SYMVER ieee80211_bss_get_elem 0x429c0c31
 #SYMVER cfg80211_calculate_bitrate 0x4d888bc1
 #SYMVER cfg80211_get_p2p_attr 0xf5596d89
 #SYMVER ieee80211_ie_split_ric 0x275269b3
 #SYMVER ieee80211_operating_class_to_band 0xf40bc2f5
 #SYMVER ieee80211_chandef_to_operating_class 0x3643b80f
-#SYMVER cfg80211_iter_combinations 0x4fadb41e
-#SYMVER cfg80211_check_combinations 0x46f4992f
-#SYMVER ieee80211_get_num_supported_channels 0x206a8496
-#SYMVER cfg80211_get_station 0x11e989d3
+#SYMVER cfg80211_iter_combinations 0x3e74aa6f
+#SYMVER cfg80211_check_combinations 0x5cbc7b05
+#SYMVER ieee80211_get_num_supported_channels 0xaa2d40e0
+#SYMVER cfg80211_get_station 0x688d5c98
 #SYMVER cfg80211_free_nan_func 0x8fa02936
 #SYMVER cfg80211_sinfo_alloc_tid_stats 0x1b5a3a7e
 #SYMVER rfc1042_header 0x69b18f43
 #SYMVER bridge_tunnel_header 0x1879fcbd
-#SYMVER cfg80211_send_layer2_update 0xebe161a8
+#SYMVER cfg80211_send_layer2_update 0x017dec28
 #SYMVER ieee80211_get_vht_max_nss 0x7c3ac925
-#SYMVER cfg80211_iftype_allowed 0x4cddf62c
-#SYMVER cfg80211_get_iftype_ext_capa 0x3de4c272
+#SYMVER cfg80211_iftype_allowed 0xd8232ecb
+#SYMVER cfg80211_get_iftype_ext_capa 0xd7837767

@@ -54,15 +54,6 @@ enum iwl_debug_cmds {
 	 * &struct iwl_dbg_dump_complete_cmd
 	 */
 	FW_DUMP_COMPLETE_CMD = 0xB,
-#ifdef CPTCFG_IWLWIFI_DHC_PRIVATE
-	/**
-	 * @DEBUG_HOST_NTF:
-	 * &struct iwl_adwell_fine_tune_metrics_report or
-	 * &struct iwl_channel_dwell_report or
-	 * &struct iwl_profiling_notification
-	 */
-	DEBUG_HOST_NTF = 0xFC,
-#endif
 	/**
 	 * @MFU_ASSERT_DUMP_NTF:
 	 * &struct iwl_mfu_assert_dump_notif

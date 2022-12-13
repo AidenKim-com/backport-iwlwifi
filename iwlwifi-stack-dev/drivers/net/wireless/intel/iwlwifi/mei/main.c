@@ -9,11 +9,7 @@
 #include <linux/rtnetlink.h>
 #include <linux/module.h>
 #include <linux/moduleparam.h>
-#ifdef CPTCFG_IWLWIFI_SIMULATION
-#include "mei_sim/mei_sim_bus.h"
-#else
 #include <linux/mei_cl_bus.h>
-#endif
 #include <linux/rcupdate.h>
 #include <linux/debugfs.h>
 #include <linux/skbuff.h>

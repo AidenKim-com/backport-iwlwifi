@@ -1,5 +1,4 @@
-/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/iwlwifi.ko
-/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/dvm/iwldvm.ko
-/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mvm/iwlmvm.ko
-/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/mei/iwlmei.ko
-/home/aiden/Desktop/modules/backport-iwlwifi/iwlwifi-stack-dev/drivers/net/wireless/intel/iwlwifi/xvt/iwlxvt.ko
+/home/aiden/Desktop/abc/backport-iwlwifi/drivers/net/wireless/intel/iwlwifi/iwlwifi.ko
+/home/aiden/Desktop/abc/backport-iwlwifi/drivers/net/wireless/intel/iwlwifi/mvm/iwlmvm.ko
+/home/aiden/Desktop/abc/backport-iwlwifi/drivers/net/wireless/intel/iwlwifi/mei/iwlmei.ko
+/home/aiden/Desktop/abc/backport-iwlwifi/drivers/net/wireless/intel/iwlwifi/xvt/iwlxvt.ko

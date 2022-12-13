@@ -158,51 +158,6 @@ static void iwl_mvm_adjust_quota_for_noa(struct iwl_mvm *mvm,
 #endif
 }
 
-#ifdef CPTCFG_IWLWIFI_DHC_PRIVATE
-/*
- * Enforce a maximum quota to vif's binding
- * Set vif to NULL to cancel a previous enforcement
- */
-int iwl_mvm_dhc_quota_enforce(struct iwl_mvm *mvm,
-			      struct iwl_mvm_vif *vif, int quota_percent)
-{
-	struct iwl_dhc_cmd *dhc_cmd;
-	struct iwl_dhc_quota_enforce *dhc_quota_cmd;
-	u32 cmd_id = WIDE_ID(IWL_ALWAYS_LONG_GROUP, DEBUG_HOST_COMMAND);
-	int ret;
-
-	lockdep_assert_held(&mvm->mutex);
-
-	dhc_cmd = kzalloc(sizeof(*dhc_cmd) + sizeof(*dhc_quota_cmd),
-			  GFP_KERNEL);
-	if (!dhc_cmd)
-		return -ENOMEM;
-
-	IWL_DEBUG_QUOTA(mvm, "quota enforce: enforce %d, percent %d\n",
-			vif ? 1 : 0, quota_percent);
-
-	dhc_quota_cmd = (void *)dhc_cmd->data;
-	dhc_quota_cmd->quota_enforce_type = QUOTA_ENFORCE_TYPE_LIMITATION;
-	if (vif) {
-		dhc_quota_cmd->macs = BIT(vif->id);
-		dhc_quota_cmd->quota_percentage[vif->id] =
-			cpu_to_le32(quota_percent);
-	}
-
-	dhc_cmd->length = cpu_to_le32(sizeof(*dhc_quota_cmd) >> 2);
-	dhc_cmd->index_and_mask =
-		cpu_to_le32(DHC_TABLE_INTEGRATION | DHC_TARGET_UMAC |
-			    DHC_INTEGRATION_QUOTA_ENFORCE);
-
-	ret = iwl_mvm_send_cmd_pdu(mvm, cmd_id, 0,
-				   sizeof(*dhc_cmd) + sizeof(*dhc_quota_cmd),
-				   dhc_cmd);
-	kfree(dhc_cmd);
-
-	return ret;
-}
-#endif
-
 int iwl_mvm_update_quotas(struct iwl_mvm *mvm,
 			  bool force_update,
 			  struct ieee80211_vif *disabled_vif)
@@ -230,20 +185,6 @@ int iwl_mvm_update_quotas(struct iwl_mvm *mvm,
 
 	/* iterator data above must match */
 	BUILD_BUG_ON(MAX_BINDINGS != 4);
-
-#ifdef CPTCFG_IWLMVM_ADVANCED_QUOTA_MGMT
-	switch (iwl_mvm_calculate_advanced_quotas(mvm, disabled_vif, force_update, &cmd)) {
-	case IWL_MVM_QUOTA_OK:
-		/* override send - advanced calculation checked already */
-		send = true;
-		goto out;
-	case IWL_MVM_QUOTA_SKIP:
-		return 0;
-	case IWL_MVM_QUOTA_ERROR:
-		/* continue with static allocation */
-		break;
-	}
-#endif
 
 	ieee80211_iterate_active_interfaces_atomic(
 		mvm->hw, IEEE80211_IFACE_ITER_NORMAL,
@@ -352,9 +293,6 @@ int iwl_mvm_update_quotas(struct iwl_mvm *mvm,
 		}
 	}
 
-#ifdef CPTCFG_IWLMVM_ADVANCED_QUOTA_MGMT
-out:
-#endif
 	iwl_mvm_adjust_quota_for_noa(mvm, &cmd);
 
 	/* check that we have non-zero quota for all valid bindings */

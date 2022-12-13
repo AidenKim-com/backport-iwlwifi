@@ -195,9 +195,6 @@ void _iwl_trans_pcie_gen2_stop_device(struct iwl_trans *trans)
 	clear_bit(STATUS_SYNC_HCMD_ACTIVE, &trans->status);
 	clear_bit(STATUS_INT_ENABLED, &trans->status);
 	clear_bit(STATUS_TPOWER_PMI, &trans->status);
-#ifdef CPTCFG_IWLWIFI_DHC_PRIVATE
-	clear_bit(STATUS_DISABLE_STUCK_TIMER, &trans->status);
-#endif
 
 	/*
 	 * Even if we stop the HW, we still want the RF kill

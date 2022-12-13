@@ -647,12 +647,6 @@ static ssize_t iwl_dbgfs_quota_min_write(struct ieee80211_vif *vif, char *buf,
 	u16 value;
 	int ret;
 
-#ifdef CPTCFG_IWLMVM_ADVANCED_QUOTA_MGMT
-	/* not yet supported in that code */
-	if (!IWL_MVM_DYNQUOTA_DISABLED)
-		return -EINVAL;
-#endif
-
 	ret = kstrtou16(buf, 0, &value);
 	if (ret)
 		return ret;
@@ -826,77 +820,41 @@ static ssize_t iwl_dbgfs_eht_puncturing_write(struct ieee80211_vif *vif, char *b
 	return count;
 }
 
-#ifdef CPTCFG_IWLWIFI_DHC_PRIVATE
-static ssize_t iwl_dbgfs_htc_omi_write(struct ieee80211_vif *vif, char *buf,
-				       size_t count, loff_t *ppos)
+static ssize_t iwl_dbgfs_max_tx_op_write(struct ieee80211_vif *vif, char *buf,
+					 size_t count, loff_t *ppos)
 {
 	struct iwl_mvm_vif *mvmvif = iwl_mvm_vif_from_mac80211(vif);
 	struct iwl_mvm *mvm = mvmvif->mvm;
-	struct iwl_dhc_htc_omi *dhc_omi_cmd;
-	struct iwl_dhc_cmd *cmd;
-	u32 om;
+	u16 value;
 	int ret;
 
-	if (kstrtou32(buf, 0, &om))
-		return -EINVAL;
-
-	cmd = kzalloc(sizeof(*cmd) + sizeof(*dhc_omi_cmd), GFP_KERNEL);
-	if (!cmd)
-		return -ENOMEM;
-
-	dhc_omi_cmd = (void *)cmd->data;
-	dhc_omi_cmd->operating_mode = cpu_to_le32(om);
-	dhc_omi_cmd->mac_id = (u8)mvmvif->id;
-
-	cmd->length = cpu_to_le32(sizeof(*dhc_omi_cmd) >> 2);
-	cmd->index_and_mask =
-		cpu_to_le32(DHC_TABLE_INTEGRATION | DHC_TARGET_UMAC |
-			    DHC_INT_UMAC_OMI_OPERATION);
+	ret = kstrtou16(buf, 0, &value);
+	if (ret)
+		return ret;
 
 	mutex_lock(&mvm->mutex);
-	ret = iwl_mvm_send_cmd_pdu(mvm,
-				   WIDE_ID(IWL_ALWAYS_LONG_GROUP, DEBUG_HOST_COMMAND),
-				   0, sizeof(*cmd) + sizeof(*dhc_omi_cmd),
-				   cmd);
+	mvmvif->max_tx_op = value;
 	mutex_unlock(&mvm->mutex);
-	kfree(cmd);
 
-	return ret ?: count;
+	return count;
 }
 
-static ssize_t iwl_dbgfs_twt_info_frame_write(struct ieee80211_vif *vif, char *buf,
-					      size_t count, loff_t *ppos)
+static ssize_t iwl_dbgfs_max_tx_op_read(struct file *file,
+					char __user *user_buf,
+					size_t count, loff_t *ppos)
 {
+	struct ieee80211_vif *vif = file->private_data;
 	struct iwl_mvm_vif *mvmvif = iwl_mvm_vif_from_mac80211(vif);
 	struct iwl_mvm *mvm = mvmvif->mvm;
-	struct iwl_dhc_cmd *cmd;
-	u32 nextTwtOffset;
-	int ret;
-
-	if (kstrtou32(buf, 0, &nextTwtOffset))
-		return -EINVAL;
-
-	cmd = kzalloc(sizeof(*cmd) + sizeof(nextTwtOffset), GFP_KERNEL);
-	if (!cmd)
-		return -ENOMEM;
-
-	cmd->length = cpu_to_le32(sizeof(nextTwtOffset) >> 2);
-	cmd->index_and_mask =
-		cpu_to_le32(DHC_TABLE_INTEGRATION | DHC_TARGET_UMAC |
-			    DHC_INT_UMAC_SEND_TWT_INFO);
-	*(__le32 *)cmd->data = cpu_to_le32(nextTwtOffset);
+	char buf[10];
+	int len;
 
 	mutex_lock(&mvm->mutex);
-	ret = iwl_mvm_send_cmd_pdu(mvm,
-				   WIDE_ID(IWL_ALWAYS_LONG_GROUP, DEBUG_HOST_COMMAND),
-				   0, sizeof(*cmd) + sizeof(nextTwtOffset),
-				   cmd);
+	len = scnprintf(buf, sizeof(buf), "%hu\n", mvmvif->max_tx_op);
 	mutex_unlock(&mvm->mutex);
-	kfree(cmd);
 
-	return ret ?: count;
+	return simple_read_from_buffer(user_buf, count, ppos, buf, len);
 }
-#endif /* CPTCFG_IWLWIFI_DHC_PRIVATE */
 
 #define MVM_DEBUGFS_WRITE_FILE_OPS(name, bufsz) \
 	_MVM_DEBUGFS_WRITE_FILE_OPS(name, bufsz, struct ieee80211_vif)
@@ -919,10 +877,7 @@ MVM_DEBUGFS_READ_WRITE_FILE_OPS(quota_min, 32);
 MVM_DEBUGFS_READ_FILE_OPS(os_device_timediff);
 MVM_DEBUGFS_WRITE_FILE_OPS(twt_setup, 256);
 MVM_DEBUGFS_READ_WRITE_FILE_OPS(eht_puncturing, 16);
-#ifdef CPTCFG_IWLWIFI_DHC_PRIVATE
-MVM_DEBUGFS_WRITE_FILE_OPS(htc_omi, 32);
-MVM_DEBUGFS_WRITE_FILE_OPS(twt_info_frame, 32);
-#endif
+MVM_DEBUGFS_READ_WRITE_FILE_OPS(max_tx_op, 10);
 
 
 void iwl_mvm_vif_dbgfs_register(struct iwl_mvm *mvm, struct ieee80211_vif *vif)
@@ -960,15 +915,11 @@ void iwl_mvm_vif_dbgfs_register(struct iwl_mvm *mvm, struct ieee80211_vif *vif)
 	MVM_DEBUGFS_ADD_FILE_VIF(os_device_timediff, mvmvif->dbgfs_dir, 0400);
 	MVM_DEBUGFS_ADD_FILE_VIF(twt_setup, mvmvif->dbgfs_dir, 0200);
 	MVM_DEBUGFS_ADD_FILE_VIF(eht_puncturing, mvmvif->dbgfs_dir, 0600);
+	MVM_DEBUGFS_ADD_FILE_VIF(max_tx_op, mvmvif->dbgfs_dir, 0600);
 
 	if (vif->type == NL80211_IFTYPE_STATION && !vif->p2p &&
 	    mvmvif == mvm->bf_allowed_vif)
 		MVM_DEBUGFS_ADD_FILE_VIF(bf_params, mvmvif->dbgfs_dir, 0600);
-
-#ifdef CPTCFG_IWLWIFI_DHC_PRIVATE
-	MVM_DEBUGFS_ADD_FILE_VIF(htc_omi, mvmvif->dbgfs_dir, 0200);
-	MVM_DEBUGFS_ADD_FILE_VIF(twt_info_frame, mvmvif->dbgfs_dir, 0200);
-#endif
 
 	/*
 	 * Create symlink for convenience pointing to interface specific

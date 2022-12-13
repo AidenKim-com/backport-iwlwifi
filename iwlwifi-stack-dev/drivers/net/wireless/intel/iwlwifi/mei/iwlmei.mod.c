@@ -37,12 +37,12 @@ SYMBOL_CRC(iwl_mei_set_rfkill_state, 0x27595f53, "_gpl");
 SYMBOL_CRC(iwl_mei_set_nic_info, 0x7d8730a9, "_gpl");
 SYMBOL_CRC(iwl_mei_set_country_code, 0xee3e060e, "_gpl");
 SYMBOL_CRC(iwl_mei_set_power_limit, 0xc76e7b8e, "_gpl");
-SYMBOL_CRC(iwl_mei_set_netdev, 0x7f249f7f, "_gpl");
+SYMBOL_CRC(iwl_mei_set_netdev, 0x92e64604, "_gpl");
 SYMBOL_CRC(iwl_mei_device_state, 0x37a19c73, "_gpl");
 SYMBOL_CRC(iwl_mei_register, 0x804b709e, "_gpl");
 SYMBOL_CRC(iwl_mei_start_unregister, 0xa571d81a, "_gpl");
 SYMBOL_CRC(iwl_mei_unregister_complete, 0x793ece1d, "_gpl");
-SYMBOL_CRC(iwl_mei_tx_copy_to_csme, 0x961b8852, "_gpl");
+SYMBOL_CRC(iwl_mei_tx_copy_to_csme, 0xf23fc3b0, "_gpl");
 
 static const struct modversion_info ____versions[]
 __used __section("__versions") = {
@@ -146,4 +146,4 @@ __used __section("__versions") = {
 MODULE_INFO(depends, "mei,cfg80211,compat");
 
 
-MODULE_INFO(srcversion, "80EB0740541FD1A7CAC71DE");
+MODULE_INFO(srcversion, "A98EA3793CD280442861D7D");

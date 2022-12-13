@@ -332,14 +332,9 @@ static void iwl_xvt_stop(struct iwl_op_mode *op_mode)
 
 	iwl_fw_cancel_timestamp(&xvt->fwrt);
 
-	if (xvt->state != IWL_XVT_STATE_UNINITIALIZED) {
-		if (xvt->fw_running) {
-			iwl_xvt_txq_disable(xvt);
-			xvt->fw_running = false;
-		}
-		iwl_fw_dbg_stop_sync(&xvt->fwrt);
-		iwl_trans_stop_device(xvt->trans);
-	}
+	mutex_lock(&xvt->mutex);
+	iwl_xvt_stop_op_mode(xvt);
+	mutex_unlock(&xvt->mutex);
 
 	for (i = 0; i < ARRAY_SIZE(xvt->reorder_bufs); i++) {
 		struct iwl_xvt_reorder_buffer *buffer;
@@ -797,19 +792,25 @@ void iwl_xvt_free_tx_queue(struct iwl_xvt *xvt, u8 lmac_id)
 	iwl_trans_txq_free(xvt->trans, xvt->tx_meta_data[lmac_id].queue);
 
 	xvt->tx_meta_data[lmac_id].queue = -1;
+	xvt->tx_meta_data[lmac_id].sta_msk = 0;
 }
 
 int iwl_xvt_allocate_tx_queue(struct iwl_xvt *xvt, u8 sta_id,
 			      u8 lmac_id)
 {
-	int ret, size = max_t(u32, IWL_DEFAULT_QUEUE_SIZE,
-			      xvt->trans->cfg->min_ba_txq_size);
+	int ret = 0;
+	int size = max_t(u32, IWL_DEFAULT_QUEUE_SIZE,
+			 xvt->trans->cfg->min_ba_txq_size);
+
+	if (xvt->tx_meta_data[lmac_id].sta_msk & BIT(sta_id))
+		return ret;
 
 	ret = iwl_trans_txq_alloc(xvt->trans, 0,
 				  BIT(sta_id), TX_QUEUE_CFG_TID, size, 0);
 	/* ret is positive when func returns the allocated the queue number */
 	if (ret > 0) {
 		xvt->tx_meta_data[lmac_id].queue = ret;
+		xvt->tx_meta_data[lmac_id].sta_msk |= BIT(sta_id);
 		ret = 0;
 	} else {
 		IWL_ERR(xvt, "failed to allocate queue\n");

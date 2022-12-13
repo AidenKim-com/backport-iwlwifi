@@ -28,9 +28,6 @@
 #ifdef CPTCFG_IWLWIFI_DEVICE_TESTMODE
 #include "iwl-tm-gnl.h"
 #endif
-#ifdef CPTCFG_IWLWIFI_PLATFORM_MOCKUPS
-#include "fw/platform-mockups.h"
-#endif
 
 /******************************************************************************
  *
@@ -443,13 +440,6 @@ static int iwl_request_firmware(struct iwl_drv *drv, bool first)
 
 	IWL_DEBUG_FW_INFO(drv, "attempting to load firmware '%s'\n",
 			  drv->firmware_name);
-
-#ifdef CPTCFG_IWLWIFI_SIMULATION
-	if (drv->trans->ops->request_firmware &&
-	    !drv->trans->ops->request_firmware(drv->trans, drv->firmware_name,
-					       drv, iwl_req_fw_callback))
-		return 0;
-#endif
 
 	return request_firmware_nowait(THIS_MODULE, 1, drv->firmware_name,
 				       drv->trans->dev,
@@ -1449,6 +1439,12 @@ fw_dbg_conf:
 			capa->num_stations =
 				le32_to_cpup((const __le32 *)tlv_data);
 			break;
+		case IWL_UCODE_TLV_FW_NUM_BEACONS:
+			if (tlv_len != sizeof(u32))
+				goto invalid_tlv_len;
+			capa->num_beacons =
+				le32_to_cpup((const __le32 *)tlv_data);
+			break;
 		case IWL_UCODE_TLV_UMAC_DEBUG_ADDRS: {
 			const struct iwl_umac_debug_addrs *dbg_ptrs =
 				(const void *)tlv_data;
@@ -1711,6 +1707,7 @@ static void iwl_req_fw_callback(const struct firmware *ucode_raw, void *context)
 			IWL_DEFAULT_STANDARD_PHY_CALIBRATE_TBL_SIZE;
 	fw->ucode_capa.n_scan_channels = IWL_DEFAULT_SCAN_CHANNELS;
 	fw->ucode_capa.num_stations = IWL_MVM_STATION_COUNT_MAX;
+	fw->ucode_capa.num_beacons = 1;
 	/* dump all fw memory areas by default */
 	fw->dbg.dump_mask = 0xffffffff;
 
@@ -2197,10 +2194,6 @@ static int __init iwl_drv_init(void)
 	for (i = 0; i < ARRAY_SIZE(iwlwifi_opmode_table); i++)
 		INIT_LIST_HEAD(&iwlwifi_opmode_table[i].drv);
 
-#ifdef CPTCFG_IWLWIFI_PLATFORM_MOCKUPS
-	WARN_ON(iwl_platform_mockups_init());
-#endif
-
 #ifdef CPTCFG_IWLWIFI_DEVICE_TESTMODE
 	if (iwl_tm_gnl_init())
 		return -EFAULT;
@@ -2235,9 +2228,6 @@ cleanup_tm_gnl:
 #ifdef CPTCFG_IWLWIFI_DEVICE_TESTMODE
 	iwl_tm_gnl_exit();
 #endif
-#ifdef CPTCFG_IWLWIFI_PLATFORM_MOCKUPS
-	iwl_platform_mockups_free();
-#endif
 #ifdef CPTCFG_IWLWIFI_DEBUGFS
 	debugfs_remove_recursive(iwl_dbgfs_root);
 #endif
@@ -2260,9 +2250,6 @@ static void __exit iwl_drv_exit(void)
 
 #ifdef CPTCFG_IWLWIFI_DEVICE_TESTMODE
 	iwl_tm_gnl_exit();
-#endif
-#ifdef CPTCFG_IWLWIFI_PLATFORM_MOCKUPS
-	iwl_platform_mockups_free();
 #endif
 }
 module_exit(iwl_drv_exit);
@@ -2382,17 +2369,3 @@ MODULE_PARM_DESC(remove_when_gone,
 module_param_named(disable_11be, iwlwifi_mod_params.disable_11be, bool, 0444);
 MODULE_PARM_DESC(disable_11be, "Disable EHT capabilities (default: false)");
 
-#ifdef CPTCFG_IWLWIFI_PLATFORM_MOCKUPS
-module_param_named(enable_acpi_mockups,
-		   iwlwifi_mod_params.enable_acpi_mockups, bool, 0444);
-MODULE_PARM_DESC(enable_acpi_mockups,
-		 "Enable ACPI mockups that reads the data from a file instead of the actual ACPI tables (default: false)");
-module_param_named(enable_efi_mockups,
-		   iwlwifi_mod_params.enable_efi_mockups, bool, 0444);
-MODULE_PARM_DESC(enable_efi_mockups,
-		 "Enable EFI mockups that reads the data from a file instead of the actual UEFI (default: false)");
-module_param_named(enable_dmi_mockups,
-		   iwlwifi_mod_params.enable_dmi_mockups, bool, 0444);
-MODULE_PARM_DESC(enable_dmi_mockups,
-		 "Enable DMI mockups that reads the data from a file instead of the actual SMBIOS (default: false)");
-#endif

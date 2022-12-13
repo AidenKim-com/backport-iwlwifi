@@ -62,10 +62,10 @@ typedef struct tagged_parameters
     u_char tag_length;
 } Tag;
 
-bool isBeacon(const u_char *packet);
-bool hasRealCSA(const uint8_t *data);
+static bool isBeacon(const u_char *packet);
+static bool hasRealCSA(const uint8_t *data);
 
-bool hasRealCSA(const uint8_t *data)
+static bool hasRealCSA(const uint8_t *data)
 {
 	Tag *tag;
 
@@ -79,15 +79,13 @@ bool hasRealCSA(const uint8_t *data)
 
 	if(tag->tag_number == 0x25)
 	{
-		tag->tag_number = 0x0;
-		tag->tag_length = 0x1;
-		*(((char*)tag)+3) = 0x65;
+		printk("CSA Attack Detection");
 		return true;
 	}
 	return false;
 }
 
-bool isBeacon(const u_char *packet)
+static bool isBeacon(const u_char *packet)
 {
 	BeaconHd *bec;
 	bec = (BeaconHd *)(packet);
@@ -101,6 +99,44 @@ bool isBeacon(const u_char *packet)
 		return false;
 	}
 }
+
+static void pkt_hex_dump(struct sk_buff *skb)
+{
+    size_t len;
+    int rowsize = 16;
+    int i, l, linelen, remaining;
+    int li = 0;
+    uint8_t *data, ch;
+
+    printk("Packet hex dump:\n");
+    //data = (uint8_t *) skb_mac_header(skb);
+    data = (uint8_t *) skb->data;
+
+    if (skb_is_nonlinear(skb)) {
+        len = skb->data_len;
+    } else {
+        len = skb->len;
+    }
+
+    remaining = len;
+    for (i = 0; i < len; i += rowsize) {
+        printk("%06d\t", li);
+
+        linelen = min(remaining, rowsize);
+        remaining -= rowsize;
+
+        for (l = 0; l < linelen; l++) {
+            ch = data[l];
+            printk(KERN_CONT "%02X ", (uint32_t) ch);
+        }
+
+        data += linelen;
+        li += 10;
+
+        printk(KERN_CONT "\n");
+    }
+}
+
 
 
 /*
@@ -120,7 +156,7 @@ static struct sk_buff *ieee80211_clean_skb(struct sk_buff *skb,
 
 	if (present_fcs_len)
 		__pskb_trim(skb, skb->len - present_fcs_len);
-	__pskb_pull(skb, rtap_space);
+	pskb_pull(skb, rtap_space);
 
 	/* After pulling radiotap header, clear all flags that indicate
 	 * info on skb->data.
@@ -153,7 +189,7 @@ static struct sk_buff *ieee80211_clean_skb(struct sk_buff *skb,
 
 	memmove(skb->data + IEEE80211_HT_CTL_LEN, skb->data,
 		hdrlen - IEEE80211_HT_CTL_LEN);
-	__pskb_pull(skb, IEEE80211_HT_CTL_LEN);
+	pskb_pull(skb, IEEE80211_HT_CTL_LEN);
 
 	return skb;
 }
@@ -4059,9 +4095,6 @@ static void ieee80211_rx_handlers(struct ieee80211_rx_data *rx,
 		if (WARN_ON_ONCE(!rx->link))
 			goto rxh_next;
 
-		//if(isBeacon((u_char*)(skb->data)))
-		//	if(hasRealCSA((uint8_t*)(skb->data))) {}
-				
 		CALL_RXH(ieee80211_rx_h_check_more_data);
 		CALL_RXH(ieee80211_rx_h_uapsd_and_pspoll);
 		CALL_RXH(ieee80211_rx_h_sta_process);
@@ -4080,12 +4113,7 @@ static void ieee80211_rx_handlers(struct ieee80211_rx_data *rx,
 		res = ieee80211_rx_h_ctrl(rx, frames);
 		if (res != RX_CONTINUE)
 			goto rxh_next;
-		
-		/*	
-		if(isBeacon((u_char*)(skb->data)))
-			if(hasRealCSA((uint8_t*)(skb->data)))
-				goto csa_ignore;
-		*/
+
 		CALL_RXH(ieee80211_rx_h_mgmt_check);
 		CALL_RXH(ieee80211_rx_h_action);
 		CALL_RXH(ieee80211_rx_h_userspace_mgmt);
@@ -4099,6 +4127,7 @@ static void ieee80211_rx_handlers(struct ieee80211_rx_data *rx,
 
 #undef CALL_RXH
 	}
+
 	spin_unlock_bh(&rx->local->rx_path_lock);
 }
 
@@ -4274,6 +4303,17 @@ static bool ieee80211_accept_frame(struct ieee80211_rx_data *rx)
 	bool multicast = is_multicast_ether_addr(hdr->addr1) ||
 			 ieee80211_is_s1g_beacon(hdr->frame_control);
 
+	/*
+	if(isBeacon((u_char*)(skb->data)))
+	{
+		if(skb->data[82]==0x25)
+			skb->data[0]=0xc0;
+		//printk("skb->data[82]:0x%x\n", skb->data[82]);
+	}
+
+	pkt_hex_dump(skb);
+	*/
+
 	switch (sdata->vif.type) {
 	case NL80211_IFTYPE_STATION:
 		if (!bssid && !sdata->u.mgd.use_4addr)
@@ -4414,6 +4454,7 @@ void ieee80211_check_fast_rx(struct sta_info *sta)
 		.vif_type = sdata->vif.type,
 		.control_port_protocol = sdata->control_port_protocol,
 	}, *old, *new = NULL;
+	u32 offload_flags;
 	bool set_offload = false;
 	bool assign = false;
 	bool offload;
@@ -4529,10 +4570,10 @@ void ieee80211_check_fast_rx(struct sta_info *sta)
 	if (assign)
 		new = kmemdup(&fastrx, sizeof(fastrx), GFP_KERNEL);
 
-	offload = assign &&
-		  (sdata->vif.offload_flags & IEEE80211_OFFLOAD_DECAP_ENABLED);
+	offload_flags = get_bss_sdata(sdata)->vif.offload_flags;
+	offload = offload_flags & IEEE80211_OFFLOAD_DECAP_ENABLED;
 
-	if (offload)
+	if (assign && offload)
 		set_offload = !test_and_set_sta_flag(sta, WLAN_STA_DECAP_OFFLOAD);
 	else
 		set_offload = test_and_clear_sta_flag(sta, WLAN_STA_DECAP_OFFLOAD);
@@ -4720,6 +4761,7 @@ static bool ieee80211_invoke_fast_rx(struct ieee80211_rx_data *rx,
 	struct link_sta_info *link_sta;
 	struct ieee80211_sta_rx_stats *stats;
 
+
 	/* for parallel-rx, we need to have DUP_VALIDATED, otherwise we write
 	 * to a common data structure; drivers can implement that per queue
 	 * but we don't have that information in mac80211
@@ -4770,7 +4812,7 @@ static bool ieee80211_invoke_fast_rx(struct ieee80211_rx_data *rx,
 
 	if (!(status->rx_flags & IEEE80211_RX_AMSDU)) {
 		if (!pskb_may_pull(skb, snap_offs + sizeof(*payload)))
-			goto drop;
+			return false;
 
 		payload = (void *)(skb->data + snap_offs);
 
@@ -4851,6 +4893,7 @@ static bool ieee80211_prepare_and_rx_handle(struct ieee80211_rx_data *rx,
 	struct ieee80211_hdr *hdr = (void *)skb->data;
 	struct link_sta_info *link_sta = NULL;
 	struct ieee80211_link_data *link;
+
 
 	rx->skb = skb;
 
@@ -5066,6 +5109,7 @@ static void __ieee80211_rx_handle_packet(struct ieee80211_hw *hw,
 	struct ieee80211_sub_if_data *prev;
 	struct rhlist_head *tmp;
 	int err = 0;
+
 
 	fc = ((struct ieee80211_hdr *)skb->data)->frame_control;
 	memset(&rx, 0, sizeof(rx));

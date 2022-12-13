@@ -5,10 +5,6 @@
 #ifndef __iwl_fw_uefi__
 #define __iwl_fw_uefi__
 
-#ifdef CPTCFG_IWLWIFI_PLATFORM_MOCKUPS
-#include "fw/platform-mockups.h"
-#endif /* CPTCFG_IWLWIFI_PLATFORM_MOCKUPS */
-
 #define IWL_UEFI_OEM_PNVM_NAME		L"UefiCnvWlanOemSignedPnvm"
 #define IWL_UEFI_REDUCED_POWER_NAME	L"UefiCnvWlanReducedPower"
 #define IWL_UEFI_SGOM_NAME		L"UefiCnvWlanSarGeoOffsetMapping"

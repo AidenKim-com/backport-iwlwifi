@@ -93,26 +93,6 @@ struct iwl_mod_params {
 	u32 enable_ini;
 	bool disable_11be;
 
-#ifdef CPTCFG_IWLWIFI_PLATFORM_MOCKUPS
-	/**
-	 * @enable_acpi_mockups: enable ACPI mockups that reads the
-	 *	data from a file instead of the actual ACPI tables,
-	 *	default = false.
-	 */
-	bool enable_acpi_mockups;
-	/**
-	 * @enable_efi_mockups: enable EFI mockups that reads the
-	 *	data from a file instead of the actual UEFI,
-	 *	default = false.
-	 */
-	bool enable_efi_mockups;
-	/**
-	 * @enable_dmi_mockups: enable DMI mockups that reads the
-	 *	data from a file instead of the actual SMBIOS,
-	 *	default = false.
-	 */
-	bool enable_dmi_mockups;
-#endif
 };
 
 static inline bool iwl_enable_rx_ampdu(void)

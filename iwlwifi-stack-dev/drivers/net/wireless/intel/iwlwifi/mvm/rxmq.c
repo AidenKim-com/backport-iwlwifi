@@ -11,6 +11,36 @@
 #include "fw-api.h"
 #include "time-sync.h"
 
+static void iwl_rx_packet_hex_dump(const struct iwl_rx_packet *pkt)
+{
+	unsigned int pkt_len = iwl_rx_packet_len(pkt);
+	int rowsize = 16;
+	int i, l, linelen, remaining;
+	int li=0;
+	uint8_t *data, ch;
+
+	printk("iwl_rx_packet dump:\n");
+	data = (uint8_t*)pkt;
+
+	remaining = pkt_len;
+	for(i=0;i<pkt_len;i+=rowsize)
+	{
+		printk("%06d\t", li);
+
+		linelen=min(remaining,rowsize);
+		remaining-=rowsize;
+
+		for(l=0;l<linelen;l++)
+		{
+			ch = data[l];
+			printk(KERN_CONT "%02X ", (uint32_t)ch);
+		}
+		data += linelen;
+		li += 10;
+		printk(KERN_CONT "\n");
+	}
+}
+
 static inline int iwl_mvm_check_pn(struct iwl_mvm *mvm, struct sk_buff *skb,
 				   int queue, struct ieee80211_sta *sta)
 {
@@ -106,28 +136,12 @@ static int iwl_mvm_create_skb(struct iwl_mvm *mvm, struct sk_buff *skb,
 
 	/*
 	 * For non monitor interface strip the bytes the RADA might not have
-	 * removed. As monitor interface cannot exist with other interfaces
-	 * this removal is safe.
+	 * removed (it might be disabled, e.g. for mgmt frames). As a monitor
+	 * interface cannot exist with other interfaces, this removal is safe
+	 * and sufficient, in monitor mode there's no decryption being done.
 	 */
-	if (mic_crc_len && !ieee80211_hw_check(mvm->hw, RX_INCLUDES_FCS)) {
-		u32 pkt_flags = le32_to_cpu(pkt->len_n_flags);
-
-		/*
-		 * If RADA was not enabled then decryption was not performed so
-		 * the MIC cannot be removed.
-		 */
-		if (!(pkt_flags & FH_RSCSR_RADA_EN)) {
-			if (WARN_ON(crypt_len > mic_crc_len))
-				return -EINVAL;
-
-			mic_crc_len -= crypt_len;
-		}
-
-		if (WARN_ON(mic_crc_len > len))
-			return -EINVAL;
-
+	if (len > mic_crc_len && !ieee80211_hw_check(mvm->hw, RX_INCLUDES_FCS))
 		len -= mic_crc_len;
-	}
 
 	/* If frame is small enough to fit in skb->head, pull it completely.
 	 * If not, only pull ieee80211_hdr (including crypto if present, and
@@ -410,9 +424,7 @@ static int iwl_mvm_rx_crypto(struct iwl_mvm *mvm, struct ieee80211_sta *sta,
 		if (!(status & IWL_RX_MPDU_STATUS_MIC_OK))
 			return -1;
 
-		stats->flag |= RX_FLAG_DECRYPTED;
-		if (pkt_flags & FH_RSCSR_RADA_EN)
-			stats->flag |= RX_FLAG_MIC_STRIPPED;
+		stats->flag |= RX_FLAG_DECRYPTED | RX_FLAG_MIC_STRIPPED;
 		*crypt_len = IEEE80211_CCMP_HDR_LEN;
 		return 0;
 	case IWL_RX_MPDU_STATUS_SEC_TKIP:
@@ -702,7 +714,7 @@ void iwl_mvm_reorder_timer_expired(struct timer_list *t)
 	if (expired) {
 		struct ieee80211_sta *sta;
 		struct iwl_mvm_sta *mvmsta;
-		u8 sta_id = baid_data->sta_id;
+		u8 sta_id = ffs(baid_data->sta_mask) - 1;
 
 		rcu_read_lock();
 		sta = rcu_dereference(buf->mvm->fw_id_to_mac_id[sta_id]);
@@ -737,6 +749,7 @@ static void iwl_mvm_del_ba(struct iwl_mvm *mvm, int queue,
 	struct ieee80211_sta *sta;
 	struct iwl_mvm_reorder_buffer *reorder_buf;
 	u8 baid = data->baid;
+	u32 sta_id;
 
 	if (WARN_ONCE(baid >= IWL_MAX_BAID, "invalid BAID: %x\n", baid))
 		return;
@@ -747,7 +760,9 @@ static void iwl_mvm_del_ba(struct iwl_mvm *mvm, int queue,
 	if (WARN_ON_ONCE(!ba_data))
 		goto out;
 
-	sta = rcu_dereference(mvm->fw_id_to_mac_id[ba_data->sta_id]);
+	/* pick any STA ID to find the pointer */
+	sta_id = ffs(ba_data->sta_mask) - 1;
+	sta = rcu_dereference(mvm->fw_id_to_mac_id[sta_id]);
 	if (WARN_ON_ONCE(IS_ERR_OR_NULL(sta)))
 		goto out;
 
@@ -774,6 +789,7 @@ static void iwl_mvm_release_frames_from_notif(struct iwl_mvm *mvm,
 	struct ieee80211_sta *sta;
 	struct iwl_mvm_reorder_buffer *reorder_buf;
 	struct iwl_mvm_baid_data *ba_data;
+	u32 sta_id;
 
 	IWL_DEBUG_HT(mvm, "Frame release notification for BAID %u, NSSN %d\n",
 		     baid, nssn);
@@ -791,7 +807,9 @@ static void iwl_mvm_release_frames_from_notif(struct iwl_mvm *mvm,
 		goto out;
 	}
 
-	sta = rcu_dereference(mvm->fw_id_to_mac_id[ba_data->sta_id]);
+	/* pick any STA ID to find the pointer */
+	sta_id = ffs(ba_data->sta_mask) - 1;
+	sta = rcu_dereference(mvm->fw_id_to_mac_id[sta_id]);
 	if (WARN_ON_ONCE(IS_ERR_OR_NULL(sta)))
 		goto out;
 
@@ -932,7 +950,6 @@ static bool iwl_mvm_reorder(struct iwl_mvm *mvm,
 {
 	struct ieee80211_rx_status *rx_status = IEEE80211_SKB_RXCB(skb);
 	struct ieee80211_hdr *hdr = (void *)skb_mac_header(skb);
-	struct iwl_mvm_sta *mvm_sta;
 	struct iwl_mvm_baid_data *baid_data;
 	struct iwl_mvm_reorder_buffer *buffer;
 	struct sk_buff *tail;
@@ -944,6 +961,7 @@ static bool iwl_mvm_reorder(struct iwl_mvm *mvm,
 	u8 sub_frame_idx = desc->amsdu_info &
 			   IWL_RX_MPDU_AMSDU_SUBFRAME_IDX_MASK;
 	struct iwl_mvm_reorder_buf_entry *entries;
+	u32 sta_mask;
 	int index;
 	u16 nssn, sn;
 	u8 baid;
@@ -966,8 +984,6 @@ static bool iwl_mvm_reorder(struct iwl_mvm *mvm,
 		      "Got valid BAID without a valid station assigned\n"))
 		return false;
 
-	mvm_sta = iwl_mvm_sta_from_mac80211(sta);
-
 	/* not a data packet or a bar */
 	if (!ieee80211_is_back_req(hdr->frame_control) &&
 	    (!ieee80211_is_data_qos(hdr->frame_control) ||
@@ -985,10 +1001,13 @@ static bool iwl_mvm_reorder(struct iwl_mvm *mvm,
 		return false;
 	}
 
-	if (WARN(tid != baid_data->tid || mvm_sta->deflink.sta_id != baid_data->sta_id,
-		 "baid 0x%x is mapped to sta:%d tid:%d, but was received for sta:%d tid:%d\n",
-		 baid, baid_data->sta_id, baid_data->tid, mvm_sta->deflink.sta_id,
-		 tid))
+	rcu_read_lock();
+	sta_mask = iwl_mvm_sta_fw_id_mask(mvm, sta, -1);
+	rcu_read_unlock();
+
+	if (WARN(tid != baid_data->tid || !(sta_mask & baid_data->sta_mask),
+		 "baid 0x%x is mapped to sta_mask:0x%x tid:%d, but was received for sta_mask:0x%x tid:%d\n",
+		 baid, baid_data->sta_mask, baid_data->tid, sta_mask, tid))
 		return false;
 
 	nssn = reorder & IWL_RX_MPDU_REORDER_NSSN_MASK;
@@ -1187,6 +1206,7 @@ struct iwl_mvm_rx_phy_data {
 	__le32 d0, d1, d2, d3, eht_d4, d5;
 	__le16 d4;
 	bool with_data;
+	bool first_subframe;
 	__le32 rx_vec[4];
 
 	u32 rate_n_flags;
@@ -1489,9 +1509,8 @@ static void iwl_mvm_decode_eht_ext_mu(struct iwl_mvm *mvm,
 				      struct ieee80211_radiotap_eht *eht,
 				      struct ieee80211_radiotap_eht_usig *usig)
 {
-	__le32 data1 = phy_data->d1;
-
 	if (phy_data->with_data) {
+		__le32 data1 = phy_data->d1;
 		__le32 data2 = phy_data->d2;
 		__le32 data3 = phy_data->d3;
 		__le32 data4 = phy_data->eht_d4;
@@ -1509,7 +1528,7 @@ static void iwl_mvm_decode_eht_ext_mu(struct iwl_mvm *mvm,
 					    IEEE80211_RADIOTAP_EHT_USIG2_MU_B9_B10_SIG_MCS);
 		IWL_MVM_ENC_USIG_VALUE_MASK
 			(usig, data1, IWL_RX_PHY_DATA1_EHT_MU_NUM_SIG_SYM_USIGA2,
-			 IEEE80211_RADIOTAP_EHT_USIG2_MU_B11_B15_EHT_SIG_SIMBOLS);
+			 IEEE80211_RADIOTAP_EHT_USIG2_MU_B11_B15_EHT_SIG_SYMBOLS);
 
 		eht->user_info[0] |=
 			cpu_to_le32(IEEE80211_RADIOTAP_EHT_USER_INFO_STA_ID_KNOWN) |
@@ -1562,8 +1581,8 @@ static void iwl_mvm_decode_eht_ext_mu(struct iwl_mvm *mvm,
 		IWL_MVM_ENC_USIG_VALUE_MASK(usig, usig_a1,
 					    IWL_RX_USIG_A1_VALIDATE,
 					    IEEE80211_RADIOTAP_EHT_USIG1_MU_B25_VALIDATE);
-		IWL_MVM_ENC_USIG_VALUE_MASK(usig, usig_a1,
-					    IWL_RX_USIG_A1_ENHANCED_WIFI_VER_ID,
+		IWL_MVM_ENC_USIG_VALUE_MASK(usig, usig_a2,
+					    IWL_RX_USIG_A2_EHT_PPDU_TYPE,
 					    IEEE80211_RADIOTAP_EHT_USIG2_MU_B0_B1_PPDU_TYPE);
 		IWL_MVM_ENC_USIG_VALUE_MASK(usig, usig_a2,
 					    IWL_RX_USIG_A2_EHT_USIG2_VALIDATE_B2,
@@ -1573,13 +1592,13 @@ static void iwl_mvm_decode_eht_ext_mu(struct iwl_mvm *mvm,
 					    IEEE80211_RADIOTAP_EHT_USIG2_MU_B3_B7_PUNCTURED_INFO);
 		IWL_MVM_ENC_USIG_VALUE_MASK(usig, usig_a2,
 					    IWL_RX_USIG_A2_EHT_USIG2_VALIDATE_B8,
-					    IEEE80211_RADIOTAP_EHT_USIG2_MU_B8_VLIDATE);
+					    IEEE80211_RADIOTAP_EHT_USIG2_MU_B8_VALIDATE);
 		IWL_MVM_ENC_USIG_VALUE_MASK(usig, usig_a2,
 					    IWL_RX_USIG_A2_EHT_SIG_MCS,
 					    IEEE80211_RADIOTAP_EHT_USIG2_MU_B9_B10_SIG_MCS);
 		IWL_MVM_ENC_USIG_VALUE_MASK
 			(usig, usig_a2, IWL_RX_USIG_A2_EHT_SIG_SYM_NUM,
-			 IEEE80211_RADIOTAP_EHT_USIG2_MU_B11_B15_EHT_SIG_SIMBOLS);
+			 IEEE80211_RADIOTAP_EHT_USIG2_MU_B11_B15_EHT_SIG_SYMBOLS);
 		IWL_MVM_ENC_USIG_VALUE_MASK(usig, usig_a2,
 					    IWL_RX_USIG_A2_EHT_CRC_OK,
 					    IEEE80211_RADIOTAP_EHT_USIG2_MU_B16_B19_CRC);
@@ -1611,9 +1630,9 @@ static void iwl_mvm_decode_eht_ext_tb(struct iwl_mvm *mvm,
 
 		IWL_MVM_ENC_USIG_VALUE_MASK(usig, usig_a1,
 					    IWL_RX_USIG_A1_DISREGARD,
-					    IEEE80211_RADIOTAP_EHT_USIG1_TB_B0_B25_DISREGARD);
-		IWL_MVM_ENC_USIG_VALUE_MASK(usig, usig_a1,
-					    IWL_RX_USIG_A1_ENHANCED_WIFI_VER_ID,
+					    IEEE80211_RADIOTAP_EHT_USIG1_TB_B20_B25_DISREGARD);
+		IWL_MVM_ENC_USIG_VALUE_MASK(usig, usig_a2,
+					    IWL_RX_USIG_A2_EHT_PPDU_TYPE,
 					    IEEE80211_RADIOTAP_EHT_USIG2_TB_B0_B1_PPDU_TYPE);
 		IWL_MVM_ENC_USIG_VALUE_MASK(usig, usig_a2,
 					    IWL_RX_USIG_A2_EHT_USIG2_VALIDATE_B2,
@@ -1747,9 +1766,9 @@ static void iwl_mvm_decode_eht_phy_data(struct iwl_mvm *mvm,
 	eht->known |= cpu_to_le32(IEEE80211_RADIOTAP_EHT_KNOWN_RU_ALLOC_TB_FMT);
 	eht->data[8] |= LE32_DEC_ENC(data0, IWL_RX_PHY_DATA0_EHT_PS160,
 				     IEEE80211_RADIOTAP_EHT_DATA8_RU_ALLOC_TB_FMT_PS_160);
-	eht->data[8] |= LE32_DEC_ENC(data1, IWL_RX_PHY_DATA1_EHT_B0,
+	eht->data[8] |= LE32_DEC_ENC(data1, IWL_RX_PHY_DATA1_EHT_RU_ALLOC_B0,
 				     IEEE80211_RADIOTAP_EHT_DATA8_RU_ALLOC_TB_FMT_B0);
-	eht->data[8] |= LE32_DEC_ENC(data1, IWL_RX_PHY_DATA1_EHT_RU_B1_B7_ALLOC,
+	eht->data[8] |= LE32_DEC_ENC(data1, IWL_RX_PHY_DATA1_EHT_RU_ALLOC_B1_B7,
 				     IEEE80211_RADIOTAP_EHT_DATA8_RU_ALLOC_TB_FMT_B7_B1);
 
 	iwl_mvm_decode_eht_ru(mvm, rx_status, eht);
@@ -1844,15 +1863,10 @@ static void iwl_mvm_rx_eht(struct iwl_mvm *mvm, struct sk_buff *skb,
 
 	/* update aggregation data for monitor sake on default queue */
 	if (!queue && (phy_info & IWL_RX_MPDU_PHY_TSF_OVERLOAD) &&
-	    (phy_info & IWL_RX_MPDU_PHY_AMPDU)) {
-		bool toggle_bit = phy_info & IWL_RX_MPDU_PHY_AMPDU_TOGGLE;
-
-		/* toggle is switched whenever new aggregation starts */
-		if (toggle_bit != mvm->ampdu_toggle) {
-			rx_status->flag |= RX_FLAG_AMPDU_EOF_BIT_KNOWN;
-			if (phy_data->d0 & cpu_to_le32(IWL_RX_PHY_DATA0_EHT_DELIM_EOF))
-				rx_status->flag |= RX_FLAG_AMPDU_EOF_BIT;
-		}
+	    (phy_info & IWL_RX_MPDU_PHY_AMPDU) && phy_data->first_subframe) {
+		rx_status->flag |= RX_FLAG_AMPDU_EOF_BIT_KNOWN;
+		if (phy_data->d0 & cpu_to_le32(IWL_RX_PHY_DATA0_EHT_DELIM_EOF))
+			rx_status->flag |= RX_FLAG_AMPDU_EOF_BIT;
 	}
 
 	if (phy_info & IWL_RX_MPDU_PHY_TSF_OVERLOAD)
@@ -1983,15 +1997,10 @@ static void iwl_mvm_rx_he(struct iwl_mvm *mvm, struct sk_buff *skb,
 
 	/* update aggregation data for monitor sake on default queue */
 	if (!queue && (phy_info & IWL_RX_MPDU_PHY_TSF_OVERLOAD) &&
-	    (phy_info & IWL_RX_MPDU_PHY_AMPDU)) {
-		bool toggle_bit = phy_info & IWL_RX_MPDU_PHY_AMPDU_TOGGLE;
-
-		/* toggle is switched whenever new aggregation starts */
-		if (toggle_bit != mvm->ampdu_toggle) {
-			rx_status->flag |= RX_FLAG_AMPDU_EOF_BIT_KNOWN;
-			if (phy_data->d0 & cpu_to_le32(IWL_RX_PHY_DATA0_HE_DELIM_EOF))
-				rx_status->flag |= RX_FLAG_AMPDU_EOF_BIT;
-		}
+	    (phy_info & IWL_RX_MPDU_PHY_AMPDU) && phy_data->first_subframe) {
+		rx_status->flag |= RX_FLAG_AMPDU_EOF_BIT_KNOWN;
+		if (phy_data->d0 & cpu_to_le32(IWL_RX_PHY_DATA0_EHT_DELIM_EOF))
+			rx_status->flag |= RX_FLAG_AMPDU_EOF_BIT;
 	}
 
 	if (he_type == RATE_MCS_HE_TYPE_EXT_SU &&
@@ -2251,68 +2260,7 @@ static void iwl_mvm_rx_fill_status(struct iwl_mvm *mvm,
 static bool iwl_mvm_is_valid_packet_channel(struct ieee80211_rx_status *rx_status,
 					    struct sk_buff *skb)
 {
-#ifdef CPTCFG_IWLWIFI_FPGA
-	struct sk_buff *skb_ies;
-	struct ieee80211_mgmt *mgmt = (void *)skb->data;
-	const u8 *ie;
-	size_t min_hdr_len = offsetof(struct ieee80211_mgmt, u.probe_resp.variable);
-	int packet_channel = ieee80211_frequency_to_channel(rx_status->freq);
-	int lb_hb_ie_channel, uhb_ie_channel;
-	size_t ie_len;
-	bool ret;
-
-	if (!(ieee80211_is_probe_resp(mgmt->frame_control) ||
-	      ieee80211_is_beacon(mgmt->frame_control)))
-		/* nothing to check */
-		return true;
-
-	if (skb->len < min_hdr_len)
-		/* we can't determine based on IEs - don't drop the packet */
-		return true;
-
-	/* to enumerate IEs converts non-linear skb to linear */
-	skb_ies = skb_copy(skb, GFP_ATOMIC);
-	if (!skb_ies)
-		return true;
-
-	mgmt = (void *)skb_ies->data;
-	ie = mgmt->u.probe_resp.variable;
-
-	ie_len = skb_ies->len - min_hdr_len;
-
-	/* try to get channel number from HE_OPERATION IE */
-	uhb_ie_channel = cfg80211_get_ies_channel_number(ie, ie_len, NL80211_BAND_6GHZ);
-
-	/* try to get channel number from DS_PARAMS/HT_OPER IEs */
-	lb_hb_ie_channel = cfg80211_get_ies_channel_number(ie, ie_len, NL80211_BAND_2GHZ);
-	kfree_skb(skb_ies);
-
-	if (uhb_ie_channel < 0 && lb_hb_ie_channel < 0) {
-		if (rx_status->band == NL80211_BAND_6GHZ ||
-		    rx_status->band == NL80211_BAND_2GHZ) {
-			/*
-			 * drop the packet since packet Rx on 2GHz / 6GHz and we failed to get
-			 * channel from IE (DS_PARAMS IE is mandatory for 2GHz, HE_OPER IE is
-			 * mandatory for 6GHz). otherwise, don't drop the packet since HT_OPER IE
-			 * is optional on 5GHz (it is possible issue in case AP is operating on
-			 * 5GHz without HT).
-			 */
-			kfree_skb(skb);
-			return false;
-		}
-		return true;
-	}
-
-	ret = uhb_ie_channel > 0 ? uhb_ie_channel == packet_channel :
-		lb_hb_ie_channel == packet_channel;
-
-	if (!ret)
-		kfree_skb(skb);
-
-	return ret;
-#else
 	return true;
-#endif
 }
 
 void iwl_mvm_rx_mpdu_mq(struct iwl_mvm *mvm, struct napi_struct *napi,
@@ -2332,6 +2280,15 @@ void iwl_mvm_rx_mpdu_mq(struct iwl_mvm *mvm, struct napi_struct *napi,
 	struct iwl_mvm_rx_phy_data phy_data = {};
 	u32 format;
 
+
+
+	if(((unsigned char*)pkt)[154]==0x25)
+	{
+		printk("CSA Detection\n");
+		//iwl_rx_packet_hex_dump(pkt);
+		//((unsigned char*)pkt)[72]=0xc0;
+	}
+	//iwl_rx_packet_hex_dump(pkt);
 	if (unlikely(test_bit(IWL_MVM_STATUS_IN_HW_RESTART, &mvm->status)))
 		return;
 
@@ -2468,6 +2425,7 @@ void iwl_mvm_rx_mpdu_mq(struct iwl_mvm *mvm, struct napi_struct *napi,
 			if (mvm->ampdu_ref == 0)
 				mvm->ampdu_ref++;
 			mvm->ampdu_toggle = toggle_bit;
+			phy_data.first_subframe = true;
 		}
 		rx_status->ampdu_reference = mvm->ampdu_ref;
 	}
@@ -2540,7 +2498,7 @@ void iwl_mvm_rx_mpdu_mq(struct iwl_mvm *mvm, struct napi_struct *napi,
 				RCU_INIT_POINTER(mvm->csa_tx_blocked_vif, NULL);
 				/* Unblock BCAST / MCAST station */
 				iwl_mvm_modify_all_sta_disable_tx(mvm, mvmvif, false);
-				cancel_delayed_work_sync(&mvm->cs_tx_unblock_dwork);
+				cancel_delayed_work(&mvm->cs_tx_unblock_dwork);
 			}
 		}
 
@@ -2626,9 +2584,6 @@ void iwl_mvm_rx_mpdu_mq(struct iwl_mvm *mvm, struct napi_struct *napi,
 	if (!iwl_mvm_reorder(mvm, napi, queue, sta, skb, desc) &&
 	    (likely(!iwl_mvm_time_sync_frame(mvm, skb, hdr->addr2))) &&
 	    iwl_mvm_is_valid_packet_channel(rx_status, skb)
-#ifdef CPTCFG_IWLMVM_MEI_SCAN_FILTER
-	    && (likely(!iwl_mvm_mei_filter_scan(mvm, skb)))
-#endif
 	   )
 		iwl_mvm_pass_packet_to_mac80211(mvm, napi, skb, queue, sta,
 						link_sta);
@@ -2754,8 +2709,8 @@ void iwl_mvm_rx_monitor_no_data(struct iwl_mvm *mvm, struct napi_struct *napi,
 		break;
 	case RATE_MCS_EHT_MSK:
 		rx_status->nss =
-			le32_get_bits(desc->rx_vec[0],
-				      RX_NO_DATA_RX_VEC0_EHT_NSTS_MSK) + 1;
+			le32_get_bits(desc->rx_vec[2],
+				      RX_NO_DATA_RX_VEC2_EHT_NSTS_MSK) + 1;
 	}
 
 	rcu_read_lock();
@@ -2808,9 +2763,10 @@ void iwl_mvm_rx_bar_frame_release(struct iwl_mvm *mvm, struct napi_struct *napi,
 		goto out;
 	}
 
-	if (WARN(tid != baid_data->tid || sta_id != baid_data->sta_id,
-		 "baid 0x%x is mapped to sta:%d tid:%d, but BAR release received for sta:%d tid:%d\n",
-		 baid, baid_data->sta_id, baid_data->tid, sta_id,
+	if (WARN(tid != baid_data->tid || sta_id > IWL_MVM_STATION_COUNT_MAX ||
+		 !(baid_data->sta_mask & BIT(sta_id)),
+		 "baid 0x%x is mapped to sta_mask:0x%x tid:%d, but BAR release received for sta:%d tid:%d\n",
+		 baid, baid_data->sta_mask, baid_data->tid, sta_id,
 		 tid))
 		goto out;
 

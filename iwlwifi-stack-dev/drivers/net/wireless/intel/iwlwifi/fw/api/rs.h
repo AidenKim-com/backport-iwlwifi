@@ -259,11 +259,6 @@ enum iwl_tlc_debug_types {
 	 * @IWL_TLC_DEBUG_PARTIAL_FIXED_RATE: set partial fixed rate to fw
 	 */
 	IWL_TLC_DEBUG_PARTIAL_FIXED_RATE,
-	/**
-	 * @IWL_TLC_DEBUG_TYPES_NUM: number of types. Used to define the max
-	 * type id in %struct iwl_dhc_tlc_cmd
-	 */
-	IWL_TLC_DEBUG_TYPES_NUM,
 }; /* TLC_MNG_DEBUG_TYPES_API_E */
 
 #define MAX_DATA_IN_DHC_TLC_CMD 10
@@ -281,20 +276,6 @@ struct iwl_dhc_tlc_cmd {
 	__le32 type;
 	__le32 data[MAX_DATA_IN_DHC_TLC_CMD];
 } __packed; /* TLC_MNG_DEBUG_CMD_S */
-
-#ifdef CPTCFG_IWLWIFI_DHC_PRIVATE
-/**
- * struct iwl_tpc_stats - statistics on the number of frames sent at each tpc
- *                        step.
- * @no_tpc: number of frames sent with no Tx-power reduction
- * @step: number of frames sent at each step (0 - 3db reduction, ... 4 - 15db
- *        reduction)
- */
-struct iwl_tpc_stats {
-	__le32 no_tpc;
-	__le32 step[5];
-} __packed;
-#endif /* CPTCFG_IWLWIFI_DHC_PRIVATE */
 
 #define IWL_MAX_MCS_DISPLAY_SIZE        12
 

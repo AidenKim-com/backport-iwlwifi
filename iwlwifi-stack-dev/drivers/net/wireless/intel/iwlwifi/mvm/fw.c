@@ -25,9 +25,6 @@
 #include "iwl-dnt-cfg.h"
 #include "fw/testmode.h"
 #endif
-#ifdef CPTCFG_IWLWIFI_PLATFORM_MOCKUPS
-#include "fw/platform-mockups.h"
-#endif /* CPTCFG_IWLWIFI_PLATFORM_MOCKUPS */
 #include "time-sync.h"
 
 #define MVM_UCODE_ALIVE_TIMEOUT	(HZ * CPTCFG_IWL_TIMEOUT_FACTOR)
@@ -599,25 +596,6 @@ static int iwl_send_phy_cfg_cmd(struct iwl_mvm *mvm)
 	/* set flags extra PHY configuration flags from the device's cfg */
 	phy_cfg_cmd.phy_cfg |=
 		cpu_to_le32(mvm->trans->trans_cfg->extra_phy_cfg_flags);
-
-#ifdef CPTCFG_IWLWIFI_ATLAS_PLATFORM_WORKAROUND
-	if (dmi_match(DMI_BOARD_NAME, "Atlas")) {
-		IWL_INFO(mvm,
-			 "Enabling platform workaround on board '%s'\n",
-			 dmi_get_system_info(DMI_BOARD_NAME));
-		/*
-		 * We're using this bit to indicate the platform workaround;
-		 * it's usually always clear because we cannot have 4 antennas,
-		 * and prior to the platform workaround firmware completely
-		 * ignored it.
-		 */
-		phy_cfg_cmd.phy_cfg |= cpu_to_le32(BIT(19));
-	} else {
-		IWL_DEBUG_INFO(mvm,
-			       "Not enabling platform workaround on board '%s'\n",
-			       dmi_get_system_info(DMI_BOARD_NAME));
-	}
-#endif
 
 	phy_cfg_cmd.calib_control.event_trigger =
 		mvm->fw->default_calib[ucode_type].event_trigger;
@@ -1220,7 +1198,26 @@ static const struct dmi_system_id dmi_tas_approved_list[] = {
 			DMI_MATCH(DMI_SYS_VENDOR, "Microsoft Corporation"),
 		},
 	},
-
+	{ .ident = "Acer",
+	  .matches = {
+			DMI_MATCH(DMI_SYS_VENDOR, "Acer"),
+		},
+	},
+	{ .ident = "ASUS",
+	  .matches = {
+			DMI_MATCH(DMI_SYS_VENDOR, "ASUSTeK COMPUTER INC."),
+		},
+	},
+	{ .ident = "MSI",
+	  .matches = {
+			DMI_MATCH(DMI_SYS_VENDOR, "Micro-Star International Co., Ltd."),
+		},
+	},
+	{ .ident = "Honor",
+	  .matches = {
+			DMI_MATCH(DMI_SYS_VENDOR, "HONOR"),
+		},
+	},
 	/* keep last */
 	{}
 };
@@ -1300,6 +1297,10 @@ static void iwl_mvm_tas_init(struct iwl_mvm *mvm)
 					"Unable to add US/Canada to TAS block list, disabling TAS\n");
 			return;
 		}
+	} else {
+		IWL_DEBUG_RADIO(mvm,
+				"System vendor '%s' is in the approved list.\n",
+				dmi_get_system_info(DMI_SYS_VENDOR));
 	}
 
 	/* v4 is the same size as v3, so no need to differentiate here */
@@ -1658,7 +1659,7 @@ int iwl_mvm_up(struct iwl_mvm *mvm)
 	struct ieee80211_channel *chan;
 	struct cfg80211_chan_def chandef;
 	struct ieee80211_supported_band *sband = NULL;
-	u32 pd_notif;
+	u32 sb_cfg;
 
 	lockdep_assert_held(&mvm->mutex);
 
@@ -1666,8 +1667,8 @@ int iwl_mvm_up(struct iwl_mvm *mvm)
 	if (ret)
 		return ret;
 
-	pd_notif = iwl_read_umac_prph(mvm->trans, WFPM_LMAC2_PD_NOTIFICATION);
-	if (!(pd_notif & WFPM_LMAC2_PD_RE_READ) && iwl_mei_pldr_req())
+	sb_cfg = iwl_read_umac_prph(mvm->trans, SB_MODIFY_CFG_FLAG);
+	if (!(sb_cfg & SB_CFG_RESIDES_IN_OTP_MASK) && iwl_mei_pldr_req())
 		return ret;
 
 	ret = iwl_mvm_load_rt_fw(mvm);
@@ -1741,6 +1742,9 @@ int iwl_mvm_up(struct iwl_mvm *mvm)
 		RCU_INIT_POINTER(mvm->fw_id_to_mac_id[i], NULL);
 		RCU_INIT_POINTER(mvm->fw_id_to_link_sta[i], NULL);
 	}
+
+	for (i = 0; i < IWL_MVM_FW_MAX_LINK_ID + 1; i++)
+		RCU_INIT_POINTER(mvm->link_id_to_link_conf[i], NULL);
 
 	memset(&mvm->fw_link_ids_map, 0, sizeof(mvm->fw_link_ids_map));
 
@@ -1848,9 +1852,6 @@ int iwl_mvm_up(struct iwl_mvm *mvm)
 			goto error;
 	}
 
-	if (test_bit(IWL_MVM_STATUS_IN_HW_RESTART, &mvm->status))
-		iwl_mvm_send_recovery_cmd(mvm, ERROR_RECOVERY_UPDATE_DB);
-
 #ifdef CPTCFG_IWLMVM_VENDOR_CMDS
 	/* set_mode must be IWL_TX_POWER_MODE_SET_DEVICE if this was
 	 * ever initialized.
@@ -1881,10 +1882,6 @@ int iwl_mvm_up(struct iwl_mvm *mvm)
 			IWL_ERR(mvm, "failed to update TX power\n");
 	}
 
-#ifdef CPTCFG_IWLMVM_PHC
-	if (!mvm->ptp_data.ptp_clock)
-		iwl_mvm_ptp_init(mvm);
-#endif
 #endif /* CPTCFG_IWLMVM_VENDOR_CMDS */
 
 	if (test_bit(IWL_MVM_STATUS_IN_HW_RESTART, &mvm->status)) {

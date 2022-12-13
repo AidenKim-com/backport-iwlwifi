@@ -1829,7 +1829,14 @@ static void mac80211_hwsim_tx(struct ieee80211_hw *hw,
 								 hdr, &link_sta);
 		}
 
-		if (WARN_ON(!bss_conf)) {
+		if (unlikely(!bss_conf)) {
+			/* if it's an MLO STA, it might have deactivated all
+			 * links temporarily - but we don't handle real PS in
+			 * this code yet, so just drop the frame in that case
+			 */
+			WARN(link != IEEE80211_LINK_UNSPECIFIED || !sta || !sta->mlo,
+			     "link:%d, sta:%pM, sta->mlo:%d\n",
+			     link, sta ? sta->addr : NULL, sta ? sta->mlo : -1);
 			ieee80211_free_txskb(hw, skb);
 			return;
 		}
@@ -2480,6 +2487,14 @@ static int mac80211_hwsim_sta_state(struct ieee80211_hw *hw,
 
 	if (old_state == IEEE80211_STA_NOTEXIST)
 		return mac80211_hwsim_sta_add(hw, vif, sta);
+
+	/*
+	 * when client is authorized (AP station marked as such),
+	 * enable all links
+	 */
+	if (vif->type == NL80211_IFTYPE_STATION &&
+	    new_state == IEEE80211_STA_AUTHORIZED && !sta->tdls)
+		ieee80211_set_active_links_async(vif, vif->valid_links);
 
 	return 0;
 }
@@ -4441,6 +4456,9 @@ static int mac80211_hwsim_new_radio(struct genl_info *info,
 	wiphy_ext_feature_set(hw->wiphy,
 			      NL80211_EXT_FEATURE_BEACON_RATE_LEGACY);
 
+	wiphy_ext_feature_set(hw->wiphy,
+			      NL80211_EXT_FEATURE_SCAN_MIN_PREQ_CONTENT);
+
 	hw->wiphy->interface_modes = param->iftypes;
 
 	/* ask mac80211 to reserve space for magic */
@@ -4974,6 +4992,8 @@ static int hwsim_cloned_frame_received_nl(struct sk_buff *skb_2,
 	}
 
 	rx_status.rate_idx = nla_get_u32(info->attrs[HWSIM_ATTR_RX_RATE]);
+	if (rx_status.rate_idx >= data2->hw->wiphy->bands[rx_status.band]->n_bitrates)
+		goto out;
 	rx_status.signal = nla_get_u32(info->attrs[HWSIM_ATTR_SIGNAL]);
 
 	hdr = (void *)skb->data;
@@ -5366,6 +5386,9 @@ static struct genl_family hwsim_genl_family __genl_ro_after_init = {
 	.ops = hwsim_ops,
 	.n_ops = ARRAY_SIZE(hwsim_ops),
 #endif
+#if LINUX_VERSION_IS_GEQ(6,1,0)
+	.resv_start_op = HWSIM_CMD_DEL_MAC_ADDR + 1,
+#endif
 	.mcgrps = hwsim_mcgrps,
 	.n_mcgrps = ARRAY_SIZE(hwsim_mcgrps),
 };
@@ -5514,6 +5537,10 @@ static int hwsim_virtio_handle_cmd(struct sk_buff *skb)
 
 	nlh = nlmsg_hdr(skb);
 	gnlh = nlmsg_data(nlh);
+
+	if (skb->len < nlh->nlmsg_len)
+		return -EINVAL;
+
 	err = genlmsg_parse(nlh, &hwsim_genl_family, tb, HWSIM_ATTR_MAX,
 			    hwsim_genl_policy, NULL);
 	if (err) {
@@ -5556,7 +5583,8 @@ static void hwsim_virtio_rx_work(struct work_struct *work)
 	spin_unlock_irqrestore(&hwsim_virtio_lock, flags);
 
 	skb->data = skb->head;
-	skb_set_tail_pointer(skb, len);
+	skb_reset_tail_pointer(skb);
+	skb_put(skb, len);
 	hwsim_virtio_handle_cmd(skb);
 
 	spin_lock_irqsave(&hwsim_virtio_lock, flags);

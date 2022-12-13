@@ -101,6 +101,7 @@ struct iwl_mvm_scan_params {
 	bool scan_6ghz;
 	bool enable_6ghz_passive;
 	bool respect_p2p_go, respect_p2p_go_hb;
+	u8 bssid[ETH_ALEN] __aligned(2);
 };
 
 static inline void *iwl_mvm_get_scan_req_umac_data(struct iwl_mvm *mvm)
@@ -762,7 +763,7 @@ iwl_mvm_build_scan_probe(struct iwl_mvm *mvm, struct ieee80211_vif *vif,
 
 	frame->frame_control = cpu_to_le16(IEEE80211_STYPE_PROBE_REQ);
 	eth_broadcast_addr(frame->da);
-	eth_broadcast_addr(frame->bssid);
+	ether_addr_copy(frame->bssid, params->bssid);
 	frame->seq_ctrl = 0;
 
 	pos = frame->u.probe_req.variable;
@@ -2639,92 +2640,6 @@ static const struct iwl_scan_umac_handler iwl_scan_umac_handlers[] = {
 	IWL_SCAN_UMAC_HANDLER(12),
 };
 
-#ifdef CPTCFG_IWLMVM_MEI_SCAN_FILTER
-static void iwl_mvm_mei_scan_work(struct work_struct *wk)
-{
-	struct iwl_mei_scan_filter *scan_filter =
-		container_of(wk, struct iwl_mei_scan_filter, scan_work);
-	struct iwl_mvm *mvm =
-		container_of(scan_filter, struct iwl_mvm, mei_scan_filter);
-	struct iwl_mvm_csme_conn_info *info;
-	struct sk_buff *skb;
-	u8 bssid[ETH_ALEN];
-
-	mutex_lock(&mvm->mutex);
-	info = iwl_mvm_get_csme_conn_info(mvm);
-	memcpy(bssid, info->conn_info.bssid, ETH_ALEN);
-	mutex_unlock(&mvm->mutex);
-
-	while ((skb = skb_dequeue(&scan_filter->scan_res))) {
-		struct ieee80211_mgmt *mgmt = (void *)skb->data;
-
-		if (!memcmp(mgmt->bssid, bssid, ETH_ALEN))
-			ieee80211_rx_irqsafe(mvm->hw, skb);
-		else
-			kfree_skb(skb);
-	}
-}
-
-void iwl_mvm_mei_scan_filter_init(struct iwl_mei_scan_filter *mei_scan_filter)
-{
-	skb_queue_head_init(&mei_scan_filter->scan_res);
-	INIT_WORK(&mei_scan_filter->scan_work, iwl_mvm_mei_scan_work);
-}
-
-/*
- * In case CSME is connected and has link protection set, this function will
- * override the scan request to scan only the associated channel and only for
- * the associated SSID.
- */
-static void iwl_mvm_mei_limited_scan(struct iwl_mvm *mvm,
-				     struct iwl_mvm_scan_params *params)
-{
-	struct iwl_mvm_csme_conn_info *info = iwl_mvm_get_csme_conn_info(mvm);
-	struct iwl_mei_conn_info *conn_info;
-	struct ieee80211_channel *chan;
-	int scan_iters, i;
-
-	if (!info) {
-		IWL_DEBUG_SCAN(mvm, "mei_limited_scan: no connection info\n");
-		return;
-	}
-
-	conn_info = &info->conn_info;
-	if (!info->conn_info.lp_state || !info->conn_info.ssid_len)
-		return;
-
-	if (!params->n_channels || !params->n_ssids)
-		return;
-
-	mvm->mei_scan_filter.is_mei_limited_scan = true;
-
-	chan = ieee80211_get_channel(mvm->hw->wiphy,
-				     ieee80211_channel_to_frequency(conn_info->channel,
-								    conn_info->band));
-	if (!chan) {
-		IWL_DEBUG_SCAN(mvm, "Failed to get CSME channel (chan=%u band=%u)\n",
-			       conn_info->channel, conn_info->band);
-		return;
-	}
-
-	/*
-	 * The mei filtered scan must find the AP, otherwise CSME will
-	 * take the NIC ownership. Add several iterations on the channel to
-	 * make the scan more robust.
-	 */
-	scan_iters = min(IWL_MEI_SCAN_NUM_ITER, params->n_channels);
-	params->n_channels = scan_iters;
-	for (i = 0; i < scan_iters; i++)
-		params->channels[i] = chan;
-
-	IWL_DEBUG_SCAN(mvm, "Mei scan: num iterations=%u\n", scan_iters);
-
-	params->n_ssids = 1;
-	params->ssids[0].ssid_len = conn_info->ssid_len;
-	memcpy(params->ssids[0].ssid, conn_info->ssid, conn_info->ssid_len);
-}
-#endif
-
 static int iwl_mvm_build_scan_cmd(struct iwl_mvm *mvm,
 				  struct ieee80211_vif *vif,
 				  struct iwl_host_cmd *hcmd,
@@ -2735,11 +2650,7 @@ static int iwl_mvm_build_scan_cmd(struct iwl_mvm *mvm,
 	u8 scan_ver;
 
 	lockdep_assert_held(&mvm->mutex);
-	memset(mvm->scan_cmd, 0, ksize(mvm->scan_cmd));
-
-#ifdef CPTCFG_IWLMVM_MEI_SCAN_FILTER
-	iwl_mvm_mei_limited_scan(mvm, params);
-#endif
+	memset(mvm->scan_cmd, 0, mvm->scan_cmd_size);
 
 	if (!fw_has_capa(&mvm->fw->ucode_capa, IWL_UCODE_TLV_CAPA_UMAC_SCAN)) {
 		hcmd->id = SCAN_OFFLOAD_REQUEST_CMD;
@@ -2905,6 +2816,7 @@ int iwl_mvm_reg_scan_start(struct iwl_mvm *mvm, struct ieee80211_vif *vif,
 	params.pass_all = true;
 	params.n_match_sets = 0;
 	params.match_sets = NULL;
+	ether_addr_copy(params.bssid, req->bssid);
 
 	params.scan_plans = &scan_plan;
 	params.n_scan_plans = 1;
@@ -2998,6 +2910,7 @@ int iwl_mvm_sched_scan_start(struct iwl_mvm *mvm,
 	params.pass_all =  iwl_mvm_scan_pass_all(mvm, req);
 	params.n_match_sets = req->n_match_sets;
 	params.match_sets = req->match_sets;
+	eth_broadcast_addr(params.bssid);
 	if (!req->n_scan_plans)
 		return -EINVAL;
 
@@ -3091,10 +3004,6 @@ void iwl_mvm_rx_umac_scan_complete_notif(struct iwl_mvm *mvm,
 	struct iwl_umac_scan_complete *notif = (void *)pkt->data;
 	u32 uid = __le32_to_cpu(notif->uid);
 	bool aborted = (notif->status == IWL_SCAN_OFFLOAD_ABORTED);
-
-#ifdef CPTCFG_IWLMVM_MEI_SCAN_FILTER
-	mvm->mei_scan_filter.is_mei_limited_scan = false;
-#endif
 
 	if (WARN_ON(!(mvm->scan_uid_status[uid] & mvm->scan_status)))
 		return;
@@ -3217,7 +3126,7 @@ static int iwl_mvm_scan_stop_wait(struct iwl_mvm *mvm, int type)
 				     1 * HZ);
 }
 
-static int iwl_scan_req_umac_get_size(u8 scan_ver)
+static size_t iwl_scan_req_umac_get_size(u8 scan_ver)
 {
 	switch (scan_ver) {
 	case 12:
@@ -3230,7 +3139,7 @@ static int iwl_scan_req_umac_get_size(u8 scan_ver)
 	return 0;
 }
 
-int iwl_mvm_scan_size(struct iwl_mvm *mvm)
+size_t iwl_mvm_scan_size(struct iwl_mvm *mvm)
 {
 	int base_size, tail_size;
 	u8 scan_ver = iwl_fw_lookup_cmd_ver(mvm->fw, SCAN_REQ_UMAC,

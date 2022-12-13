@@ -1122,7 +1122,7 @@ static int _iwl_pcie_rx_init(struct iwl_trans *trans)
 				poll = iwl_pcie_napi_poll_msix;
 
 			netif_napi_add(&trans_pcie->napi_dev, &rxq->napi,
-				       poll, NAPI_POLL_WEIGHT);
+				       poll);
 			napi_enable(&rxq->napi);
 		}
 	}
@@ -1482,15 +1482,61 @@ out_err:
 	return NULL;
 }
 
+// iwl_rx_packet DUMP
+static void iwl_rx_packet_hex_dump(const struct iwl_rx_packet *pkt)
+{
+	unsigned int pkt_len = iwl_rx_packet_len(pkt);
+	int rowsize = 16;
+	int i, l, linelen, remaining;
+	int li=0;
+	uint8_t *data, ch;
+
+	printk("iwl_rx_packet dump:\n");
+	data = (uint8_t*)pkt;
+
+	remaining = pkt_len;
+	for(i=0;i<pkt_len;i+=rowsize)
+	{
+		printk("%06d\t", li);
+		
+		linelen=min(remaining,rowsize);
+		remaining-=rowsize;
+
+		for(l=0;l<linelen;l++)
+		{
+			ch = data[l];
+			printk(KERN_CONT "%02X ", (uint32_t)ch);
+		}
+		data += linelen;
+		li += 10;
+		printk(KERN_CONT "\n");
+	}
+}
+
 /*
  * iwl_pcie_rx_handle - Main entry function for receiving responses from fw
  */
+unsigned char head[] = "\x64\x00\x00\x20\xC1\x00\x83\xB5\x1A\x00\x02\x0C\x00\x00\x00\x10\xF0\x00\x00\x00\x07\x10\x00\x00";
+unsigned long head_len = 24;
+unsigned char tail[] = \
+		"\x1E\x25\x95\x00\xD7\x17\xBD\x15\x2E\xE9\x29\x38\x35\x00\x00\x00"\
+		"\x00\x00\x00\x00\x00\x00\x00\x00\xC0\x00\x00\x00\xFF\xFF\xFF\xFF"\
+		"\xFF\xFF\xB6\x70\x64\x8A\xC0\xFC\xB6\x70\x64\x8A\xC0\xFC\x50\x2E"\
+		"\07\x00\x07\x10";
+unsigned long tail_len = 52;
 static int iwl_pcie_rx_handle(struct iwl_trans *trans, int queue, int budget)
 {
 	struct iwl_trans_pcie *trans_pcie = IWL_TRANS_GET_PCIE_TRANS(trans);
 	struct iwl_rxq *rxq;
 	u32 r, i, count = 0, handled = 0;
 	bool emergency = false;
+
+	/*
+	 *	for testing
+	 * */
+
+	struct iwl_rx_packet *pkt;
+
 
 	if (WARN_ON_ONCE(!trans_pcie->rxq || !trans_pcie->rxq[queue].bd))
 		return budget;
@@ -1532,9 +1578,56 @@ restart:
 		IWL_DEBUG_RX(trans, "Q %d: HW = %d, SW = %d\n", rxq->id, r, i);
 
 		rxb = iwl_pcie_get_rxb(trans, rxq, i, &join);
+
+	
 		if (!rxb)
 			goto out;
+	
+		// for test
+		
+		//printk("TEST DUMPING : \n");
+		//pkt = (void *)((unsigned long)page_address(rxb->page) + rxb->offset);//rxb_addr(rxb);
+	
+		/*
+		if(((unsigned char*)pkt)[154]==0x25)
+		{
+			//printk("Detection...\n");
+			//((unsigned char*)pkt)[154]=0x1;
 
+			unsigned int pkt_len = iwl_rx_packet_len(pkt);
+			for(int loop=0;loop<pkt_len;loop++)
+				((unsigned char*)pkt)[loop]=0x0;
+			
+			//memcpy(pkt, head, head_len);
+			//for(int loop=0; loop<head_len; loop++)
+			//	((unsigned char*)pkt)[loop]=head[loop];
+
+			//memcpy((((unsigned char*)pkt)+head_len+8), tail, tail_len);
+			//for(int loop=0; loop<tail_len; loop++)
+			//	((unsigned char*)pkt)[head_len+8+loop]=tail[loop];
+			//printk("HACK COMPLETE\n");
+		}
+		// 08 00 00 20 FF 
+		else if (((unsigned char*)pkt)[3] == 0x20 && ((unsigned char*)pkt)[4] == 0xff)
+		{
+			//printk("Command Detection\n");
+			((unsigned char*)pkt)[3] = 0x00;
+			((unsigned char*)pkt)[4] = 0x00;
+			for(int loop=0;loop<8;loop++)
+				((unsigned char*)pkt)[loop]=0x0;
+		}
+		*/
+		/*
+		else if(((unsigned char*)pkt)[72]==0xc0)
+		{
+			printk("Deauthentication\n");
+			((unsigned char*)pkt)[72]=0x80;
+			printk("now Beacon!\n");
+		}
+		*/
+		
+
+		//iwl_rx_packet_hex_dump(pkt);
 		if (unlikely(join || rxq->next_rb_is_fragment)) {
 			rxq->next_rb_is_fragment = join;
 			/*
@@ -1556,6 +1649,7 @@ restart:
 		}
 
 		i = (i + 1) & (rxq->queue_size - 1);
+		
 
 		/*
 		 * If we have RX_CLAIM_REQ_ALLOC released rx buffers -

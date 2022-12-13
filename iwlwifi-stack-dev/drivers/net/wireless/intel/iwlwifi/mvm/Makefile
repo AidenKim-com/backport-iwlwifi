@@ -20,10 +20,7 @@ ccflags-y += -I$(src)/../
 # non-upstream things
 iwlmvm-$(CPTCFG_IWLMVM_VENDOR_CMDS) += vendor-cmd.o
 ifeq ($(CPTCFG_IWLMVM_VENDOR_CMDS),y)
-iwlmvm-$(CPTCFG_IWLMVM_PHC) += ptp.o
 endif
-iwlmvm-$(CPTCFG_IWLMVM_ADVANCED_QUOTA_MGMT) += quota-adv.o
-iwlmvm-$(CPTCFG_IWLMVM_AX_SOFTAP_TESTMODE) += ax-softap-testmode.o
 
 ifeq ($(CPTCFG_IWLWIFI_SIMULATION),y)
 UBSAN_SANITIZE := y

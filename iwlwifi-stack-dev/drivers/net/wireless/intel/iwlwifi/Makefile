@@ -20,15 +20,11 @@ iwlwifi-$(CONFIG_ACPI)	+= fw/acpi.o
 iwlwifi-$(CONFIG_EFI)	+= fw/uefi.o
 
 # Mock-ups
-iwlwifi-$(CPTCFG_IWLWIFI_PLATFORM_MOCKUPS) += fw/acpi.o fw/uefi.o
-iwlwifi-$(CPTCFG_IWLWIFI_PLATFORM_MOCKUPS) += fw/platform-mockups.o
 
 # Bus
 iwlwifi-$(CONFIG_PCI) += pcie/drv.o pcie/rx.o pcie/tx.o pcie/trans.o
 iwlwifi-$(CONFIG_PCI) += pcie/ctxt-info.o pcie/ctxt-info-gen3.o pcie/trans-gen2.o pcie/tx-gen2.o
 
-iwlwifi-$(CPTCFG_IWLDVM) += cfg/1000.o cfg/2000.o
-iwlwifi-$(CPTCFG_IWLDVM) += cfg/5000.o cfg/6000.o
 iwlwifi-$(CPTCFG_IWLMVM) += cfg/7000.o cfg/8000.o
 iwlwifi-$(CPTCFG_IWLMVM) += cfg/9000.o cfg/22000.o
 
@@ -44,10 +40,7 @@ iwlwifi-$(CPTCFG_IWLWIFI_DEVICE_TESTMODE) += iwl-dnt-dev-if.o fw/testmode.o
 ccflags-y += -I$(src)
 subdir-ccflags-y += $(call cc-option,-Wimplicit-fallthrough)
 # for FreeBSD compatibility - they use most of our driver
-subdir-ccflags-$(CPTCFG_IWLWIFI_SIMULATION) += $(call cc-option,-Wcast-qual)
-subdir-ccflags-$(CPTCFG_IWLWIFI_SIMULATION) += $(call cc-option,-Wpointer-arith)
 
-obj-$(CPTCFG_IWLDVM)	+= dvm/
 obj-$(CPTCFG_IWLMVM)	+= mvm/
 obj-$(CPTCFG_IWLMEI)	+= mei/
 obj-$(CPTCFG_IWLXVT)	+= xvt/

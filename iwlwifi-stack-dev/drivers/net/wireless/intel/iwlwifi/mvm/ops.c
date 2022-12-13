@@ -168,33 +168,6 @@ static void iwl_mvm_nic_config(struct iwl_op_mode *op_mode)
 				       ~APMG_PS_CTRL_EARLY_PWR_OFF_RESET_DIS);
 }
 
-#ifdef CPTCFG_IWLWIFI_DHC_PRIVATE
-/* A stub notification handler to receive Debug Host Notification (DHN).
- * The notification handler is empty because the report is processed by
- * trace-cmd and not by the driver
- */
-static void iwl_mvm_rx_dhn(struct iwl_mvm *mvm,
-			   struct iwl_rx_cmd_buffer *rxb)
-{
-	struct iwl_rx_packet *pkt = rxb_addr(rxb);
-	struct iwl_dhn_hdr *notif = (void *)pkt->data;
-
-	u32 length = le32_to_cpu(notif->length);
-	u32 index_and_mask = le32_to_cpu(notif->index_and_mask);
-	union iwl_dbg_tlv_tp_data tp_data = { .fw_pkt = pkt };
-
-	iwl_dbg_tlv_time_point(&mvm->fwrt,
-			       IWL_FW_INI_TIME_POINT_FW_DHC_NOTIFICATION,
-			       &tp_data);
-
-	IWL_DEBUG_INFO(mvm,
-		       "Received Debug Host Notifcation:\n"
-		       "length: %u\n"
-		       "index and mask: 0x%x\n",
-		       length, index_and_mask);
-}
-#endif /* CPTCFG_IWLWIFI_DHC_PRIVATE */
-
 static void iwl_mvm_rx_monitor_notif(struct iwl_mvm *mvm,
 				     struct iwl_rx_cmd_buffer *rxb)
 {
@@ -267,7 +240,6 @@ void iwl_mvm_update_link_smps(struct ieee80211_vif *vif,
 	enum ieee80211_smps_mode mode = IEEE80211_SMPS_AUTOMATIC;
 
 	if (mvm->fw_static_smps_request &&
-	    link_conf &&
 	    link_conf->chandef.width == NL80211_CHAN_WIDTH_160 &&
 	    link_conf->he_support)
 		mode = IEEE80211_SMPS_STATIC;
@@ -473,10 +445,6 @@ static const struct iwl_rx_handlers iwl_mvm_rx_handlers[] = {
 #ifdef CPTCFG_IWLWIFI_DEVICE_TESTMODE
 	RX_HANDLER_NO_SIZE(DEBUG_LOG_MSG, iwl_mvm_rx_fw_logs, RX_HANDLER_SYNC),
 #endif
-#ifdef CPTCFG_IWLWIFI_DHC_PRIVATE
-	RX_HANDLER_GRP(DEBUG_GROUP, DEBUG_HOST_NTF,
-		       iwl_mvm_rx_dhn, RX_HANDLER_SYNC, struct iwl_dhn_hdr),
-#endif
 	RX_HANDLER_GRP(DATA_PATH_GROUP, MONITOR_NOTIF,
 		       iwl_mvm_rx_monitor_notif, RX_HANDLER_ASYNC_LOCKED,
 		       struct iwl_datapath_monitor_notif),
@@ -653,12 +621,6 @@ static const struct iwl_hcmd_names iwl_mvm_data_path_names[] = {
 	HCMD_NAME(TRIGGER_RX_QUEUES_NOTIF_CMD),
 	HCMD_NAME(STA_HE_CTXT_CMD),
 	HCMD_NAME(RLC_CONFIG_CMD),
-#ifdef CPTCFG_IWLMVM_AX_SOFTAP_TESTMODE
-	HCMD_NAME(AX_SOFTAP_TESTMODE_DL_BASIC),
-	HCMD_NAME(AX_SOFTAP_TESTMODE_DL_MU_BAR),
-	HCMD_NAME(AX_SOFTAP_TESTMODE_UL),
-	HCMD_NAME(AX_SOFTAP_CLIENT_TESTMODE),
-#endif
 	HCMD_NAME(RFH_QUEUE_CONFIG_CMD),
 	HCMD_NAME(TLC_MNG_CONFIG_CMD),
 	HCMD_NAME(CHEST_COLLECTOR_FILTER_CONFIG_CMD),
@@ -677,9 +639,6 @@ static const struct iwl_hcmd_names iwl_mvm_data_path_names[] = {
 static const struct iwl_hcmd_names iwl_mvm_debug_names[] = {
 	HCMD_NAME(DBGC_SUSPEND_RESUME),
 	HCMD_NAME(BUFFER_ALLOCATION),
-#ifdef CPTCFG_IWLWIFI_DHC_PRIVATE
-	HCMD_NAME(DEBUG_HOST_NTF),
-#endif
 	HCMD_NAME(MFU_ASSERT_DUMP_NTF),
 };
 
@@ -750,9 +709,6 @@ static const struct iwl_hcmd_arr iwl_mvm_groups[] = {
 	[PROT_OFFLOAD_GROUP] = HCMD_ARR(iwl_mvm_prot_offload_names),
 	[REGULATORY_AND_NVM_GROUP] =
 		HCMD_ARR(iwl_mvm_regulatory_and_nvm_names),
-#ifdef CPTCFG_IWLWIFI_DHC_PRIVATE
-	[DEBUG_GROUP] = HCMD_ARR(iwl_mvm_debug_names),
-#endif
 };
 
 /* this forward declaration can avoid to export the function */
@@ -1537,6 +1493,7 @@ iwl_op_mode_mvm_start(struct iwl_trans *trans, const struct iwl_cfg *cfg,
 	mvm->scan_cmd = kmalloc(scan_size, GFP_KERNEL);
 	if (!mvm->scan_cmd)
 		goto out_free;
+	mvm->scan_cmd_size = scan_size;
 
 	/* invalidate ids to prevent accidental removal of sta_id 0 */
 	mvm->aux_sta.sta_id = IWL_MVM_INVALID_STA;
@@ -1558,10 +1515,6 @@ iwl_op_mode_mvm_start(struct iwl_trans *trans, const struct iwl_cfg *cfg,
 	iwl_mvm_init_modparams(mvm);
 #endif
 
-#ifdef CPTCFG_IWLMVM_AX_SOFTAP_TESTMODE
-	mvm->is_bar_enabled = true;
-#endif
-
 	iwl_mvm_ftm_initiator_smooth_config(mvm);
 
 	iwl_mvm_init_time_sync(&mvm->time_sync);
@@ -1569,10 +1522,6 @@ iwl_op_mode_mvm_start(struct iwl_trans *trans, const struct iwl_cfg *cfg,
 	mvm->debugfs_dir = dbgfs_dir;
 
 	mvm->mei_registered = !iwl_mei_register(mvm, &mei_ops);
-
-#ifdef CPTCFG_IWLMVM_MEI_SCAN_FILTER
-	iwl_mvm_mei_scan_filter_init(&mvm->mei_scan_filter);
-#endif
 
 	if (iwl_mvm_start_get_nvm(mvm)) {
 		/*
@@ -1677,9 +1626,6 @@ static void iwl_op_mode_mvm_stop(struct iwl_op_mode *op_mode)
 	if (mvm->hw_registered)
 		iwl_mvm_vendor_cmds_unregister(mvm);
 
-#ifdef CPTCFG_IWLMVM_PHC
-	iwl_mvm_ptp_remove(mvm);
-#endif
 #endif /* CPTCFG_IWLMVM_VENDOR_CMDS */
 
 	iwl_trans_op_mode_leave(mvm->trans);

@@ -4,33 +4,6 @@
 #include <linux/version.h>
 
 
-#if LINUX_VERSION_IS_LESS(5,2,0)
-#define skb_xmit_more(skb) ((skb)->xmit_more)
-#else
-#define skb_xmit_more(skb) netdev_xmit_more()
-#endif
-
-#if LINUX_VERSION_IS_LESS(4,2,0) && \
-	RHEL_RELEASE_CODE < RHEL_RELEASE_VERSION(7,6)
-static inline void skb_free_frag(void *data)
-{
-	put_page(virt_to_head_page(data));
-}
-
-#include <net/flow_keys.h>
-#include <linux/jhash.h>
-
-static inline u32 skb_get_hash_perturb(struct sk_buff *skb, u32 key)
-{
-	struct flow_keys keys;
-
-	skb_flow_dissect(skb, &keys);
-	return jhash_3words((__force u32)keys.dst,
-			    (__force u32)keys.src ^ keys.ip_proto,
-			    (__force u32)keys.ports, key);
-}
-#endif /* LINUX_VERSION_IS_LESS(4,2,0) */
-
 #if LINUX_VERSION_IS_LESS(4,4,10)
 static __always_inline void
 __skb_postpush_rcsum(struct sk_buff *skb, const void *start, unsigned int len,
@@ -46,7 +19,6 @@ static inline void skb_postpush_rcsum(struct sk_buff *skb,
 {
 	__skb_postpush_rcsum(skb, start, len, 0);
 }
-
 #endif /* LINUX_VERSION_IS_LESS(4,4,10) */
 
 #if LINUX_VERSION_IS_LESS(4,13,0) && \

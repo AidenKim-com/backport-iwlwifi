@@ -46,29 +46,6 @@ enum iwl_data_path_subcmd_ids {
 	 */
 	RLC_CONFIG_CMD = 0x8,
 
-#ifdef CPTCFG_IWLMVM_AX_SOFTAP_TESTMODE
-	/**
-	 * @AX_SOFTAP_TESTMODE_DL_BASIC: &struct ax_softap_testmode_dl_basic_cmd
-	 */
-	AX_SOFTAP_TESTMODE_DL_BASIC = 0x9,
-
-	/**
-	 * @AX_SOFTAP_TESTMODE_DL_MU_BAR:
-	 *  &struct ax_softap_testmode_dl_mu_bar_cmd
-	 */
-	AX_SOFTAP_TESTMODE_DL_MU_BAR = 0xA,
-
-	/**
-	 * @AX_SOFTAP_TESTMODE_UL: &struct ax_softap_testmode_ul_cmd
-	 */
-	AX_SOFTAP_TESTMODE_UL = 0xB,
-
-	/**
-	 * @AX_SOFTAP_CLIENT_TESTMODE: &struct ax_softap_client_testmode_cmd
-	 */
-	AX_SOFTAP_CLIENT_TESTMODE = 0xC,
-#endif
-
 	/**
 	 * @RFH_QUEUE_CONFIG_CMD: &struct iwl_rfh_queue_config
 	 */

@@ -23,24 +23,6 @@ config IWLWIFI_NUM_CHANNELS
 	default 2
 	depends on IWLMVM
 
-config IWLMVM_AX_SOFTAP_TESTMODE
-	bool "enable 11ax softap testmode debugfs configuration files"
-	depends on IWLMVM
-	depends on MAC80211_DEBUGFS
-	default y
-	help
-	  Enable 11ax softap testmode debugfs entries that can be used to
-	  enable/disable test modes for trigger frame sending to an 11ax
-	  testmode client.
-
-config IWLMVM_ADVANCED_QUOTA_MGMT
-	bool "enable advanced quota management code"
-	default y
-	depends on IWLMVM
-	help
-	  This code isn't intended to go upstream yet, hence
-	  the config option. You shouldn't turn it off.
-
 config IWLWIFI_THERMAL_DEBUGFS
 	bool "enable thermal debug write and read support"
 	depends on IWLWIFI_DEBUGFS
@@ -121,72 +103,8 @@ config REJECT_NONUPSTREAM_NL80211
 	help
 	  Say Y to disable non-upstream commands.
 
-config IWLWIFI_DHC_PRIVATE
-	bool "enable *private* DHC commands"
-	select IWLWIFI_DHC
-	help
-	  This option enables the use of private debug host commands.  It's used
-	  for internal debugging purposes and not intended for upstream.
-
-config IWLWIFI_ATLAS_PLATFORM_WORKAROUND
-	bool "enable Atlas platform workaround code"
-	help
-	  Say Y here to enable Atlas platform detection at runtime,
-	  to enable a specific workaround if detected.
-
-config IWLWIFI_FPGA
-	bool "enable FPGA workaround code"
-	help
-	  The code that is related to fpga is not intended to ever go upstream.
-
-config IWLWIFI_SIMULATION
-	def_bool y
-	depends on UML
-
-config IWLMVM_PHC
-	def_bool y
-	# this means kernel is >= 4.10, i.e. no 4.10 backports required
-	depends on !KERNEL_4_10
-
-config IWLWIFI_PLATFORM_MOCKUPS
-	bool "enable ACPI testing mock-ups"
-	default y
-	# this means kernel is >= 4.13, i.e. no 4.13 backports required
-	# we need this because we override acpi_evaluate_dsm() which has
-	# different API in 3.14-4.13
-	depends on !KERNEL_4_13
-	help
-	  If enabled, the ACPI functions are substituted by mock-ups
-	  that can be controlled to return what we want in order to
-	  test ACPI-based features.
-
 config IWLWIFI_DONT_DUMP_FIFOS
 	bool "do not dump FIFO contents"
 	help
 	  If enabled, instruct the driver to not dump FIFO regions as
 	  they may contain PII.
-
-config IWLWIFI_IPU_SECURITY_FIX
-	bool "enable IPU security fixes"
-	default n
-	help
-	  If enabled, IPU fixes will be included in compilation for
-	  testing security code changes.
-
-config IWLWIFI_PRE_IPU_SECURITY_FIX
-	bool "enable pre IPU security fixes"
-	default n
-	depends on IWLWIFI_IPU_SECURITY_FIX
-	help
-	  If enabled, pre IPU fixes will be included in compilation for
-	  testing security code changes.
-
-config IWLMVM_MEI_SCAN_FILTER
-	bool "enable MEI scan filter"
-	default y
-	depends on IWLMEI
-	help
-	  If enabled, when the driver loads and the MEI driver reports that
-	  CSME is connected and has link protection enabled, scan requests will
-	  be modified to include only the channel and SSID of the connected AP,
-	  and scan results will be filtered to include only the connected BSS.
